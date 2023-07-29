@@ -129,10 +129,10 @@ STATICFILES_DIRS = [
     Path.joinpath(BASE_DIR, "static")
 ]
 
-STATIC_ROOT = '../app_advertisements/staticfiles'
+STATIC_ROOT = 'staticfiles/'
 
 STATICFILES_DIRS_ROOT = [
-    Path.joinpath(BASE_DIR,'advertisements/app_advertisements/staticfiles')
+    Path.joinpath(BASE_DIR,'staticfiles')
 ]
 
 # Default primary key field type
