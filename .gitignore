@@ -1,2 +1,5 @@
 *.idea/
 /info.txt
+*.DS_Store
+__pycahe__/
+venv/
