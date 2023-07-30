@@ -8,31 +8,34 @@
 {% block content %}
 
 <ul class="nav nav-pills sticky-top bg-white nav-fill">
+
   <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="{% url 'main-page' %}"><span style="font-weight: bold;">Главная</span>
+    <a class="nav-link active" aria-current="page" href="{% url 'main-page' %}">
+      <span style="font-weight: bold;">Главная</span>
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="{%  url 'top-sellers' %}"><span style="font-weight: bold;">Топ продавцов</span>
+    <a class="nav-link" href="{% url 'top-sellers' %}">
+      <span style="font-weight: bold;">Топ продавцов</span>
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="advertisement-post.html">
+    <a class="nav-link" href="{% url 'advertisement-post' %}">
       <span style="font-weight: bold;">Разместить объявление</span>
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="register.html">
+    <a class="nav-link" href="{% url 'register' %}">
       <span style="font-weight: bold;">Регистрация</span>
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="login.html">
+    <a class="nav-link" href="{% url 'login' %}">
       <span style="font-weight: bold;">Войти</span>
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="profile.html">
+    <a class="nav-link" href="{% url 'profile' %}">
       <span style="font-weight: bold;">Профиль</span>
     </a>
   </li>
@@ -41,6 +44,7 @@
       <span style="font-weight: bold;">Выйти</span>
     </a>
   </li>
+
 </ul>
 
 <div id="carouselExampleControls" class="carousel slide bg-primary" data-bs-ride="carousel">
@@ -98,16 +102,16 @@
     <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
       <div class="row g-0">
         <div class="col-md-4">
-          <a href="advertisement.html" class="nav-link">
+          <a href="{% url 'advertisement' %}" class="nav-link">
             <img src="{% static 'img/adv.png' %}" class="img-fluid rounded-start" alt="Card title">
           </a>
         </div>
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="advertisement.html" class="nav-link"><strong>Продаю балкон</strong></a>
+              <a href="{% url 'advertisement' %}" class="nav-link"><strong>Продаю балкон</strong></a>
             </h5>
-            <a href="advertisement.html" class="nav-link">
+            <a href="{% url 'advertisement' %}" class="nav-link">
               <p class="card-text">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, nulla eos neque dolorum quis aliquid
                 deleniti molestias, nobis debitis expedita, fugiat ea. Delectus harum quo dolores modi cupiditate in
@@ -125,16 +129,16 @@
     <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
       <div class="row g-0">
         <div class="col-md-4">
-          <a href="advertisement.html" class="nav-link">
+          <a href="{% url 'advertisement' %}" class="nav-link">
             <img src="{% static 'img/adv.png' %}" class="img-fluid rounded-start" alt="Card title">
           </a>
         </div>
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="advertisement.html" class="nav-link"><strong>Продам гараж</strong></a>
+              <a href="{% url 'advertisement' %}" class="nav-link"><strong>Продам гараж</strong></a>
             </h5>
-            <a href="advertisement.html" class="nav-link">
+            <a href="{% url 'advertisement' %}" class="nav-link">
               <p class="card-text">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, nulla eos neque dolorum quis aliquid
                 deleniti molestias, nobis debitis expedita, fugiat ea. Delectus harum quo dolores modi cupiditate in
@@ -152,16 +156,16 @@
     <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
       <div class="row g-0">
         <div class="col-md-4">
-          <a href="advertisement.html" class="nav-link">
+          <a href="{% url 'advertisement' %}" class="nav-link">
             <img src="{% static 'img/adv.png' %}" class="img-fluid rounded-start" alt="Card title">
           </a>
         </div>
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="advertisement.html" class="nav-link"><strong>Куплю баню</strong></a>
+              <a href="{% url 'advertisement' %}" class="nav-link"><strong>Куплю баню</strong></a>
             </h5>
-            <a href="advertisement.html" class="nav-link">
+            <a href="{% url 'advertisement' %}" class="nav-link">
               <p class="card-text">
                 Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, nulla eos neque dolorum quis aliquid
                 deleniti molestias, nobis debitis expedita, fugiat ea. Delectus harum quo dolores modi cupiditate in
@@ -178,27 +182,29 @@
     </div>
   </div>
 </div>
+
 <footer style="padding: 100px;" class="bg-primary">
   <nav class="navbar navbar-expand-sm navbar-dark">
     <a class="navbar-brand" href="#">Добавьте</a>
     <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-            data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-            aria-label="Toggle navigation"></button>
+      data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+      aria-label="Toggle navigation"></button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
       <ul class="navbar-nav me-auto mt-2 mt-lg-0">
         <li class="nav-item">
           <a class="nav-link active" href="#" aria-current="page">сюда<span
-                  class="visually-hidden">(current)</span></a>
+              class="visually-hidden">(current)</span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">что</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
-             aria-expanded="false">хотите</a>
+            aria-expanded="false">хотите</a>
           <div class="dropdown-menu" aria-labelledby="dropdownId">
-            <a class="dropdown-item" href="#">например</a>
-            <a class="dropdown-item" href="#">ссылки на социальные сети</a>
+            <a class="dropdown-item" href="https://t.me/PIIZDEEC">Telegram</a>
+            <a class="dropdown-item" href="https://github.com/LebedevSergeyV">GitHub</a>
+            <a class="dropdown-item" href="https://github.com/LebedevSergeyV/Django">Repositories</a>
           </div>
         </li>
       </ul>
@@ -209,6 +215,7 @@
     </div>
   </nav>
 </footer>
-<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+<script src="js/bootstrap.bundle.min.js"></script>
 
 {% endblock %}
