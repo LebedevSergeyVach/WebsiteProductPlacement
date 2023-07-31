@@ -1,18 +1,22 @@
 from django.urls import path
 
-from .views import index, top_sellers, advertisement, advertisement_post, login, profile, register
+from .views import WebViews
 
 
 urlpatterns = [
-    path("search/", index, name="search"),
+    path("search", WebViews.index, name="search"),
 
-    path('', index, name="main-page"),
-    path("top-sellers/", top_sellers, name="top-sellers"),
+    path('', WebViews.index, name="main-page"),
+    path("top-sellers", WebViews.top_sellers, name="top-sellers"),
 
-    path("advertisement/", advertisement, name="advertisement"),
-    path("advertisement-post/", advertisement_post, name="advertisement-post"),
+    path("advertisement", WebViews.advertisement, name="advertisement"),
+    path("advertisement-post/", WebViews.advertisement_post, name="advertisement-post"),
 
-    path("login/", login, name="login"),
-    path("profile/", profile, name="profile"),
-    path("register/", register, name="register"),
+    path("advertisement-AK-74", WebViews.advertisement_ak_74, name="advertisement-AK-74"),
+
+    path("login", WebViews.login, name="login"),
+    path("profile", WebViews.profile, name="profile"),
+    path("register", WebViews.register, name="register"),
+
+    path("fake", WebViews.fake, name="fake"),
 ]
