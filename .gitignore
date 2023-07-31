@@ -1,5 +1,5 @@
-*.idea/
+.idea/
 /info.txt
 *.DS_Store
-__pycahe__/
+__pycache__/
 venv/
