@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Ты не туда попал
+{% endblock %}
+
+{% block content %}
+
+<p></p>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col align-self-start">
+        <a href="https://go-friend-go.narod.ru">
+          <button type="button" class="btn btn-outline-primary">ТЫКАЙ СЮДА</button>
+        </a>
+    </div>
+    <div class="col align-self-center">
+        <a href="https://nahnah.ru">
+          <button type="button" class="btn btn-outline-primary">НЕТ СЮДА !</button>
+        </a>
+    </div>
+    <div class="col align-self-end">
+        <a href="http://idi-nahuy.ru">
+          <button type="button" class="btn btn-outline-primary">ИЛИ СЮДА ;)</button>
+        </a>
+    </div>
+  </div>
+</div>
+
+<p></p>
+
+<div class="container text-center">
+  <div class="row">
+    <div class="col align-self-center">
+      <a class="nav-link " aria-current="page" href="{% url 'main-page' %}">
+        <button type="button" class="btn btn-outline-primary">А МОЖЕШЬ ВЕРНУТЬСЯ :(</button>
+      </a>
+    </div>
+  </div>
+</div>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+
+{% endblock %}

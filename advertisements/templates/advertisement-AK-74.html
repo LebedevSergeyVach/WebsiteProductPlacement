@@ -2,12 +2,12 @@
 {% load static %}
 
 {% block title %}
-Объявление продажи
+Объявление продажи АК-74
 {% endblock %}
 
 {% block content %}
 
-<ul class="nav nav-pills sticky-top bg-white nav-fill">
+<ul class="nav nav-pills sticky-top bg-white nav-fill" xmlns="http://www.w3.org/1999/html">
 
   <li class="nav-item">
     <a class="nav-link active" aria-current="page" href="{% url 'main-page' %}">
@@ -46,42 +46,41 @@
   </li>
 </ul>
 
-<div class="container" style="margin: 50px;">
-  <div class="display-2">
-    <span class="badge bg-primary">Объявление пользователя "username"</span>
+  <div class="container" style="margin: 50px;">
+    <div class="display-2">
+      <span class="badge bg-primary">Объявление пользователя "Дедушка Сталин"</span>
+    </div>
   </div>
-</div>
-<div class="col offset-2">
-  <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
-    <div class="row g-0">
-      <div class="col-md-4">
-        <a href="#" class="nav-link">
-          <img src="../static/img/adv.png" class="img-fluid rounded-start" alt="Card title">
-        </a>
-      </div>
-      <div class="col">
-        <div class="card-body">
-          <h5 class="card-title">
-            <a href="#" class="nav-link"><strong>Продам гараж</strong></a>
-          </h5>
-          <p class="card-text">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit eum aut commodi dolores
-            praesentium fugiat! Maxime perspiciatis iste, voluptas tenetur voluptatem at beatae, aliquid
-            libero odit ab accusamus tempore assumenda.
-            Hic asperiores pariatur recusandae sapiente doloremque illo laudantium placeat sed fugit!
-            Dolorem nulla quaerat doloremque odit impedit unde esse dolorum tenetur quos error! Iure
-            quas, illo expedita sed suscipit ullam.
-            Illo quam odio, quas laborum natus error doloremque totam maiores dolorum fugit aliquam, sit
-            numquam impedit praesentium facilis amet perspiciatis facere rem magnam consectetur, nobis
-            est. Qui quod fuga illum.
-          </p>
-          <span>Автор: "username"</span>
-          <p class="card-text"><small class="text-muted">Размещено: "дата"</small></p>
+  <div class="col offset-2">
+    <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <a href="#" class="nav-link">
+             <img src="{% static 'img/AK-74.jpg' %}" class="img-fluid rounded-start" alt="Card title">
+          </a>
+        </div>
+        <div class="col">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="#" class="nav-link"><strong>Продаю АК-74 1974 год</strong></a>
+            </h5>
+            <p class="card-text">
+                <h6>
+                Автомат Калашникова 74 1974 года, отличное состояние!
+                </h6>
+                5,45-мм автомат Калашникова АК-74. Калибр – 5,45мм (патрон 5,45х39). Дальность прицельная – 1000м.
+                Дальность прямого выстрела: по грудной фигуре – 440м по бегущей фигуре – 625м.
+                Начальная скорость пули – 900м/с Темп стрельбы – 600В/мин. Боевая скорострельность:
+                одиночным огнем – 40 в/мин очередями – 100в/мин. Дальность полета пули: при которой сохраняется
+                убойное действие– 1350м предельная дальность – 3150м Вес автомата – 3,6кг
+            </p>
+              <span>Автор: Дедушка Сталин</span>
+              <p class="card-text"><small class="text-muted">Размещено: 31.07.2023</small></p>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 
 <footer style="padding: 100px;" class="bg-primary">
   <nav class="navbar navbar-expand-sm navbar-dark">

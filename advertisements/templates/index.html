@@ -56,7 +56,7 @@
       <img src="{% static 'img/adv.png' %}" class="mx-auto d-block w-33" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="{% static 'img/adv.png' %}" class="mx-auto d-block w-33" alt="...">
+      <img src="{% static 'img/AK-74.jpg' %}" width="750" height="512" class="mx-auto d-block w-33" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -109,7 +109,7 @@
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="{% url 'advertisement' %}" class="nav-link"><strong>Продаю балкон</strong></a>
+              <a href="{% url 'advertisement' %}" class="nav-link"><strong>Продаю Балкон</strong></a>
             </h5>
             <a href="{% url 'advertisement' %}" class="nav-link">
               <p class="card-text">
@@ -156,25 +156,28 @@
     <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
       <div class="row g-0">
         <div class="col-md-4">
-          <a href="{% url 'advertisement' %}" class="nav-link">
-            <img src="{% static 'img/adv.png' %}" class="img-fluid rounded-start" alt="Card title">
+          <a href="{% url 'advertisement-AK-74' %}" class="nav-link">
+            <img src="{% static 'img/AK-74.jpg' %}" class="img-fluid rounded-start" alt="Card title">
           </a>
         </div>
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="{% url 'advertisement' %}" class="nav-link"><strong>Куплю баню</strong></a>
+              <a href="{% url 'advertisement-AK-74' %}" class="nav-link"><strong>Продаю АК-74 1974 год</strong></a>
             </h5>
-            <a href="{% url 'advertisement' %}" class="nav-link">
+            <a href="{% url 'advertisement-AK-74' %}" class="nav-link">
               <p class="card-text">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quas, nulla eos neque dolorum quis aliquid
-                deleniti molestias, nobis debitis expedita, fugiat ea. Delectus harum quo dolores modi cupiditate in
-                tempore. Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas quis similique quas
-                architecto doloremque culpa consequatur excepturi provident quo fugit repudiandae inventore quae ea
-                sequi, recusandae aliquid veritatis rerum quibusdam?
+                <h6>
+                Автомат Калашникова 74 1974 года, отличное состояние!
+                </h6>
+                5,45-мм автомат Калашникова АК-74. Калибр – 5,45мм (патрон 5,45х39). Дальность прицельная – 1000м.
+                Дальность прямого выстрела: по грудной фигуре – 440м по бегущей фигуре – 625м.
+                Начальная скорость пули – 900м/с Темп стрельбы – 600В/мин. Боевая скорострельность:
+                одиночным огнем – 40 в/мин очередями – 100в/мин. Дальность полета пули: при которой сохраняется
+                убойное действие– 1350м предельная дальность – 3150м Вес автомата – 3,6кг
               </p>
-              <span>Автор: Никнейм автора объявления</span>
-              <p class="card-text"><small class="text-muted">Размещено: здесь должна стоять дата</small></p>
+              <span>Автор: Дедушка Сталин</span>
+              <p class="card-text"><small class="text-muted">Размещено: 31.07.2023</small></p>
             </a>
           </div>
         </div>
@@ -200,11 +203,12 @@
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">хотите</a>
+            aria-expanded="false">Ссылки</a>
           <div class="dropdown-menu" aria-labelledby="dropdownId">
             <a class="dropdown-item" href="https://t.me/PIIZDEEC">Telegram</a>
             <a class="dropdown-item" href="https://github.com/LebedevSergeyV">GitHub</a>
             <a class="dropdown-item" href="https://github.com/LebedevSergeyV/Django">Repositories</a>
+            <a class="dropdown-item" href="{% url 'fake' %}">Fake</a>
           </div>
         </li>
       </ul>
