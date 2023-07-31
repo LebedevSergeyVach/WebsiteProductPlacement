@@ -8,6 +8,7 @@ class AdvertisementAdmin(admin.ModelAdmin):
     list_display = ['id', 'title', 'description', 'price', 'auctions', 'created_date', 'updated_at']
     list_filter = ['auctions', 'created_at', 'updated_at']
     actions =['make_auctions_as_false', 'make_auctions_as_true']
+
     fieldsets = (
         ('Общая информация', {
             'fields': ('title', 'description')
