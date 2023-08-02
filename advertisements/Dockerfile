@@ -1,4 +1,4 @@
-FROM python:3.10.10-alpine3.17 as python-base
+FROM python:3.11-alpine3.17 as python-base
 
 ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
@@ -31,4 +31,4 @@ RUN poetry install --no-interaction --no-cache --with dev
 
 COPY ./ ./
 
-CMD [ "python", "manage.py", "runserver", "0.0.0.0:86" ]
+CMD [ "poetry", "run", "python", "manage.py", "runserver", "0.0.0.0:86" ]
