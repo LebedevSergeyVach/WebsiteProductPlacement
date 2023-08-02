@@ -64,7 +64,7 @@ def get_int_env(env_name: str, default: int | None = None) -> str | NoReturn:
 @dataclass(slots=True, frozen=True)
 class Config:
     """Config class."""
-    DEBUG: bool = get_bool_env('DEBUG', False)
+    DEBUG: bool = get_bool_env('DEBUG', True)  # True - на своем компе False - на серваке Сани
     SECRET_KEY: bool = get_str_env('SECRET_KEY')
 
 
