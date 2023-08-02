@@ -4,9 +4,9 @@ Description=Docker project for garage.xiver.ru
 
 [Service]
 Type=simple
-ExecStart= /opt/sergey/Django/scripts/start.sh
-ExecStop= /opt/sergey/Django/scripts/stop.sh
-WorkingDirectory= /opt/sergey/Django
+ExecStart=sh /opt/sergey/Django/scripts/start.sh
+ExecStop=sh /opt/sergey/Django/scripts/stop.sh
+WorkingDirectory=/opt/sergey/Django
 Restart=always
 RestartSec=3
 
