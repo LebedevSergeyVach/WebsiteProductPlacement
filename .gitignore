@@ -5,3 +5,5 @@ __pycache__/
 venv/
 staticfiles/
 .env
+advertisements/advertisements/secret_setting.py
+/secret_setting.py

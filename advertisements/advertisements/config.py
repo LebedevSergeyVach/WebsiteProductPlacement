@@ -65,7 +65,9 @@ def get_int_env(env_name: str, default: int | None = None) -> str | NoReturn:
 class Config:
     """Config class."""
     DEBUG: bool = get_bool_env('DEBUG', True)  # True - на своем компе False - на серваке Сани
-    SECRET_KEY: bool = get_str_env('SECRET_KEY')
+    # SECRET_KEY: bool = get_str_env('SECRET_KEY')
+
+    # комминить когда на своем компае, и раскомминить когда на серваке сани
 
 
 config = Config()
