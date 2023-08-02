@@ -1,12 +1,16 @@
 [tool.poetry]
-name = "django"
+name = "test_django"
 version = "0.1.0"
 description = ""
-authors = ["Sergey Lebedev <ob430y@yandex.ru>"]
+authors = [
+    "Sergey Lebedev <ob430y@yandex.ru>",
+    "GigantPro <gigantpro2000@gmail.com>"
+]
 readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
+django = "^4.2.4"
 
 
 [build-system]
