@@ -1,0 +1,14 @@
+version: '3'
+
+services:
+  frontend:
+    hostname: frontend
+    env_file:
+      - ./.env
+    build:
+      context: ./advertisements
+      dockerfile: Dockerfile
+    ports:
+      - 86:86
+    volumes:
+      - ./advertisements:/app
