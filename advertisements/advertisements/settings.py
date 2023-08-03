@@ -144,7 +144,7 @@ STATICFILES_DIRS = [
 STATIC_ROOT = 'staticfiles/'
 
 STATICFILES_DIRS_ROOT = [
-    Path.joinpath(BASE_DIR,'staticfiles')
+    Path.joinpath(BASE_DIR, 'staticfiles')
 ]
 
 # Default primary key field type
