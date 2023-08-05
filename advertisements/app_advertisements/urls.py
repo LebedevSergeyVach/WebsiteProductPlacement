@@ -14,6 +14,7 @@ urlpatterns = [
 
     path("advertisement-AK-74", WebViews.advertisement_ak_74, name="advertisement-AK-74"),
     path("advertisement-laptop", WebViews.advertisement_laptop, name="advertisement-laptop"),
+    path("advertisement-rtx", WebViews.advertisement_rtx, name="advertisement-rtx"),
 
     path("login", WebViews.login, name="login"),
     path("profile", WebViews.profile, name="profile"),

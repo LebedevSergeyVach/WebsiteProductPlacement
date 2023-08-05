@@ -49,16 +49,13 @@
 <div id="carouselExampleControls" class="carousel slide bg-primary" data-bs-ride="carousel">
   <div class="carousel-inner">
     <div class="carousel-item active">
-      <img src="{% static 'img/nain.png' %}" width="" height="600" class="mx-auto d-block w-33" alt="...">
+      <img src="{% static 'img/RTX-4090.jpg' %}" width="" height="600" class="mx-auto d-block w-33" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="{% static 'img/asus1.png' %}" width="" height="600" class="mx-auto d-block w-33" alt="...">
+      <img src="{% static 'img/asus1.png' %}" width="..." height="600" class="mx-auto d-block w-33" alt="...">
     </div>
     <div class="carousel-item">
-      <img src="{% static 'img/asus2.png' %}" width="..." height="600" class="mx-auto d-block w-33" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="{% static 'img/AK-74.jpg' %}" width="..." height="600" class="mx-auto d-block w-33" alt="...">
+      <img src="{% static 'img/AK-74-1.jpg' %}" width="..." height="600" class="mx-auto d-block w-33" alt="...">
     </div>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -101,6 +98,7 @@
       </div>
     </form>
   </div>
+
   <div class="col">
     <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
       <div class="row g-0">
@@ -129,6 +127,44 @@
         </div>
       </div>
     </div>
+
+    <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <a href="{% url 'advertisement-rtx' %}" class="nav-link">
+            <img src="{% static 'img/RTX-4090.jpg' %}" class="img-fluid rounded-start" alt="Card title">
+          </a>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+          <h5 class="card-title">
+            <a href="{% url 'advertisement-rtx' %}" class="nav-link"><strong>Видеокарта RTX 4090 ASUS ROG STRIX</strong></a>
+          </h5>
+            <a href="{% url 'advertisement-rtx' %}" class="nav-link">
+            <h6>
+              Видеокарта RTX-4090 Asus rog strix
+            </h6>
+            <h6>
+              ПЕЧКА НАХУЙ КИЛОВАТНАЯ
+            </h6>
+            Графические процессоры ASUS GeForce RTX 4090 ROG Strix OC Edition обеспечивают невероятную
+            скорость для игр и творчества. Они созданы на основе сверхэффективной архитектуры NVIDIA Ada
+            Lovelace, которая обеспечивает качественный скачок как в производительности, так и в графических
+            возможностях на базе ИИ. Погрузитесь в виртуальные миры с трассировкой лучей и сверхвысоким FPS с
+            минимальной задержкой. Используйте возможности для творчества с беспрецедентным ускорением рабочего
+            процесса.
+          </p>
+          <h6 class="card-title">
+            <a href="https://sun1-19.userapi.com/c543108/v543108091/57267/ZnbYJNkJi1Y.jpg" class="nav-link"><strong>Контактные данные</strong></a>
+          </h6>
+          <span>Автор: "Сын Миллионера"</span>
+          <p class="card-text"><small class="text-muted">Размещено: "05.08.2023"</small></p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
       <div class="row g-0">
         <div class="col-md-4">
@@ -153,6 +189,9 @@
             приложений и не допускает промедлений в процессе навигации между окнами. Дискретная видеокарта
             GeForce RTX 3070 Ti несет ответственность за высокое качество графики.
           </p>
+          <h6 class="card-title">
+            <a href="https://t.me/PIIZDEEC" class="nav-link"><strong>Контактные данные</strong></a>
+          </h6>
           <span>Автор: "Школьник Майнер"</span>
           <p class="card-text"><small class="text-muted">Размещено: "02.08.2023"</small></p>
             </a>
@@ -160,6 +199,7 @@
         </div>
       </div>
     </div>
+
     <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
       <div class="row g-0">
         <div class="col-md-4">
@@ -183,6 +223,9 @@
                 одиночным огнем – 40 в/мин очередями – 100в/мин. Дальность полета пули: при которой сохраняется
                 убойное действие– 1350м предельная дальность – 3150м Вес автомата – 3,6кг
               </p>
+              <h6 class="card-title">
+                <a href="https://nsk.zoon.ru/medical/type/psihiatricheskaya_bolnitsa/" class="nav-link"><strong>Контактные данные</strong></a>
+              </h6>
               <span>Автор: Дедушка Сталин</span>
               <p class="card-text"><small class="text-muted">Размещено: 31.07.2023</small></p>
             </a>
@@ -226,6 +269,7 @@
     </div>
   </nav>
 </footer>
+
 
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 

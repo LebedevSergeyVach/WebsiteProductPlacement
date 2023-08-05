@@ -33,5 +33,8 @@ class WebViews(object):
     def advertisement_laptop(request):
         return render(request, "advertisement-laptop.html")
 
+    def advertisement_rtx(request):
+        return render(request, "advertisement-rtx.html")
+
     def fake(request):
         return render(request, "fake.html")
