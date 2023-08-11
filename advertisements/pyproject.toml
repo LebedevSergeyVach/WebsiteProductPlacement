@@ -11,6 +11,7 @@ readme = "README.md"
 [tool.poetry.dependencies]
 python = "^3.11"
 django = "^4.2.4"
+django-test = "^0.4030"
 
 
 [build-system]

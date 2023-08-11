@@ -13,7 +13,7 @@ class WebViews(object):
         return render(request, "top-sellers.html")
 
     def advertisement(request):
-        return render(request, "advertisement.html")
+        return render(request, "% url 'advertisement' %")
 
     def login(request):
         return render(request, "login.html")

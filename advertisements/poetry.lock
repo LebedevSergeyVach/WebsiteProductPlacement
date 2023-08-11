@@ -35,6 +35,16 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
+name = "django-test"
+version = "0.4030"
+description = "UNKNOWN"
+optional = false
+python-versions = "*"
+files = [
+    {file = "django-test-0.4030.tar.gz", hash = "sha256:68e91cb474da99b2c08e53959bc9df27e471a944e03102b9a145214f7e492a4f"},
+]
+
+[[package]]
 name = "sqlparse"
 version = "0.4.4"
 description = "A non-validating SQL parser."
@@ -64,4 +74,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "9509010d61036cd1060bed28e35eb49653084e0b30f15d2eb13bc7699ec20a6a"
+content-hash = "ca9a0bb5aab97fb6b5744b58319da8791247e555b219b934f2b50893e1bccd72"
