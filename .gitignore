@@ -6,3 +6,4 @@ venv/
 .env
 advertisements/advertisements/secret_setting.py
 /secret_setting.py
+advertisements/parser.py
