@@ -8,7 +8,7 @@ ENV POETRY_VENV=/opt/poetry-venv
 ENV POETRY_CACHE_DIR=/opt/.cache
 
 # Add Poetry to PATH
-ENV PATH="${PATH}:${POETRY_VENV}/bin"
+ENV PATH="/opt/poetry/bin:$PATH"
 
 RUN apk update && \
     apk upgrade && \
