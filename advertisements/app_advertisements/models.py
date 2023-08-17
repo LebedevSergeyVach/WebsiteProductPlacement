@@ -10,7 +10,22 @@ from django.contrib.auth import get_user_model
 # Create your models here.
 
 
+User = get_user_model()
+
+
 class Advertisement(models.Model):
+
+    user = models.ForeignKey(
+        to=User,
+        on_delete=models.CASCADE,
+        verbose_name="Пользователь"
+    )
+
+    image = models.ImageField(
+        verbose_name="Изображение",
+        upload_to="advertisements/"
+    )
+
     title = models.CharField(
         verbose_name="Заголовок",
         help_text="Сюда пишем заголовок товара",
