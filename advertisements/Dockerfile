@@ -11,7 +11,8 @@ ENV POETRY_CACHE_DIR=/opt/.cache
 ENV PATH="${PATH}:${POETRY_VENV}/bin"
 
 RUN apk update && \
-    apk upgrade
+    apk upgrade && \
+    apk --no-cache add curl
 
 COPY ./ ./
 
