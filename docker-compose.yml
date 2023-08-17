@@ -9,6 +9,8 @@ services:
       context: ./advertisements
       dockerfile: Dockerfile
     ports:
-      - 86:86
+      - '80:80'
     volumes:
       - ./advertisements:/app
+
+    restart: always
