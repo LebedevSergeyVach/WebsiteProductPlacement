@@ -36,9 +36,10 @@ DEBUG = config.DEBUG
 
 # комминить когда на своем компае, и раскомминить когда на серваке сани
 
-# ALLOWED_HOSTS = [
-#     'garage.xiver.ru'
-# ]
+ALLOWED_HOSTS = [
+    # 'garage.xiver.ru',
+    '192.168.1.102',
+]
 
 
 # Application definition

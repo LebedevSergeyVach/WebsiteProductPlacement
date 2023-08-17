@@ -6,11 +6,11 @@ services:
     env_file:
       - ./.env
     build:
-      context: ./advertisements
+    #  context: ./advertisements
       dockerfile: Dockerfile
     ports:
       - '80:80'
-    volumes:
-      - ./advertisements:/app
+    #volumes:
+    #  - ./advertisements:/app
 
     restart: always
