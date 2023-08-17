@@ -6,6 +6,9 @@
 # 	COMPOSE_FILE = "./docker-compose.yml"
 # endif
 
+run:
+	su -c 'sudo docker compose -f "./docker-compose.yml" up'
+
 COMPOSE_FILE = "./docker-compose.yml"
 
 init: docker-down docker-pull docker-build docker-up
