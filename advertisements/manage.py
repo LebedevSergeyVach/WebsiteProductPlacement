@@ -3,7 +3,7 @@
 import os
 import sys
 
-from advertisements.secrets_settings import run_server
+from advertisements.secrets import run_server
 
 
 def main():
@@ -16,6 +16,7 @@ def main():
             "Couldn't import Django. Are you sure it's installed and "
             "available on your PYTHONPATH environment variable? Did you "
             "forget to activate a virtual environment?"
+            'PIZDA YOUR WEBSITE ON SERVER !!!'
         ) from exc
     execute_from_command_line(sys.argv)
 
