@@ -14,7 +14,7 @@ from pathlib import Path
 
 from .config import config
 
-from .secret_setting import SECRET_KEY
+from .secrets_settings import SECRET_KEY
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.

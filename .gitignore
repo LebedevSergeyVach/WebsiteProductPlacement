@@ -4,8 +4,8 @@
 __pycache__/
 venv/
 .env
-advertisements/advertisements/secret_setting.py
-/secret_setting.py
+advertisements/advertisements/secrets_settings.py
+/secrets_settings.py
 advertisements/parser.py
 advertisements/templates/times.html
-advertisements/secret_setting.py
+advertisements/secrets_settings.py

@@ -3,7 +3,7 @@
 import os
 import sys
 
-from advertisements.secret_setting import run_server
+from advertisements.secrets_settings import run_server
 
 
 def main():
