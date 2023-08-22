@@ -9,7 +9,7 @@ services:
     #  context: ./advertisements
       dockerfile: Dockerfile
     ports:
-      - '80:80'
+      - '86:86'
     #volumes:
     #  - ./advertisements:/app
 
