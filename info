@@ -1,2 +1,0 @@
-смена пароля пользователя
-python manage.py changepassword user_name
