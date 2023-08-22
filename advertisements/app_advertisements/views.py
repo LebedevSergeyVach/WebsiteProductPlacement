@@ -11,7 +11,7 @@ class WebViews(object):
     def index(request):
         advertisements = Advertisement.objects.all()
         context = {
-            "advertisements": advertisements
+            'advertisements': advertisements
         }
 
         return render(request, "index.html", context=context)
