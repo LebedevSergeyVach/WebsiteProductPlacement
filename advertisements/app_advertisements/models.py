@@ -72,8 +72,31 @@ class Advertisement(models.Model):
             )
         return self.updated_at.strftime("%d.%m.%Y в %H:%M:%S")
 
+    @admin.display(description="Аукцион")
+    def auction(self):
+        if self.auction:
+            return format_html(
+                '<span style="color: blue; font-weight: bold;">🍏</>'
+            )
+        else:
+            return format_html(
+                '<span style="color: red; font-weight: bold;">🍎</span>'
+            )
+
+    @admin.display(description="Изображения")
+    def show_image(self):
+        if self.image:
+            return format_html(
+                '<img src={} style="width: 50px; height: 50px">', self.image.url
+            )
+        else:
+            return format_html(
+                '<img src="https://dark-network.net/wp-content/uploads/2021/09/404-not-found-01.jpg"'
+                'style="width: 50px; height: 50px">'
+            )
+
     def __str__(self):
-        return f'id = {self.id} title = {self.title} description = {self.description} price = {self.price}'
+        return f'id = {self.id} title = {self.title} description = {self.description} price = {self.price} image = {self.image_url}'
 
     class Meta:
         db_table = "advertisement"
