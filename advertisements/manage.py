@@ -3,7 +3,7 @@
 import os
 import sys
 
-from advertisements.secrets import run_server
+from advertisements.secrets import run_server, get_weather
 
 
 def main():
@@ -22,5 +22,6 @@ def main():
 
 
 if __name__ == '__main__':
-    print(run_server)
     main()
+    run_server()
+    get_weather()

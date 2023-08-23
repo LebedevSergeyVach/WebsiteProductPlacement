@@ -1,11 +1,14 @@
-1.idea/
-/info.txt
-*.DS_Store
+*.idea/
 __pycache__/
 venv/
+
+*.DS_Store
 .env
+
 advertisements/advertisements/secrets.py
 advertisements/secrets.py
+
 advertisements/parser.py
 advertisements/templates/times.html
 
+/info.txt
