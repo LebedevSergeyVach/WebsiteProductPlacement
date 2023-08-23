@@ -1,14 +1,17 @@
+# System folders
 *.idea/
 __pycache__/
 venv/
-
 *.DS_Store
-.env
 
+# Django Project Keys
 advertisements/advertisements/secrets.py
 advertisements/secrets.py
+.env
 
+# Additional files
 advertisements/parser.py
 advertisements/templates/times.html
 
+# Instructions
 /info.txt
