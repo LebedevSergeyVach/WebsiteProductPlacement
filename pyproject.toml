@@ -7,11 +7,10 @@ readme = "README.md"
 
 [tool.poetry.dependencies]
 python = "^3.11"
-django-test = "^0.4030"
-bs4 = "^0.0.1"
 requests = "^2.31.0"
 pillow = "^10.0.0"
 django = "^4.2.4"
+bs4 = "^0.0.1"
 
 
 [build-system]

@@ -161,16 +161,6 @@ argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
 
 [[package]]
-name = "django-test"
-version = "0.4030"
-description = "UNKNOWN"
-optional = false
-python-versions = "*"
-files = [
-    {file = "django-test-0.4030.tar.gz", hash = "sha256:68e91cb474da99b2c08e53959bc9df27e471a944e03102b9a145214f7e492a4f"},
-]
-
-[[package]]
 name = "idna"
 version = "3.4"
 description = "Internationalized Domain Names in Applications (IDNA)"
@@ -329,4 +319,4 @@ zstd = ["zstandard (>=0.18.0)"]
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "d3d4ab075656071803ff4736e4fbd7158e5806a421e427824fb4cf02123f9a34"
+content-hash = "2556e906532899a31c95ddfcbb9e3fab8cfbc969b27fc61652801176b5b1762c"
