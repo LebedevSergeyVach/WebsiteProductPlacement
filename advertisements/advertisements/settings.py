@@ -28,15 +28,11 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = config.SECRET_KEY
-SECRET_KEY = os.environ.get('SECRET_KEY', SECRET_KEY)
-
-# 1 когда у Сани на серваке, 2 когда на своем компе
-
+SECRET_KEY = os.environ.get(SECRET_KEY, SECRET_KEY)
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config.DEBUG
 
-# комминить когда на своем компае, и раскомминить когда на серваке сани
 
 ALLOWED_HOSTS = [
     'garage.xiver.ru',
