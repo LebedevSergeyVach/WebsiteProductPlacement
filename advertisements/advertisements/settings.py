@@ -10,6 +10,8 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
+import os
+
 from pathlib import Path
 
 from .config import config
@@ -26,7 +28,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = config.SECRET_KEY
-SECRET_KEY = SECRET_KEY
+SECRET_KEY = os.environ.get('SECRET_KEY', SECRET_KEY)
 
 # 1 когда у Сани на серваке, 2 когда на своем компе
 

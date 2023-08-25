@@ -6,13 +6,15 @@ from .models import Advertisement
 
 class AdvertisementAdmin(admin.ModelAdmin):
     list_display = [
-        'id', 'user', 'title', 'description', 'price', 'created_date', 'updated_date', 'auction', 'show_image'
+        'id', 'show_user', 'title', 'description', 'price', 'created_date', 'updated_date', 'show_auction', 'show_image'
     ]
+
     list_filter = [
-        'auctions', 'created_at', 'updated_at'
+        'auction', 'created_at', 'updated_at'
     ]
-    actions =[
-        'make_auctions_as_false', 'make_auctions_as_true'
+
+    auction = [
+        'make_auction_as_false', 'make_auctios_as_true'
     ]
 
     fieldsets = (
@@ -21,18 +23,18 @@ class AdvertisementAdmin(admin.ModelAdmin):
         }),
 
         ('Цены', {
-            'fields': ('price', 'auctions'),
+            'fields': ('price', 'auction'),
             'classes': ['collapse']
         })
     )
 
     @admin.action(description='Убрать возможность торга')
-    def make_auctions_as_false(self, request, queryset):
-        queryset.update(auctions=False)
+    def make_auction_as_false(self, request, queryset):
+        queryset.update(auction=False)
 
     @admin.action(description='Добавить возможность торга')
-    def make_auctions_as_true(self, request, queryset):
-        queryset.update(auctions=True)
+    def make_auction_as_true(self, request, queryset):
+        queryset.update(auction=True)
 
 
 admin.site.register(Advertisement, AdvertisementAdmin)

@@ -16,7 +16,7 @@ User = get_user_model()
 class Advertisement(models.Model):
 
     user = models.ForeignKey(
-        to=User,
+        User,
         on_delete=models.CASCADE,
         verbose_name="Пользователь"
     )
@@ -45,7 +45,7 @@ class Advertisement(models.Model):
         decimal_places=2,
     )
 
-    auctions = models.BooleanField(
+    auction = models.BooleanField(
         verbose_name="Аукцион",
         help_text="Сюда пишем аукцион товара",
         default=False,
@@ -73,10 +73,10 @@ class Advertisement(models.Model):
         return self.updated_at.strftime("%d.%m.%Y в %H:%M:%S")
 
     @admin.display(description="Аукцион")
-    def auction(self):
+    def show_auction(self):
         if self.auction:
             return format_html(
-                '<span style="color: blue; font-weight: bold;">🍏</>'
+                '<span style="color: blue; font-weight: bold;">🍏</span>'
             )
         else:
             return format_html(
@@ -87,16 +87,25 @@ class Advertisement(models.Model):
     def show_image(self):
         if self.image:
             return format_html(
-                '<img src={} style="width: 50px; height: 50px">', self.image.url
+                '<img src={} style="width: 70px; height: 50px">', self.image.url
             )
         else:
             return format_html(
                 '<img src="https://dark-network.net/wp-content/uploads/2021/09/404-not-found-01.jpg"'
-                'style="width: 50px; height: 50px">'
+                'style="width: 70px; height: 50px">'
             )
 
+    @admin.display(description="Пользователь")
+    def show_user(self):
+        if self.user is 'admin':
+            return format_html(
+                '<span style="color: red; font-weight: bold;">admin</span>'
+            )
+        else:
+            return self.user
+
     def __str__(self):
-        return f'id = {self.id} title = {self.title} description = {self.description} price = {self.price} image = {self.image_url}'
+        return f"id = {self.id} title = {self.title} price = {self.price}"
 
     class Meta:
         db_table = "advertisement"

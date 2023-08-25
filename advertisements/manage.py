@@ -3,8 +3,6 @@
 import os
 import sys
 
-from advertisements.secrets import run_server
-
 
 def main():
     """Run administrative tasks."""
@@ -23,4 +21,4 @@ def main():
 
 if __name__ == '__main__':
     main()
-    run_server()
+    print('* Website is now running normally')
