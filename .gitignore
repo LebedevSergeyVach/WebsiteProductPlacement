@@ -1,5 +1,7 @@
 # System folders
 *.idea/
+.idea/
+1.idea/
 __pycache__/
 */__pycache__
 venv/
