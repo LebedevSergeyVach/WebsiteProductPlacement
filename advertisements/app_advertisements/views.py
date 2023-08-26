@@ -1,4 +1,6 @@
 from django.shortcuts import render, redirect, reverse
+from django.contrib.auth.decorators import login_required
+from django.urls import reverse_lazy
 
 from .models import Advertisement
 from .forms import AdvertisementForm
@@ -32,6 +34,7 @@ class WebViews(object):
             request, "app_advertisement/advertisement.html"
         )
 
+    @login_required(login_url=reverse_lazy("login"))
     def advertisement_post(request):
         """Renders the advertisement post page."""
         if request.method == "POST":

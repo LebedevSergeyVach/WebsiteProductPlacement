@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
+from django.urls import reverse_lazy
 
 # Create your views here.
 
@@ -8,6 +9,7 @@ from django.contrib.auth.decorators import login_required
 class WebView(object):
     """View class for auth pages"""
 
+    @login_required(login_url=reverse_lazy('login'))
     def profile_view(request):
         """View function for profile page"""
         return render(request, 'app_auth/profile.html')
