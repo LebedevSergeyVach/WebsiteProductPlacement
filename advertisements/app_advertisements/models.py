@@ -29,27 +29,28 @@ class Advertisement(models.Model):
 
     title = models.CharField(
         verbose_name="Заголовок",
-        help_text="Сюда пишем заголовок товара",
         max_length=100,
     )
 
     description = models.TextField(
         verbose_name="Описание",
-        help_text="Сюда пишем описание товара",
         max_length=1000,
     )
 
     price = models.DecimalField(
         verbose_name="Цена",
-        help_text="Сюда пишем цену товара",
         max_digits=10,
         decimal_places=2,
     )
 
     auction = models.BooleanField(
         verbose_name="Аукцион",
-        help_text="Сюда пишем аукцион товара",
         default=False,
+    )
+
+    contact = models.TextField(
+        verbose_name="Контактная информация",
+        max_length=50
     )
 
     created_at = models.DateTimeField(auto_now_add=True)

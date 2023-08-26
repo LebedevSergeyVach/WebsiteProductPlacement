@@ -40,16 +40,23 @@
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link" href="{% url 'logout' %}">
       <span style="font-weight: bold;">Выйти</span>
     </a>
   </li>
-
 </ul>
 
-<div class="col" style="margin: 50px;">
-  <div class="display-2">
-    <span class="badge bg-primary">Сейчас вы находитесь на сайте под ником "username".</span>
+<div class="container">
+  <div class="row">
+    <div class="col" style="margin: 50px;">
+      <div class="display-4">
+        <span class="badge bg-primary">Ваш аккаунт: </span>
+        <span class="badge bg-primary">{{ user }}</span>
+          <p></p>
+        <span class="badge bg-primary">Ваши контактные данные: </span>
+        <span class="badge bg-primary">{{ contact }}</span>
+      </div>
+    </div>
   </div>
 </div>
 

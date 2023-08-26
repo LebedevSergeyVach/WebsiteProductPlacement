@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-Вход
+Вход в аккаунт
 {% endblock %}
 
 {% block content %}
@@ -40,44 +40,59 @@
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link" href="{% url 'logout' %}">
       <span style="font-weight: bold;">Выйти</span>
     </a>
   </li>
-
 </ul>
 
 <div class="container">
 <div class="row">
-  <div class="col-8" style="margin: 50px;">
-    <div class="display-2">
-      <span class="badge bg-primary">Страница авторизации пользователя</span>
-    </div>
+<div class="col-8" style="margin: 50px;">
+  <div class="display-2">
+    <span class="badge bg-primary">Страница авторизации пользователя</span>
   </div>
 </div>
-  <form method="post">{% csrf_token %}
-    <div class="row mb-3">
-      <div class="col">
-        <label class="col-sm-4 col-form-label offset-4">Username</label>
-        <div class="col-sm-4 offset-4 w-25">
-          <input id="username" name="username" type="text" class="form-control form-control-lg">
-        </div>
+{% if error %}
+  <div class="col-sm-4  offset-4 w-25">
+    <div class='form-label bg-warning' style="margin: 10px 0px">
+      {{ error }}
+    </div>
+  </div>
+{% endif %}
+</div>
+
+<form method="post">{% csrf_token %}
+  <div class="row mb-3">
+    <div class="col">
+      <label class="col-sm-4 col-form-label offset-4">Username</label>
+      <div class="col-sm-4 offset-4 w-25">
+        <input id="username" name="username" type="text" class="form-control form-control-lg">
       </div>
     </div>
-    <div class="row mb-3">
-      <div class="col">
-        <label class="col-sm-4 col-form-label offset-4">Password</label>
-        <div class="col-sm-4 offset-4 w-25">
-          <input type="password" class="form-control form-control-lg">
-        </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <label class="col-sm-4 col-form-label offset-4">Contact</label>
+      <div class="col-sm-4 offset-4 w-25">
+        <input name="contact" type="text" class="form-control form-control-lg">
       </div>
     </div>
-    <div class="row mb-3 offset-sm-5">
-      <div class="col">
-        <button type="submit" class="btn btn-success">Принять</button>
+  </div>
+  <div class="row mb-3">
+    <div class="col">
+      <label class="col-sm-4 col-form-label offset-4">Password</label>
+      <div class="col-sm-4 offset-4 w-25">
+        <input id="password" name="password" type="password" class="form-control form-control-lg">
       </div>
     </div>
-  </form>
+  </div>
+  <div class="row mb-3 offset-sm-5">
+    <div class="col">
+      <button type="submit" class="btn btn-success">Принять</button>
+    </div>
+  </div>
+</form>
 </div>
 
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>

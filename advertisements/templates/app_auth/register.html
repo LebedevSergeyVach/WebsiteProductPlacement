@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-Главная
+Регистрация
 {% endblock %}
 
 {% block content %}
@@ -40,70 +40,63 @@
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link" href="{% url 'logout' %}">
       <span style="font-weight: bold;">Выйти</span>
     </a>
   </li>
-
 </ul>
 
-<div class="container">
-<div class="row">
-  <div class="col" style="margin: 50px;">
-    <div class="display-2">
-      <span class="badge bg-primary">Страница регистрации пользователя</span>
-    </div>
-  </div>
-</div>
-  <form method="post">
-    <div class="row mb-3">
-      <div class="col">
-        <label class="col-sm-4 col-form-label offset-4">Username</label>
-        <div class="col-sm-4 offset-4 w-25">
-          <input type="text" class="form-control form-control-lg">
+<form method="post">{% csrf_token %}
+    <div class="container">
+    <div class="row">
+      <div class="col" style="margin: 50px;">
+        <div class="display-2">
+          <span class="badge bg-primary">Страница регистрации пользователя</span>
         </div>
       </div>
     </div>
-    <div class="row mb-3">
-      <div class="col">
-        <label class="col-sm-4 col-form-label offset-4">Name</label>
-        <div class="col-sm-4 offset-4 w-25">
-          <input type="text" class="form-control form-control-lg">
+      <form method="post">
+        <div class="row mb-3">
+          <div class="col">
+            <label class="col-sm-4 col-form-label offset-4">Username</label>
+            <div class="col-sm-4 offset-4 w-25">
+              <input id="username" name="username" type="text" class="form-control form-control-lg">
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="row mb-3">
-      <div class="col">
-        <label class="col-sm-4 col-form-label offset-4">Surname</label>
-        <div class="col-sm-4 offset-4 w-25">
-          <input type="text" class="form-control form-control-lg">
+        <div class="row mb-3">
+          <div class="col">
+            <label class="col-sm-4 col-form-label offset-4">Contact</label>
+            <div class="col-sm-4 offset-4 w-25">
+              <input id="contact" name="contact" type="text" class="form-control form-control-lg">
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="row mb-3">
-      <div class="col">
-        <label class="col-sm-4 col-form-label offset-4">Password</label>
-        <div class="col-sm-4 offset-4 w-25">
-          <input type="password" class="form-control form-control-lg">
+        <div class="row mb-3">
+          <div class="col">
+            <label class="col-sm-4 col-form-label offset-4">Password</label>
+            <div class="col-sm-4 offset-4 w-25">
+              <input id="password" name="password" type="password" class="form-control form-control-lg">
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
-    <div class="row mb-3">
-      <div class="col">
-        <label class="col-sm-4 col-form-label offset-4">Password confirmation</label>
-        <div class="col-sm-4 offset-4 w-25">
-          <input type="password" class="form-control form-control-lg">
-          <div class="form-label bg-warning" style="margin: 10px 0px;">Ошибка (если будет)</div>
+        <div class="row mb-3">
+          <div class="col">
+            <label class="col-sm-4 col-form-label offset-4">Password confirmation</label>
+            <div class="col-sm-4 offset-4 w-25">
+              <input type="password" class="form-control form-control-lg">
+              <div class="form-label bg-warning" style="margin: 10px 0px;">Ошибка (если будет)</div>
+            </div>
+          </div>
         </div>
-      </div>
+        <div class="row mb-3 offset-sm-5">
+          <div class="col">
+            <button type="submit" class="btn btn-success">Принять</button>
+          </div>
+        </div>
+      </form>
     </div>
-    <div class="row mb-3 offset-sm-5">
-      <div class="col">
-        <button type="submit" class="btn btn-success">Принять</button>
-      </div>
-    </div>
-  </form>
-</div>
+</form>
 
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 

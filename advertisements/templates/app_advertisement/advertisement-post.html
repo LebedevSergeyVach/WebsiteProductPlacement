@@ -40,7 +40,7 @@
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link" href="{% url 'logout' %}">
       <span style="font-weight: bold;">Выйти</span>
     </a>
   </li>
@@ -56,21 +56,18 @@
 
 
 <form method="post" enctype="multipart/form-data">
-  {% csrf_token %}
-  <div class="row mb-3 offset-sm-4">
-    <div class="col-6">
-      {{ form.as_p }}
+{% csrf_token %}
+    <div class="row mb-auto offset-sm-4">
+        <div class="col-6">
+            {{ form.as_p }}
+        </div>
     </div>
-
-<div class="row mb-3 offset-sm-5">
-  <div class="col">
-    <button type="submit" class="btn btn-success">Принять</button>
-  </div>
-</div>
-
-  </div>
+    <div class="row mb-auto offset-sm-4">
+        <div class="col">
+            <button type="submit" class="btn btn-success">Принять</button>
+        </div>
+    </div>
 </form>
-
 
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 

@@ -40,7 +40,7 @@
     </a>
   </li>
   <li class="nav-item">
-    <a class="nav-link" href="#">
+    <a class="nav-link" href="{% url 'logout' %}">
       <span style="font-weight: bold;">Выйти</span>
     </a>
   </li>
@@ -102,9 +102,7 @@
   </div>
 
   <div class="col">
-
-
-    <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
+    <div class="card mb-auto" style="max-width: 1200px; margin-top: 20px;">
       <div class="row g-0">
         <div class="col-md-4">
           <a href="{% url 'advertisement-rtx' %}" class="nav-link">
@@ -213,7 +211,7 @@
     </div>
 
   {%  for adv in advertisements %}
-    <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
+    <div class="card mb-auto" style="max-width: 1200px; margin-top: 20px;">
       <div class="row g-0">
         <div class="col-md-4">
           <a href="{% url 'advertisement' %}" class="nav-link">

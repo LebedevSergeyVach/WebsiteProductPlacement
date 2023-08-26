@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect, reverse
 from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -16,6 +17,7 @@ class WebView(object):
         redirect_url = reverse('profile')
 
         if request.method == 'GET':
+
             if request.user.is_authenticated:
                 return redirect(redirect_url)
 
@@ -23,9 +25,12 @@ class WebView(object):
                 return render(request, 'app_auth/login.html')
 
         username = request.POST['username']
+        contact = request.POST['contact']
         password = request.POST['password']
 
-        user = authenticate(username=username, password=password)
+        user = authenticate(
+            username=username, contact=contact, password=password
+        )
 
         if user is not None:
             login(request, user)
@@ -38,8 +43,9 @@ class WebView(object):
     def logout_view(request):
         """View function for logout page"""
         logout(request)
+
         return redirect(reverse('login'))
-      
+
     def register_view(request):
         """View function for registration page"""
         return render(request, 'app_auth/register.html')
