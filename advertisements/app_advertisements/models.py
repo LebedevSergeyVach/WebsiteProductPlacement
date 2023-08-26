@@ -61,20 +61,24 @@ class Advertisement(models.Model):
         """Show the date of the creation"""
         if self.created_at.date() == timezone.now().date():
             created_time = self.created_at.time().strftime("%H:%M:%S")
+
             return format_html(
                 '<span style="color: blue; font-weight: bold;">Сегодня в {}</span>', created_time
             )
+
         return self.created_at.strftime("%d.%m.%Y в %H:%M:%S")
 
     @admin.display(description="Дата изменения")
     def updated_date(self):
         """Show the date of the update"""
         if self.updated_at.date() == timezone.now().date():
-            created_time = self.updated_at.time().strftime("%H:%M:%S")
+            created_time = self.updated_at.time().strftime(f"'%H':%M:%S")
+
             return format_html(
                 '<span style="color: green; font-weight: bold">Сегодня в {}</span>', created_time
             )
-        return self.updated_at.strftime("%d.%m.%Y в %H:%M:%S")
+
+        return self.updated_at.strftime(f"%d.%m.%Y в %H:%M:%S", self.updated_at)
 
     @admin.display(description="Аукцион")
     def show_auction(self):
