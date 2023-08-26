@@ -95,14 +95,6 @@ class Advertisement(models.Model):
                 'style="width: 70px; height: 50px">'
             )
 
-    @admin.display(description="Пользователь")
-    def show_user(self):
-        if self.user is 'admin':
-            return format_html(
-                '<span style="color: red; font-weight: bold;">admin</span>'
-            )
-        else:
-            return self.user
 
     def __str__(self):
         return f"id = {self.id} title = {self.title} price = {self.price}"

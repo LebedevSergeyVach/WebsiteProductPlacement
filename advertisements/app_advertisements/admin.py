@@ -6,7 +6,7 @@ from .models import Advertisement
 
 class AdvertisementAdmin(admin.ModelAdmin):
     list_display = [
-        'id', 'show_user', 'title', 'description', 'price', 'created_date', 'updated_date', 'show_auction', 'show_image'
+        'id', 'user', 'title', 'description', 'price', 'created_date', 'updated_date', 'show_auction', 'show_image'
     ]
 
     list_filter = [
