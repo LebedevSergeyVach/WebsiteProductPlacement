@@ -55,12 +55,12 @@
     </div>
   </div>
 </div>
-  <form method="post">
+  <form method="post">{% csrf_token %}
     <div class="row mb-3">
       <div class="col">
         <label class="col-sm-4 col-form-label offset-4">Username</label>
         <div class="col-sm-4 offset-4 w-25">
-          <input type="text" class="form-control form-control-lg">
+          <input id="username" name="username" type="text" class="form-control form-control-lg">
         </div>
       </div>
     </div>

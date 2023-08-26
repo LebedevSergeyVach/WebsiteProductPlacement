@@ -5,6 +5,7 @@ from .models import Advertisement
 # Register your models here.
 
 class AdvertisementAdmin(admin.ModelAdmin):
+    """Advertisement Admin"""
     list_display = [
         'id', 'user', 'title', 'description', 'price', 'created_date', 'updated_date', 'show_auction', 'show_image'
     ]
@@ -13,13 +14,13 @@ class AdvertisementAdmin(admin.ModelAdmin):
         'auction', 'created_at', 'updated_at'
     ]
 
-    auction = [
-        'make_auction_as_false', 'make_auctios_as_true'
+    actions = [
+        'make_auction_as_false', 'make_auction_as_true'
     ]
 
     fieldsets = (
         ('Общая информация', {
-            'fields': ('title', 'description', 'user', 'image'),
+            'fields': ('title', 'description', 'user', 'image')
         }),
 
         ('Цены', {
@@ -28,12 +29,14 @@ class AdvertisementAdmin(admin.ModelAdmin):
         })
     )
 
-    @admin.action(description='Убрать возможность торга')
+    @admin.action(description="Убрать возможность торга")
     def make_auction_as_false(self, request, queryset):
+        """Remove the possibility of bargaining"""
         queryset.update(auction=False)
 
-    @admin.action(description='Добавить возможность торга')
+    @admin.action(description="Добавить возможность торга")
     def make_auction_as_true(self, request, queryset):
+        """Make the possibility of bargaining"""
         queryset.update(auction=True)
 
 

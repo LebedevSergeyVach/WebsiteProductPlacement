@@ -14,6 +14,7 @@ User = get_user_model()
 
 
 class Advertisement(models.Model):
+    """Advertisement model"""
 
     user = models.ForeignKey(
         User,
@@ -56,6 +57,7 @@ class Advertisement(models.Model):
 
     @admin.display(description="Дата создания")
     def created_date(self):
+        """Show the date of the creation"""
         if self.created_at.date() == timezone.now().date():
             created_time = self.created_at.time().strftime("%H:%M:%S")
             return format_html(
@@ -65,6 +67,7 @@ class Advertisement(models.Model):
 
     @admin.display(description="Дата изменения")
     def updated_date(self):
+        """Show the date of the update"""
         if self.updated_at.date() == timezone.now().date():
             created_time = self.updated_at.time().strftime("%H:%M:%S")
             return format_html(
@@ -74,6 +77,7 @@ class Advertisement(models.Model):
 
     @admin.display(description="Аукцион")
     def show_auction(self):
+        """Show the auction status"""
         if self.auction:
             return format_html(
                 '<span style="color: blue; font-weight: bold;">🍏</span>'
@@ -85,6 +89,7 @@ class Advertisement(models.Model):
 
     @admin.display(description="Изображения")
     def show_image(self):
+        """Show the image"""
         if self.image:
             return format_html(
                 '<img src={} style="width: 70px; height: 50px">', self.image.url
@@ -95,11 +100,12 @@ class Advertisement(models.Model):
                 'style="width: 70px; height: 50px">'
             )
 
-
     def __str__(self):
+        """String representation"""
         return f"id = {self.id} title = {self.title} price = {self.price}"
 
     class Meta:
+        """Meta options"""
         db_table = "advertisement"
         verbose_name = "Товар"
         verbose_name_plural = "Товары"
