@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}
-Объявление о продаже
+{{ advertisement.title }}
 {% endblock %}
 
 {% block active_1 %}active{% endblock %}
@@ -19,13 +19,13 @@
       <div class="row g-0">
         <div class="col-md-4">
           <a href="#" class="nav-link">
-            <img src="{% if advertisement.image %} {{ advertisement.image.url }} {% else %} {% static 'img/404-not-found.jpg' %} {% endif %} " class="img-fluid rounded-start" alt="Card title">
+            <img src="{% if advertisement.image %} {{ advertisement.image.url }} {% else %} {% static 'img/404-sorry-3.gif' %} {% endif %} " class="img-fluid rounded-start" alt="Card title">
           </a>
         </div>
         <div class="col">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="#" class="nav-link"><strong>Продам {{ advertisement.title }}</strong></a>
+              <a href="#" class="nav-link"><strong>{{ advertisement.title }}</strong></a>
             </h5>
             <p class="card-text">
               {{ advertisement.description }}
