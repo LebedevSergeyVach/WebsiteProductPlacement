@@ -106,17 +106,17 @@ class Advertisement(models.Model):
                 'style="width: 70px; height: 50px">'
             )
 
-    # @admin.display(description="Контактная информация")
-    # def show_contact(self):
-    #     """Show the contact information"""
-    #     if self.user.is_superuser:
-    #         return format_html(
-    #             '<span style="color: red; font-weight: bold;">Администратор</span>'
-    #         )
-    #     else:
-    #         return format_html(
-    #             '<span style="color: blue; font-weight: bold;">{}</span>', self.contact
-    #         )
+    @admin.display(description="Почта")
+    def show_email(self):
+        """Show the contact information"""
+        if self.user.is_superuser:
+            return format_html(
+                '<span style="color: red; font-weight: bold;">Администратор</span>'
+            )
+        else:
+            return format_html(
+                '<span style="color: blue; font-weight: bold;">{}</span>', self.user.email
+            )
 
     @admin.display(description="Пользователь")
     def show_user(self):
