@@ -5,50 +5,14 @@
 Объявление продажи RTX-4090
 {% endblock %}
 
+{% block active_1 %}active{% endblock %}
+
 {% block content %}
-
-<ul class="nav nav-pills sticky-top bg-white nav-fill">
-
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="{% url 'main-page' %}">
-      <span style="font-weight: bold;">Главная</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'top-sellers' %}">
-      <span style="font-weight: bold;">Топ продавцов</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'advertisement-post' %}">
-      <span style="font-weight: bold;">Разместить объявление</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'register' %}">
-      <span style="font-weight: bold;">Регистрация</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'login' %}">
-      <span style="font-weight: bold;">Войти</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'profile' %}">
-      <span style="font-weight: bold;">Профиль</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'logout' %}">
-      <span style="font-weight: bold;">Выйти</span>
-    </a>
-  </li>
-</ul>
 
 <div class="container" style="margin: 50px;">
   <header class="display-4">
     <nav class="badge bg-primary">Объявление пользователя</nav>
+      <p></p>
     <nav class="badge bg-primary">Сын Миллионера</nav>
   </header>
 </div>

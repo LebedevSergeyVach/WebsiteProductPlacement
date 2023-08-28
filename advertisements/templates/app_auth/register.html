@@ -5,98 +5,44 @@
 Регистрация
 {% endblock %}
 
+{% block active_4 %}active{% endblock %}
+
 {% block content %}
 
-<ul class="nav nav-pills sticky-top bg-white nav-fill">
-
-  <li class="nav-item">
-    <a class="nav-link" aria-current="page" href="{% url 'main-page' %}">
-      <span style="font-weight: bold;">Главная</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'top-sellers' %}">
-      <span style="font-weight: bold;">Топ продавцов</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'advertisement-post' %}">
-      <span style="font-weight: bold;">Разместить объявление</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link active" href="{% url 'register' %}">
-      <span style="font-weight: bold;">Регистрация</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'login' %}">
-      <span style="font-weight: bold;">Войти</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'profile' %}">
-      <span style="font-weight: bold;">Профиль</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'logout' %}">
-      <span style="font-weight: bold;">Выйти</span>
-    </a>
-  </li>
-</ul>
-
-<form method="post">{% csrf_token %}
-    <div class="container">
-    <div class="row">
-      <div class="col" style="margin: 50px;">
-        <div class="display-2">
-          <span class="badge bg-primary">Страница регистрации пользователя</span>
-        </div>
+  <div class="container">
+  <div class="row">
+    <div class="col" style="margin: 50px;">
+      <div class="display-2">
+        <span class="badge bg-primary">Страница регистрации пользователя</span>
       </div>
     </div>
-      <form method="post">
-        <div class="row mb-3">
-          <div class="col">
-            <label class="col-sm-4 col-form-label offset-4">Username</label>
-            <div class="col-sm-4 offset-4 w-25">
-              <input id="username" name="username" type="text" class="form-control form-control-lg">
-            </div>
-          </div>
+  </div>
+
+    {{ form.non_field.errors }}
+    <form method="post">{% csrf_token %}
+      {% for field in form %}
+      <div class="row mb-3">
+              <div class="col">
+                      <label class="col-sm-4 col-form-label offset-4">{{ field.label }}</label>
+        <div class="col-sm-4 offset-4 w-25">
+                {{ field }}
+        {% if field.errors %}
+      <div class="form-label bg-warning" style="margin: 10px 0px;">{{ field.errors }}</div>
+      {% endif %}
         </div>
-        <div class="row mb-3">
-          <div class="col">
-            <label class="col-sm-4 col-form-label offset-4">Contact</label>
-            <div class="col-sm-4 offset-4 w-25">
-              <input id="contact" name="contact" type="text" class="form-control form-control-lg">
-            </div>
-          </div>
+      </div>
+      </div>
+      {% endfor %}
+
+      <div class="row mb-3 offset-sm-5">
+        <div class="col">
+          <button type="submit" class="btn btn-success">Принять</button>
         </div>
-        <div class="row mb-3">
-          <div class="col">
-            <label class="col-sm-4 col-form-label offset-4">Password</label>
-            <div class="col-sm-4 offset-4 w-25">
-              <input id="password" name="password" type="password" class="form-control form-control-lg">
-            </div>
-          </div>
-        </div>
-        <div class="row mb-3">
-          <div class="col">
-            <label class="col-sm-4 col-form-label offset-4">Password confirmation</label>
-            <div class="col-sm-4 offset-4 w-25">
-              <input type="password" class="form-control form-control-lg">
-              <div class="form-label bg-warning" style="margin: 10px 0px;">Ошибка (если будет)</div>
-            </div>
-          </div>
-        </div>
-        <div class="row mb-3 offset-sm-5">
-          <div class="col">
-            <button type="submit" class="btn btn-success">Принять</button>
-          </div>
-        </div>
-      </form>
-    </div>
-</form>
+      </div>
+    </form>
+
+  </div>
+
 
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 

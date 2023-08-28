@@ -3,6 +3,9 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
 
+from .forms import MyUserCreationForm
+
+
 # Create your views here.
 
 
@@ -12,35 +15,36 @@ class WebView(object):
     @login_required(login_url=reverse_lazy('login'))
     def profile_view(request):
         """View function for profile page"""
-        return render(request, 'app_auth/profile.html')
+        return render(
+            request, 'app_auth/profile.html'
+        )
 
     def login_view(request):
         """View function for login page"""
-        redirect_url = reverse('profile')
-
-        if request.method == 'GET':
-
+        redirect_url = reverse("profile")
+        if request.method == "GET":
             if request.user.is_authenticated:
                 return redirect(redirect_url)
-
             else:
-                return render(request, 'app_auth/login.html')
+                return render(request, "app_auth/login.html")
 
-        username = request.POST['username']
-        contact = request.POST['contact']
-        password = request.POST['password']
+        username = request.POST["username"]
+        password = request.POST["password"]
+        email = request.POST["email"]
 
         user = authenticate(
-            username=username, contact=contact, password=password
+            request, username=username, password=password, email=email
         )
 
         if user is not None:
             login(request, user)
             return redirect(redirect_url)
 
-        context = {'error': 'Пользователь не найден!'}
+        context = {"error": "Пользователь не найден!"}
 
-        return render(request, 'app_auth/login.html', context=context)
+        return render(
+            request, "app_auth/login.html", context=context
+        )
 
     def logout_view(request):
         """View function for logout page"""
@@ -49,5 +53,25 @@ class WebView(object):
         return redirect(reverse('login'))
 
     def register_view(request):
-        """View function for registration page"""
-        return render(request, 'app_auth/register.html')
+        """View function for register page"""
+        if request.method == "POST":
+            form = MyUserCreationForm(request.POST)
+
+            if form.is_valid():
+                user = form.save()
+                user = authenticate(
+                    username=user.username, password=request.POST["password1"]
+                )
+                login(request, user=user)
+
+                return redirect(reverse("profile"))
+
+        else:
+            form = MyUserCreationForm()
+
+        context = {"form": form}
+
+        return render(
+            request, "app_auth/register.html", context=context
+        )
+

@@ -14,7 +14,7 @@ advertisements/secrets.py
 
 # Additional files
 advertisements/parser.py
-advertisements/templates/times.html
+advertisements/templates/time.html
 
 # Instructions
 /info.txt

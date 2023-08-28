@@ -5,6 +5,7 @@ from django.contrib import admin
 from django.utils import timezone
 from django.utils.html import format_html
 from django.contrib.auth import get_user_model
+from django.urls import reverse
 
 
 # Create your models here.
@@ -48,8 +49,8 @@ class Advertisement(models.Model):
         default=False,
     )
 
-    contact = models.TextField(
-        verbose_name="Контактная информация",
+    email = models.EmailField(
+        verbose_name="Электронная почта",
         max_length=50
     )
 
@@ -78,7 +79,7 @@ class Advertisement(models.Model):
                 '<span style="color: green; font-weight: bold">Сегодня в {}</span>', created_time
             )
 
-        return self.updated_at.strftime(f"%d.%m.%Y в %H:%M:%S", self.updated_at)
+        return self.updated_at.strftime(f"%d.%m.%Y в %H:%M:%S")
 
     @admin.display(description="Аукцион")
     def show_auction(self):
@@ -105,17 +106,17 @@ class Advertisement(models.Model):
                 'style="width: 70px; height: 50px">'
             )
 
-    @admin.display(description="Контактная информация")
-    def show_contact(self):
-        """Show the contact information"""
-        if self.user.is_superuser:
-            return format_html(
-                '<span style="color: red; font-weight: bold;">Администратор</span>'
-            )
-        else:
-            return format_html(
-                '<span style="color: blue; font-weight: bold;">{}</span>', self.contact
-            )
+    # @admin.display(description="Контактная информация")
+    # def show_contact(self):
+    #     """Show the contact information"""
+    #     if self.user.is_superuser:
+    #         return format_html(
+    #             '<span style="color: red; font-weight: bold;">Администратор</span>'
+    #         )
+    #     else:
+    #         return format_html(
+    #             '<span style="color: blue; font-weight: bold;">{}</span>', self.contact
+    #         )
 
     @admin.display(description="Пользователь")
     def show_user(self):
@@ -132,6 +133,11 @@ class Advertisement(models.Model):
     def __str__(self):
         """String representation"""
         return f"id = {self.id} title = {self.title} price = {self.price}"
+
+    def get_absolute_url(self):
+        return reverse(
+            "adv", kwargs={"pk": self.pk}
+        )
 
     class Meta:
         """Meta options"""

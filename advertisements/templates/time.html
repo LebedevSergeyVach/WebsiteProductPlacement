@@ -2,83 +2,102 @@
 {% load static %}
 
 {% block title %}
-Вход
+Объявление о продаже
 {% endblock %}
+
+{% block active_1 %}active{% endblock %}
 
 {% block content %}
 
-<ul class="nav nav-pills sticky-top bg-white nav-fill">
+<div class="container" style="margin: 50px;">
+  <div class="display-2">
+    <span class="badge bg-primary">Объявление пользователя "username"</span>
+  </div>
+</div>
+<div class="col offset-2">
+  <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <a href="#" class="nav-link">
 
-  <li class="nav-item">
-    <a class="nav-link" aria-current="page" href="{% url 'main-page' %}">
-      <span style="font-weight: bold;">Главная</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'top-sellers' %}">
-      <span style="font-weight: bold;">Топ продавцов</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'advertisement-post' %}">
-      <span style="font-weight: bold;">Разместить объявление</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'register' %}">
-      <span style="font-weight: bold;">Регистрация</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link active" href="{% url 'login' %}">
-      <span style="font-weight: bold;">Войти</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'profile' %}">
-      <span style="font-weight: bold;">Профиль</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="#">
-      <span style="font-weight: bold;">Выйти</span>
-    </a>
-  </li>
+          <div id="carouselExampleControls" class="carousel slide bg-primary" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'img/404-not-found.jpg' %}" class="img-fluid rounded-start" alt="Card title">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'img/404-not-found.jpg' %}" class="img-fluid rounded-start" alt="Card title">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Предыдущий</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Следующий</span>
+            </button>
+          </div>
 
-</ul>
-
-<div class="container">
-<div class="row">
-  <div class="col-8" style="margin: 50px;">
-    <div class="display-2">
-      <span class="badge bg-primary">Страница авторизации пользователя</span>
+        </a>
+      </div>
+      <div class="col">
+        <div class="card-body">
+          <h5 class="card-title">
+            <a href="#" class="nav-link"><strong>Продам гараж</strong></a>
+          </h5>
+          <p class="card-text">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit eum aut commodi dolores
+            praesentium fugiat! Maxime perspiciatis iste, voluptas tenetur voluptatem at beatae, aliquid
+            libero odit ab accusamus tempore assumenda.
+            Hic asperiores pariatur recusandae sapiente doloremque illo laudantium placeat sed fugit!
+            Dolorem nulla quaerat doloremque odit impedit unde esse dolorum tenetur quos error! Iure
+            quas, illo expedita sed suscipit ullam.
+            Illo quam odio, quas laborum natus error doloremque totam maiores dolorum fugit aliquam, sit
+            numquam impedit praesentium facilis amet perspiciatis facere rem magnam consectetur, nobis
+            est. Qui quod fuga illum.
+          </p>
+          <span>Автор: "username"</span>
+          <p class="card-text"><small class="text-muted">Размещено: "дата"</small></p>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-  <form method="post">{% csrf_token %}
-    <div class="row mb-3">
-      <div class="col">
-        <label class="col-sm-4 col-form-label offset-4">Username</label>
-        <div class="col-sm-4 offset-4 w-25">
-          <input type="text" class="form-control form-control-lg">
-        </div>
-      </div>
+
+<footer style="padding: 100px;" class="bg-primary">
+  <nav class="navbar navbar-expand-sm navbar-dark">
+    <a class="navbar-brand" href="#">Добавьте</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+      data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+      aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="#" aria-current="page">сюда<span
+              class="visually-hidden">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">что</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Ссылки</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownId">
+            <a class="dropdown-item" href="https://t.me/PIIZDEEC">Telegram</a>
+            <a class="dropdown-item" href="https://github.com/LebedevSergeyV">GitHub</a>
+            <a class="dropdown-item" href="https://github.com/LebedevSergeyV/Django">Repositories</a>
+            <a class="dropdown-item" href="{% url 'fake' %}">Fake</a>
+          </div>
+        </li>
+      </ul>
+      <form class="d-flex my-2 my-lg-0">
+        <input class="form-control me-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+      </form>
     </div>
-    <div class="row mb-3">
-      <div class="col">
-        <label class="col-sm-4 col-form-label offset-4">Password</label>
-        <div class="col-sm-4 offset-4 w-25">
-          <input type="password" class="form-control form-control-lg">
-        </div>
-      </div>
-    </div>
-    <div class="row mb-3 offset-sm-5">
-      <div class="col">
-        <button type="submit" class="btn btn-success">Принять</button>
-      </div>
-    </div>
-  </form>
-</div>
+  </nav>
+</footer>
 
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 
@@ -93,3 +112,90 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Регистрация
+{% endblock %}
+
+{% block active_4 %}active{% endblock %}
+
+{% block content %}
+
+<form method="post">{% csrf_token %}
+    <div class="container">
+    <div class="row">
+      <div class="col" style="margin: 50px;">
+        <div class="display-2">
+          <span class="badge bg-primary">Страница регистрации пользователя</span>
+        </div>
+      </div>
+    </div>
+      <form method="post">
+        <div class="row mb-3">
+          <div class="col">
+            <label class="col-sm-4 col-form-label offset-4">Username</label>
+            <div class="col-sm-4 offset-4 w-25">
+              <input id="username" name="username" type="text" class="form-control form-control-lg">
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label class="col-sm-4 col-form-label offset-4">Contact</label>
+            <div class="col-sm-4 offset-4 w-25">
+              <input id="contact" name="contact" type="text" class="form-control form-control-lg">
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label class="col-sm-4 col-form-label offset-4">Password</label>
+            <div class="col-sm-4 offset-4 w-25">
+              <input id="password" name="password" type="password" class="form-control form-control-lg">
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <label class="col-sm-4 col-form-label offset-4">Password confirmation</label>
+            <div class="col-sm-4 offset-4 w-25">
+              <input type="password" class="form-control form-control-lg">
+              <div class="form-label bg-warning" style="margin: 10px 0px;">Ошибка (если будет)</div>
+            </div>
+          </div>
+        </div>
+        <div class="row mb-3 offset-sm-5">
+          <div class="col">
+            <button type="submit" class="btn btn-success">Принять</button>
+          </div>
+        </div>
+      </form>
+    </div>
+</form>
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+{% endblock %}

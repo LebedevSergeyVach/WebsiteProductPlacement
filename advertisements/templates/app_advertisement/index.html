@@ -5,46 +5,9 @@
 Главная
 {% endblock %}
 
+{% block active_1 %}active{% endblock %}
+
 {% block content %}
-
-<ul class="nav nav-pills sticky-top bg-white nav-fill">
-
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="{% url 'main-page' %}">
-      <span style="font-weight: bold;">Главная</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'top-sellers' %}">
-      <span style="font-weight: bold;">Топ продавцов</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'advertisement-post' %}">
-      <span style="font-weight: bold;">Разместить объявление</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'register' %}">
-      <span style="font-weight: bold;">Регистрация</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'login' %}">
-      <span style="font-weight: bold;">Войти</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'profile' %}">
-      <span style="font-weight: bold;">Профиль</span>
-    </a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="{% url 'logout' %}">
-      <span style="font-weight: bold;">Выйти</span>
-    </a>
-  </li>
-</ul>
 
 <div id="carouselExampleControls" class="carousel slide bg-primary" data-bs-ride="carousel">
   <div class="carousel-inner">
@@ -91,9 +54,9 @@
         <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Еще что-нибудь</a>
       </li>
     </ul>
-    <form class="row g-3">
+    <form class="row g-3" method="get">
       <div class="col-auto w-50">
-        <input type="text" class="form-control">
+        <input  name="query"  value="{% if title %}{{ title }}{% endif %}" type="text" class="form-control">
       </div>
       <div class="col-auto">
         <button type="submit" class="btn btn-success mb-3">Найти</button>

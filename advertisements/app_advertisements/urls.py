@@ -7,9 +7,9 @@ urlpatterns = [
     path("search", WebViews.index, name="search"),
 
     path('', WebViews.index, name="main-page"),
-    path("top-sellers", WebViews.top_sellers, name="top-sellers"),
 
-    path("advertisement", WebViews.advertisement, name="advertisement"),
+    path("top-sellers", WebViews.top_sellers, name="top-sellers"),
+    path("advertisement/<int:pk>", WebViews.advertisement, name="advertisement"),
     path("advertisement-post", WebViews.advertisement_post, name="advertisement-post"),
 
     path("advertisement-AK-74", WebViews.advertisement_ak_74, name="advertisement-AK-74"),
