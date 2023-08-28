@@ -62,7 +62,7 @@ class WebView(object):
 
         # DEBUG
         now = datetime.now()
-        print(f'#Пользователь вышел из аккаунта: [{now.strftime("%Y-%m-%d %H:%M:%S")}] ')
+        print(f'# Пользователь вышел из аккаунта: [{now.strftime("%Y-%m-%d %H:%M:%S")}] ')
 
         return redirect(reverse('login'))
 

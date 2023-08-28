@@ -1,0 +1,27 @@
+""" Command list for the project """
+
+
+* The command to run the site docker build on the server
+  su -c 'sudo docker compose -f "./docker-compose.yml" up'
+
+* The command to start the rebuild of the docker site on the server
+  su -c 'sudo docker compose -f "./docker-compose.yml" build --force-rm --no-cache'
+
+* Running the project locally
+  poetry run python manage.py runserver
+
+* Launching Django shell
+  python manage.py shell
+
+* Migrations in the Django project
+  python manage.py migrate
+  python manage.py makemigrations
+
+  poetry run python manage.py migrate
+  poetry run python manage.py makemigrations
+
+* Create superuser for the project
+  poetry run python manage.py createsuperuser
+
+* Create app for the project
+  python manage.py startapp app_auth

@@ -21,3 +21,15 @@ Running the project locally.
 ```commandline
 poetry run python manage.py runserver
 ```
+
+Migrations in the Django project
+```commandline
+python manage.py migrate
+python manage.py makemigrations
+```
+
+If poetry is present in the project
+```commandline
+poetry run python manage.py migrate
+poetry run python manage.py makemigrations
+```
