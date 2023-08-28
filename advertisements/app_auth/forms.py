@@ -15,7 +15,7 @@ class MyUserCreationForm(UserCreationForm):
         self.fields["last_name"].widget.attrs["class"] = "form-control form-control-lg"
         self.fields["password1"].widget.attrs["class"] = "form-control form-control-lg"
         self.fields["password2"].widget.attrs["class"] = "form-control form-control-lg"
-        self.fields["email"].widget.attrs["email"] = "form-control form-control-lg"
+        self.fields["email"].widget.attrs["class"] = "form-control form-control-lg"
 
     class Meta:
         """Meta class for user creation form."""

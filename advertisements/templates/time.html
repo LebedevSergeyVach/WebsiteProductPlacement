@@ -199,3 +199,272 @@
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 
 {% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Главная
+{% endblock %}
+
+{% block active_1 %}active{% endblock %}
+
+{% block content %}
+
+<div id="carouselExampleControls" class="carousel slide bg-primary" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{% static 'img/RTX-4090.jpg' %}" width="" height="600" class="mx-auto d-block w-33" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'img/asus1.png' %}" width="..." height="600" class="mx-auto d-block w-33" alt="...">
+    </div>
+    <div class="carousel-item">
+      <img src="{% static 'img/AK-74-1.jpg' %}" width="..." height="600" class="mx-auto d-block w-33" alt="...">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Предыдущий</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Следующий</span>
+  </button>
+</div>
+
+<div class="container" style="margin: 50px;">
+  <div class="display-2">
+    <span class="badge bg-primary">В центре внимания</span>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="row">
+    <ul class="nav nav-tabs bg-white">
+      <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="#">Проверенные продавцы</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Новинки</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Избранное</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Еще что-нибудь</a>
+      </li>
+    </ul>
+    <form class="row g-3" method="get">
+      <div class="col-auto w-50">
+        <input  name="query"  value="{% if title %}{{ title }}{% endif %}" type="text" class="form-control">
+      </div>
+      <div class="col-auto">
+        <button type="submit" class="btn btn-success mb-3">Найти</button>
+      </div>
+    </form>
+  </div>
+
+  <div class="col">
+    <div class="card mb-auto" style="max-width: 1200px; margin-top: 20px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <a href="{% url 'advertisement-rtx' %}" class="nav-link">
+            <img src="{% static 'img/RTX-4090.jpg' %}" class="img-fluid rounded-start" alt="Card title">
+          </a>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="{% url 'advertisement-rtx' %}" class="nav-link"><strong>Видеокарта RTX 4090 ASUS ROG STRIX</strong></a>
+            </h5>
+            <a href="{% url 'advertisement-rtx' %}" class="nav-link">
+              <p class="card-text">
+                <h6>
+                  Видеокарта RTX-4090 Asus rog strix
+                </h6>
+                <h6>
+                  ПЕЧКА КИЛОВАТНАЯ
+                </h6>
+                Графические процессоры ASUS GeForce RTX 4090 ROG Strix OC Edition обеспечивают невероятную
+                скорость для игр и творчества. Они созданы на основе сверхэффективной архитектуры NVIDIA Ada
+                Lovelace, которая обеспечивает качественный скачок как в производительности, так и в графических
+                возможностях на базе ИИ. Погрузитесь в виртуальные миры с трассировкой лучей и сверхвысоким FPS с
+                минимальной задержкой. Используйте возможности для творчества с беспрецедентным ускорением рабочего
+                процесса.
+              </p>
+              <h6 class="card-title">
+                <a href="https://sun1-19.userapi.com/c543108/v543108091/57267/ZnbYJNkJi1Y.jpg" class="nav-link"><strong>Контактные данные</strong></a>
+              </h6>
+              <span>Автор: "Сын Миллионера"</span>
+              <p class="card-text"><small class="text-muted">Размещено: "05.08.2023"</small></p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <a href="{% url 'advertisement-laptop' %}" class="nav-link">
+            <img src="{% static 'img/asus1.png' %}" class="img-fluid rounded-start" alt="Card title">
+          </a>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="{% url 'advertisement-laptop' %}" class="nav-link"><strong>Ноутбук ASUS ROG Strix</strong></a>
+            </h5>
+            <a href="{% url 'advertisement-laptop' %}" class="nav-link">
+              <p class="card-text">
+                <h6>
+                  Ноутбук ASUS ROG Strix G15 G513RW-HQ177.
+                </h6>
+                Оборудован 15.6-дюймовым экраном с технологией Adaptive-Sync.
+                Она выступает гарантом плавной смены кадров во время динамичных игровых сессий.
+                Разрешение Quad HD 2K обеспечивает детализацию мельчайших элементов.
+                Основу ноутбука ASUS ROG Strix G15 G513RW-HQ177 составил 8-ядерный процессор AMD Ryzen 9 6900HX и
+                оперативная память объемом 32 ГБ. Подобная вычислительная мощность способствует ускорению загрузки
+                приложений и не допускает промедлений в процессе навигации между окнами. Дискретная видеокарта
+                GeForce RTX 3070 Ti несет ответственность за высокое качество графики.
+              </p>
+              <h6 class="card-title">
+                <a href="https://t.me/PIIZDEEC" class="nav-link"><strong>Контактные данные</strong></a>
+              </h6>
+              <span>Автор: "Школьник Майнер"</span>
+              <p class="card-text"><small class="text-muted">Размещено: "02.08.2023"</small></p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <a href="{% url 'advertisement-AK-74' %}" class="nav-link">
+            <img src="{% static 'img/AK-74.jpg' %}" class="img-fluid rounded-start" alt="Card title">
+          </a>
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h5 class="card-title">
+              <a href="{% url 'advertisement-AK-74' %}" class="nav-link"><strong>Продаю АК-74 1974 год</strong></a>
+            </h5>
+            <a href="{% url 'advertisement-AK-74' %}" class="nav-link">
+              <p class="card-text">
+                <h6>
+                Автомат Калашникова 74 1974 года, отличное состояние!
+                </h6>
+                5,45-мм автомат Калашникова АК-74. Калибр – 5,45мм (патрон 5,45х39). Дальность прицельная – 1000м.
+                Дальность прямого выстрела: по грудной фигуре – 440м по бегущей фигуре – 625м.
+                Начальная скорость пули – 900м/с Темп стрельбы – 600В/мин. Боевая скорострельность:
+                одиночным огнем – 40 в/мин очередями – 100в/мин. Дальность полета пули: при которой сохраняется
+                убойное действие– 1350м предельная дальность – 3150м Вес автомата – 3,6кг
+              </p>
+              <h6 class="card-title">
+                <a href="https://nsk.zoon.ru/medical/type/psihiatricheskaya_bolnitsa/" class="nav-link"><strong>Контактные данные</strong></a>
+              </h6>
+              <span>Автор: Дедушка Сталин</span>
+              <p class="card-text"><small class="text-muted">Размещено: 31.07.2023</small></p>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <div class="col">
+      {% for adv in advertisements %}
+        <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <a href="{{ advertisement.get_absolute_url }}" class="nav-link">
+                <img src="{% if adv.image %}  {{ adv.image.url }} {% else %} {% static 'img/404-not-found.jpg' %} {% endif %} " class="img-fluid rounded-start" alt="Card title">
+              </a>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">
+                  <a href="{{ advertisement.get_absolute_url }}" class="nav-link"><strong>{{ adv.title }} </strong></a>
+                </h5>
+                <a href="{{ advertisement.get_absolute_url }}" class="nav-link">
+                  <p class="card-text">
+                    {{ adv.description }}
+                  </p>
+                  <span>Автор: {{ adv.user }}</span>
+                  <p class="card-text"><small class="text-muted">Размещено: {{ adv.created_at }} </small></p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+
+<footer style="padding: 100px;" class="bg-primary">
+  <nav class="navbar navbar-expand-sm navbar-dark">
+    <a class="navbar-brand" href="#">Добавьте</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+      data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+      aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="#" aria-current="page">сюда<span
+              class="visually-hidden">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">что</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Ссылки</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownId">
+            <a class="dropdown-item" href="https://t.me/PIIZDEEC">Telegram</a>
+            <a class="dropdown-item" href="https://github.com/LebedevSergeyV">GitHub</a>
+            <a class="dropdown-item" href="https://github.com/LebedevSergeyV/Django">Repositories</a>
+            <a class="dropdown-item" href="{% url 'fake' %}">Fake</a>
+          </div>
+        </li>
+      </ul>
+      <form class="d-flex my-2 my-lg-0">
+        <input class="form-control me-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+</footer>
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+{% endblock %}

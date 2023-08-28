@@ -43,7 +43,18 @@ class WebViews(object):
             request, "app_advertisement/top-sellers.html", context=context
         )
 
-    def advertisement(request, pk):
+    # def advertisement_view(request, pk):
+    #     """Renders the advertisement page."""
+    #     advertisement = Advertisement.objects.get(pk=pk)
+    #     context = {
+    #         "advertisement": advertisement
+    #     }
+    #
+    #     return render(
+    #         request, "app_advertisement/advertisement.html", context=context
+    #
+
+    def advertisement_view(request, pk):
         """Renders the advertisement page."""
         advertisement = Advertisement.objects.get(pk=pk)
         context = {

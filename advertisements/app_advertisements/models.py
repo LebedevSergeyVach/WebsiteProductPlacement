@@ -135,6 +135,7 @@ class Advertisement(models.Model):
         return f"id = {self.id} title = {self.title} price = {self.price}"
 
     def get_absolute_url(self):
+        """Get absolute URL for this user from the database"""
         return reverse(
             "adv", kwargs={"pk": self.pk}
         )

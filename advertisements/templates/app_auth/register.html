@@ -22,10 +22,10 @@
     <form method="post">{% csrf_token %}
       {% for field in form %}
       <div class="row mb-3">
-              <div class="col">
-                      <label class="col-sm-4 col-form-label offset-4">{{ field.label }}</label>
+        <div class="col">
+          <label class="col-sm-4 col-form-label offset-4">{{ field.label }}</label>
         <div class="col-sm-4 offset-4 w-25">
-                {{ field }}
+            {{ field }}
         {% if field.errors %}
       <div class="form-label bg-warning" style="margin: 10px 0px;">{{ field.errors }}</div>
       {% endif %}
