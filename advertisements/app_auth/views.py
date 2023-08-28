@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.shortcuts import render, redirect, reverse
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
@@ -22,6 +24,7 @@ class WebView(object):
     def login_view(request):
         """View function for login page"""
         redirect_url = reverse("profile")
+
         if request.method == "GET":
             if request.user.is_authenticated:
                 return redirect(redirect_url)
@@ -34,6 +37,13 @@ class WebView(object):
 
         user = authenticate(
             request, username=username, password=password, email=email
+        )
+
+        # DEBUG
+        now = datetime.now()
+        print(
+            f'# Пользователь вошел в аккаунт: [{now.strftime("%Y-%m-%d %H:%M:%S")}]\n'
+            f'Username: {username} Password: {password} Email: {email}'
         )
 
         if user is not None:
@@ -50,6 +60,10 @@ class WebView(object):
         """View function for logout page"""
         logout(request)
 
+        # DEBUG
+        now = datetime.now()
+        print(f'#Пользователь вышел из аккаунта: [{now.strftime("%Y-%m-%d %H:%M:%S")}] ')
+
         return redirect(reverse('login'))
 
     def register_view(request):
@@ -63,6 +77,13 @@ class WebView(object):
                     username=user.username, password=request.POST["password1"]
                 )
                 login(request, user=user)
+
+                # DEBUG
+                now = datetime.now()
+                print(
+                    f'# Пользователь зарегистрировался: [{now.strftime("%Y-%m-%d %H:%M:%S")}]\n'
+                    f'Username: {user} Password: {request.POST["password1"]}'
+                )
 
                 return redirect(reverse("profile"))
 

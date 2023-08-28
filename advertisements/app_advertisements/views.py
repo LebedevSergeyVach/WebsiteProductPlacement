@@ -43,20 +43,10 @@ class WebViews(object):
             request, "app_advertisement/top-sellers.html", context=context
         )
 
-    # def advertisement_view(request, pk):
-    #     """Renders the advertisement page."""
-    #     advertisement = Advertisement.objects.get(pk=pk)
-    #     context = {
-    #         "advertisement": advertisement
-    #     }
-    #
-    #     return render(
-    #         request, "app_advertisement/advertisement.html", context=context
-    #
-
     def advertisement_view(request, pk):
         """Renders the advertisement page."""
         advertisement = Advertisement.objects.get(pk=pk)
+
         context = {
             "advertisement": advertisement
         }
@@ -77,7 +67,15 @@ class WebViews(object):
                 advertisement.save()
                 url = reverse("main-page")
 
-                return redirect(url)
+                # DEBUG
+                print(
+                    f"# Пользователь выложил объявление:\n"
+                    f"{advertisement.user} Title: {advertisement.title} "
+                    f"Description: {advertisement.description} Price: {advertisement.price} "
+                    f"Image: {advertisement.image} Auction: {advertisement.auction}"
+                )
+
+                return redirect(reverse("main-page"))
 
         else:
             form = AdvertisementForm()
@@ -108,6 +106,9 @@ class WebViews(object):
 
     def fake(request):
         """Renders the fake page."""
+        # DEBuG
+        print('# Пользователь зашел на страницу FAKE, он лох!!!')
+
         return render(
             request, "app_dop/fake.html"
         )

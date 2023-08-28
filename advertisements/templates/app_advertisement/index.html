@@ -180,13 +180,13 @@
       <div class="row g-0">
         <div class="col-md-4">
           <a href="{{ adv.get_absolute_url }}" class="nav-link">
-            <img src="{% if adv.image %}  {{ adv.image.url }} {% else %} {% static 'img/adv.png' %} {% endif %} " class="img-fluid rounded-start" alt="Card title">
+            <img src="{% if adv.image %}  {{ adv.image.url }} {% else %} {% static 'img/404-sorry-3.gif' %} {% endif %} " class="img-fluid rounded-start" alt="Card title">
           </a>
         </div>
         <div class="col-md-8">
           <div class="card-body">
             <h5 class="card-title">
-              <a href="{{ adv.get_absolute_url }}" class="nav-link"><strong>Куплю {{ adv.title }} </strong></a>
+              <a href="{{ adv.get_absolute_url }}" class="nav-link"><strong>{{ adv.title }} </strong></a>
             </h5>
             <a href="{{ adv.get_absolute_url }}" class="nav-link">
               <p class="card-text">
@@ -205,19 +205,19 @@
 
 <footer style="padding: 100px;" class="bg-primary">
   <nav class="navbar navbar-expand-sm navbar-dark">
-    <a class="navbar-brand" href="#">Добавьте</a>
+{#    <a class="navbar-brand" href="#">Добавьте</a>#}
     <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
       data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
       aria-label="Toggle navigation"></button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
       <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" href="#" aria-current="page">сюда<span
-              class="visually-hidden">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">что</a>
-        </li>
+{#        <li class="nav-item">#}
+{#          <a class="nav-link active" href="#" aria-current="page">сюда<span#}
+{#              class="visually-hidden">(current)</span></a>#}
+{#        </li>#}
+{#        <li class="nav-item">#}
+{#          <a class="nav-link" href="#">что</a>#}
+{#        </li>#}
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">Ссылки</a>

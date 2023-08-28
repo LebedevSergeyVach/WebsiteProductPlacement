@@ -25,7 +25,9 @@ class Advertisement(models.Model):
 
     image = models.ImageField(
         verbose_name="Изображение",
-        upload_to="advertisements/"
+        upload_to="advertisements/",
+        null=True,
+        blank=True
     )
 
     title = models.CharField(
@@ -73,7 +75,7 @@ class Advertisement(models.Model):
     def updated_date(self):
         """Show the date of the update"""
         if self.updated_at.date() == timezone.now().date():
-            created_time = self.updated_at.time().strftime(f"'%H':%M:%S")
+            created_time = self.updated_at.time().strftime("%H:%M:%S")
 
             return format_html(
                 '<span style="color: green; font-weight: bold">Сегодня в {}</span>', created_time
@@ -102,7 +104,8 @@ class Advertisement(models.Model):
             )
         else:
             return format_html(
-                '<img src="https://dark-network.net/wp-content/uploads/2021/09/404-not-found-01.jpg"'
+                # '<img src="https://dark-network.net/wp-content/uploads/2021/09/404-not-found-01.jpg"'
+                '<img src="https://pa1.narvii.com/7435/efabf45acf29e0c694a56ec3871779f6f5434fc7r1-640-360_hq.gif"'
                 'style="width: 70px; height: 50px">'
             )
 

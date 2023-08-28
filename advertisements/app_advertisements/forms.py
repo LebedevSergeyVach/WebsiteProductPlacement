@@ -9,6 +9,7 @@ class AdvertisementForm(forms.ModelForm):
         fields = [
             'title', 'description', 'image', 'price', 'auction',
         ]
+
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'description': forms.Textarea(attrs={'class': 'form-control'}),
