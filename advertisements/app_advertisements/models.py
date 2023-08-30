@@ -20,14 +20,28 @@ class Advertisement(models.Model):
     user = models.ForeignKey(
         User,
         on_delete=models.CASCADE,
-        verbose_name="Пользователь"
+        verbose_name="Пользователь",
     )
 
-    image = models.ImageField(
+    image_1 = models.ImageField(
         verbose_name="Изображение",
         upload_to="advertisements/",
         null=True,
-        blank=True
+        blank=True,
+    )
+
+    image_2 = models.ImageField(
+        verbose_name="Дополнительное Изображение",
+        upload_to="advertisements/",
+        null=True,
+        blank=True,
+    )
+
+    image_3 = models.ImageField(
+        verbose_name="Дополнительное Изображение",
+        upload_to="advertisements/",
+        null=True,
+        blank=True,
     )
 
     title = models.CharField(
@@ -44,6 +58,7 @@ class Advertisement(models.Model):
         verbose_name="Цена",
         max_digits=10,
         decimal_places=2,
+        default=0
     )
 
     auction = models.BooleanField(
@@ -53,7 +68,16 @@ class Advertisement(models.Model):
 
     email = models.EmailField(
         verbose_name="Электронная почта",
-        max_length=50
+        max_length=50,
+        null=True,
+        blank=True,
+    )
+
+    contact = models.CharField(
+        verbose_name="Контакты",
+        max_length=20,
+        null=True,
+        blank=True,
     )
 
     created_at = models.DateTimeField(auto_now_add=True)
@@ -96,15 +120,41 @@ class Advertisement(models.Model):
             )
 
     @admin.display(description="Изображения")
-    def show_image(self):
+    def show_image_1(self):
         """Show the image"""
-        if self.image:
+        if self.image_1:
             return format_html(
-                '<img src={} style="width: 70px; height: 50px">', self.image.url
+                '<img src={} style="width: 70px; height: 50px">', self.image_1.url
             )
         else:
             return format_html(
                 # '<img src="https://dark-network.net/wp-content/uploads/2021/09/404-not-found-01.jpg"'
+                '<img src="https://pa1.narvii.com/7435/efabf45acf29e0c694a56ec3871779f6f5434fc7r1-640-360_hq.gif"'
+                'style="width: 70px; height: 50px">'
+            )
+
+    @admin.display(description="Изображения")
+    def show_image_2(self):
+        """Show the image"""
+        if self.image_2:
+            return format_html(
+                '<img src={} style="width: 70px; height: 50px">', self.image_2.url
+            )
+        else:
+            return format_html(
+                '<img src="https://pa1.narvii.com/7435/efabf45acf29e0c694a56ec3871779f6f5434fc7r1-640-360_hq.gif"'
+                'style="width: 70px; height: 50px">'
+            )
+
+    @admin.display(description="Изображения")
+    def show_image_3(self):
+        """Show the image"""
+        if self.image_3:
+            return format_html(
+                '<img src={} style="width: 70px; height: 50px">', self.image_3.url
+            )
+        else:
+            return format_html(
                 '<img src="https://pa1.narvii.com/7435/efabf45acf29e0c694a56ec3871779f6f5434fc7r1-640-360_hq.gif"'
                 'style="width: 70px; height: 50px">'
             )
@@ -131,6 +181,18 @@ class Advertisement(models.Model):
         else:
             return format_html(
                 '<span style="color: blue; font-weight: bold;">{}</span>', self.user.username
+            )
+
+    @admin.display(description="Контакты")
+    def show_contact(self):
+        """Show the contact"""
+        if self.user.is_superuser:
+            return format_html(
+                '<span style="color: red; font-weight: bold;">Администратор</span>'
+            )
+        else:
+            return format_html(
+                '<span style="color: blue; font-weight: bold;">{}</span>', self.contact
             )
 
     def __str__(self):

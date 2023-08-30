@@ -180,19 +180,25 @@
       <div class="row g-0">
         <div class="col-md-4">
           <a href="{{ adv.get_absolute_url }}" class="nav-link">
-            <img src="{% if adv.image %}  {{ adv.image.url }} {% else %} {% static 'img/404-sorry-3.gif' %} {% endif %} " class="img-fluid rounded-start" alt="Card title">
+            <img src="{% if adv.image_1 %}  {{ adv.image_1.url }} {% else %} {% static 'img/404-sorry-3.gif' %} {% endif %} " class="img-fluid rounded-start" alt="Card title">
           </a>
         </div>
         <div class="col-md-8">
           <div class="card-body">
-            <h5 class="card-title">
-              <a href="{{ adv.get_absolute_url }}" class="nav-link"><strong>{{ adv.title }} </strong></a>
-            </h5>
+            <h3 class="card-title">
+{#              <a href="{{ adv.get_absolute_url }}" class="nav-link"><strong>{{ adv.title }} </strong></a>#}
+              <strong class="badge bg-primary">{{ adv.title }} </strong>
+            </h3>
             <a href="{{ adv.get_absolute_url }}" class="nav-link">
               <p class="card-text">
                 {{ adv.description }}
               </p>
-              <span>Автор: {{ adv.user }}</span>
+              <p class="card-title">
+                <a href="{{ adv.get_absolute_url }}" class="nav-link"><span>Цена: {{ adv.price }} ₽</span></a>
+              </p>
+              <h6>
+                <span>Автор: {{ adv.user }}</span>
+              </h6>
               <p class="card-text"><small class="text-muted">Размещено: {{ adv.created_at }} </small></p>
             </a>
           </div>
@@ -205,7 +211,7 @@
 
 <footer style="padding: 100px;" class="bg-primary">
   <nav class="navbar navbar-expand-sm navbar-dark">
-{#    <a class="navbar-brand" href="#">Добавьте</a>#}
+    <span class="card-text" href="#">Версия сайта 1.2.1</span>
     <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
       data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
       aria-label="Toggle navigation"></button>

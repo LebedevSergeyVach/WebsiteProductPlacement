@@ -7,15 +7,18 @@ class AdvertisementForm(forms.ModelForm):
     class Meta:
         model = Advertisement
         fields = [
-            'title', 'description', 'image', 'price', 'auction',
+            'title', 'description', 'contact', 'image_1', 'image_2', 'image_3', 'price', 'auction',
         ]
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'description': forms.Textarea(attrs={'class': 'form-control'}),
-            'image': forms.FileInput(attrs={'class': 'form-control form-control-lg'}),
+            'image_1': forms.FileInput(attrs={'class': 'form-control form-control-lg'}),
+            'image_2': forms.FileInput(attrs={'class': 'form-control form-control-lg'}),
+            'image_3': forms.FileInput(attrs={'class': 'form-control form-control-lg'}),
             'price': forms.NumberInput(attrs={'class': 'form-control'}),
             'auction': forms.CheckboxInput(attrs={'class': 'form-check-input'}),
+            'contact': forms.TextInput(attrs={'class': 'form-control'})
         }
 
     def clean_title(self):

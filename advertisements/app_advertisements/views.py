@@ -72,7 +72,7 @@ class WebViews(object):
                     f"# Пользователь выложил объявление:\n"
                     f"{advertisement.user} Title: {advertisement.title} "
                     f"Description: {advertisement.description} Price: {advertisement.price} "
-                    f"Image: {advertisement.image} Auction: {advertisement.auction}"
+                    f"Image: {advertisement.image_1} Auction: {advertisement.auction}"
                 )
 
                 return redirect(reverse("main-page"))
