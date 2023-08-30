@@ -85,3 +85,14 @@
 .icon-file-video:before { content: '\f1c8'; } /* '' */
 .icon-paper-plane:before { content: '\f1d8'; } /* '' */
 .icon-chart-line:before { content: '\f201'; } /* '' */
+
+@media screen and (prefers-color-scheme: dark) {
+  body {
+    background: black;
+    color: white;
+      }
+}
+
+body {
+  background-color: black;
+}

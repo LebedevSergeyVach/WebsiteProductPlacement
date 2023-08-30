@@ -3,3 +3,4 @@ Django==4.2.2
 sqlparse==0.4.4
 tzdata==2023.3
 Pillow
+python=3.11

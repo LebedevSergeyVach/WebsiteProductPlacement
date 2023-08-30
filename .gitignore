@@ -16,4 +16,8 @@ advertisements/secrets.py
 advertisements/parser.py
 advertisements/templates/time.html
 
+# Database
+advertisements/db.sqlite3
+advertisements/media/advertisements
+
 # Instructions
