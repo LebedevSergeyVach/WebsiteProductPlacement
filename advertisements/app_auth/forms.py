@@ -1,5 +1,7 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import get_user_model
+from django import forms
+
 
 User = get_user_model()
 
@@ -26,6 +28,7 @@ class MyUserCreationForm(UserCreationForm):
     class Meta:
         """Meta class for user creation form."""
         model = User
+
         fields = [
             "username", "email", "first_name", "last_name", "password1", "password2"
         ]

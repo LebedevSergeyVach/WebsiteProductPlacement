@@ -69,7 +69,7 @@ class WebView(object):
     def register_view(request):
         """View function for register page"""
         if request.method == "POST":
-            form = MyUserCreationForm(request.POST)
+            form = MyUserCreationForm(request.POST, request.FILES)
 
             if form.is_valid():
                 user = form.save()

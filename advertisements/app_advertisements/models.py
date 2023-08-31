@@ -23,7 +23,7 @@ class Advertisement(models.Model):
         verbose_name="Пользователь",
     )
 
-    # profile_picture = models.ImageField(
+    # picture = models.ImageField(
     #     verbose_name="Аватарка",
     #     upload_to="advertisements/",
     #     null=True,
