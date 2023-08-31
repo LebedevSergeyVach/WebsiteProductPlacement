@@ -8,146 +8,103 @@
 {% block active_1 %}active{% endblock %}
 
 {% block content %}
-
-<div id="carouselExampleControls" class="carousel slide bg-primary" data-bs-ride="carousel">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="{% static 'img/RTX-4090.jpg' %}" width="" height="600" class="mx-auto d-block w-33" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="{% static 'img/asus1.png' %}" width="..." height="600" class="mx-auto d-block w-33" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="{% static 'img/AK-74-1.jpg' %}" width="..." height="600" class="mx-auto d-block w-33" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Предыдущий</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Следующий</span>
-  </button>
-</div>
-
-<div class="container" style="margin: 50px;">
-  <div class="display-2">
-    <span class="badge bg-primary">В центре внимания</span>
-  </div>
-</div>
-
-<div class="container">
-
-  <div class="row">
-    <ul class="nav nav-tabs bg-white">
-      <li class="nav-item">
-        <a class="nav-link active" aria-current="page" href="#">Проверенные продавцы</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Новинки</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">Избранное</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Еще что-нибудь</a>
-      </li>
-    </ul>
-    <form class="row g-3" method="get">
-      <div class="col-auto w-50">
-        <input  name="query"  value="{% if title %}{{ title }}{% endif %}" type="text" class="form-control">
-      </div>
-      <div class="col-auto">
-        <button type="submit" class="btn btn-success mb-3">Найти</button>
-      </div>
-    </form>
-  </div>
-
-  {% for adv in advertisements %}
-    <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
-      <div class="row g-0">
-        <div class="col-md-4">
-          <a href="{{ adv.get_absolute_url }}" class="nav-link">
-            <img src="{% if adv.image_1 %}  {{ adv.image_1.url }} {% else %} {% static 'img/404-sorry-3.gif' %} {% endif %} " class="img-fluid rounded-start" alt="Card title">
-          </a>
+<div class="bg-black">
+    <div id="carouselExampleControls" class="carousel slide bg-primary" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'imgs/utkablackwhite.gif' %}" width="" height="600" class="mx-auto d-block w-33" alt="...">
         </div>
-        <div class="col-md-8">
-          <div class="card-body">
-            <h4 class="card-title">
-{#              <a href="{{ adv.get_absolute_url }}" class="nav-link"><strong>{{ adv.title }} </strong></a>#}
-              <strong class="badge bg-primary">{{ adv.title }} </strong>
-            </h4>
-            <a href="{{ adv.get_absolute_url }}" class="nav-link">
-              <p class="card-text">
-                {{ adv.description }}
-              </p>
-              <h6 class="card-title">
-                <a href="{{ adv.get_absolute_url }}" class="nav-link"><span>Цена: {{ adv.price }} ₽</span></a>
-              </h6>
-              <h6>
-                <span>Автор: {{ adv.user }}</span>
-              </h6>
-{#              <span>Аукцион: {% if adv.auction %} ✅ {% else %} ❌ {% endif %}</span>#}
+        <div class="carousel-item">
+          <img src="{% static 'imgs/programmneon.gif' %}" width="" height="600" class="mx-auto d-block w-33" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'img/404-sorry-1.gif' %}" width="" height="600" class="mx-auto d-block w-33" alt="...">
+        </div>
+    {#    <div class="carousel-item ">#}
+    {#      <img src="{% static 'img/RTX-4090.jpg' %}" width="" height="600" class="mx-auto d-block w-33" alt="...">#}
+    {#    </div>#}
+    {#    <div class="carousel-item">#}
+    {#      <img src="{% static 'img/asus1.png' %}" width="..." height="600" class="mx-auto d-block w-33" alt="...">#}
+    {#    </div>#}
+    {#    <div class="carousel-item">#}
+    {#      <img src="{% static 'img/AK-74-1.jpg' %}" width="..." height="600" class="mx-auto d-block w-33" alt="...">#}
+    {#    </div>#}
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Предыдущий</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Следующий</span>
+      </button>
+    </div>
 
-{#                <h6 class="card-title">#}
-{#                  <ul class="navbar-nav me-auto mt-auto mt-lg-auto">#}
-{#                    <li class="nav-item dropdown">#}
-{#                      <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"#}
-{#                        aria-expanded="false">Контакты</a>#}
-{#                      <div class="dropdown-menu" aria-labelledby="dropdownId">#}
-{#                          <strong class="dropdown-item">{{ adv.user.email }}</strong>#}
-{#                          <p></p>#}
-{#                          <span class="dropdown-item">{{ adv.contact }}</span>#}
-{#                      </div>#}
-{#                    </li>#}
-{#                  </ul>#}
-{#                </h6>#}
+    <div class="container" style="margin: 50px;">
+      <div class="display-2">
+        <span class="badge bg-primary">В центре внимания</span>
+      </div>
+    </div>
 
-              <p class="card-text"><small class="text-muted">Размещено: {{ adv.created_at }} </small></p>
-            </a>
+    <div class="container bg-black">
+
+      <div class="row">
+        <ul class="nav nav-pills">
+          <li class="nav-item bg-dark">
+            <a class="nav-link active bg-primary" aria-current="page" href="#">Проверенные продавцы</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Новинки</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Избранное</a>
+          </li>
+        </ul>
+        <form class="row g-3" method="get">
+          <div class="col-auto w-50">
+            <input  name="query"  value="{% if title %}{{ title }}{% endif %}" type="text" class="form-control bg-dark text-light btn-outline-primary">
+          </div>
+          <div class="col-auto">
+              <button type="submit" class="btn btn-primary mb-3 btn-outline-dark text-light">Найти</button>
+          </div>
+        </form>
+      </div>
+      <div class="bg-black">
+      {% for adv in advertisements %}
+        <div class="card mb-2 bg-dark" style="max-width: 1200px; margin-top: 20px;">
+          <div class="row g-0">
+            <div class="col-md-4">
+              <a href="{{ adv.get_absolute_url }}" class="nav-link">
+                <img src="{% if adv.image_1 %}  {{ adv.image_1.url }} {% else %} {% static 'img/404-sorry-3.gif' %} {% endif %} " class="img-fluid rounded-start" alt="Card title">
+              </a>
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h4 class="card-title">
+    {#              <a href="{{ adv.get_absolute_url }}" class="nav-link"><strong>{{ adv.title }} </strong></a>#}
+                  <strong class="badge bg-primary">{{ adv.title }} </strong>
+                </h4>
+                <a href="{{ adv.get_absolute_url }}" class="nav-link">
+                  <strong class="card-text text-primary">
+                    {{ adv.description }}
+                  </strong>
+                  <h6 class="card-title">
+                    <a href="{{ adv.get_absolute_url }}" class="nav-link"><span class="text-primary">Цена: {{ adv.price }} ₽</span></a>
+                  </h6>
+                  <h6>
+                    <span class="text-light">Автор: {{ adv.user }}</span>
+                  </h6>
+                  <p class="card-text"><small class="text-muted">Размещено: {{ adv.created_at }} </small></p>
+                </a>
+              </div>
+            </div>
           </div>
         </div>
+      {% endfor %}
       </div>
     </div>
-  {% endfor %}
-  </div>
-</div>
-
-<footer style="padding: 100px;" class="bg-primary">
-  <nav class="navbar navbar-expand-sm navbar-dark">
-    <span class="card-text" >Версия сайта 1.2.2</span>
-    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-      data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-      aria-label="Toggle navigation"></button>
-    <div class="collapse navbar-collapse" id="collapsibleNavId">
-      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-{#        <li class="nav-item">#}
-{#          <a class="nav-link active" href="#" aria-current="page">сюда<span#}
-{#              class="visually-hidden">(current)</span></a>#}
-{#        </li>#}
-{#        <li class="nav-item">#}
-{#          <a class="nav-link" href="#">что</a>#}
-{#        </li>#}
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">Ссылки</a>
-          <div class="dropdown-menu" aria-labelledby="dropdownId">
-            <a class="dropdown-item" href="https://t.me/PIIZDEEC">Telegram</a>
-            <a class="dropdown-item" href="https://github.com/LebedevSergeyV">GitHub</a>
-            <a class="dropdown-item" href="https://github.com/LebedevSergeyV/Django">Repositories</a>
-            <a class="dropdown-item" href="{% url 'fake' %}">Fake</a>
-          </div>
-        </li>
-      </ul>
-      <form class="d-flex my-2 my-lg-0">
-        <input class="form-control me-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-</footer>
 
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 
 {% endblock %}
+</div>

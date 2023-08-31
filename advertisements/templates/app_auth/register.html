@@ -8,6 +8,7 @@
 {% block active_4 %}active{% endblock %}
 
 {% block content %}
+<div class="bg-black">
 
   <div class="container">
   <div class="row">
@@ -21,7 +22,7 @@
     {{ form.non_field.errors }}
     <form method="post">{% csrf_token %}
       {% for field in form %}
-      <div class="row mb-3">
+      <div class="row mb-3 text-primary">
         <div class="col">
           <label class="col-sm-4 col-form-label offset-4">{{ field.label }}</label>
         <div class="col-sm-4 offset-4 w-25">
@@ -36,7 +37,7 @@
 
       <div class="row mb-3 offset-sm-5">
         <div class="col">
-          <button type="submit" class="btn btn-success">Принять</button>
+          <button type="submit" class="btn btn-primary btn-outline-dark text-light">Принять</button>
         </div>
       </div>
     </form>
@@ -47,3 +48,4 @@
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 
 {% endblock %}
+</div>

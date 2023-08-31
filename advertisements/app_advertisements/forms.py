@@ -11,14 +11,14 @@ class AdvertisementForm(forms.ModelForm):
         ]
 
         widgets = {
-            'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'description': forms.Textarea(attrs={'class': 'form-control'}),
-            'image_1': forms.FileInput(attrs={'class': 'form-control form-control-lg'}),
-            'image_2': forms.FileInput(attrs={'class': 'form-control form-control-lg'}),
-            'image_3': forms.FileInput(attrs={'class': 'form-control form-control-lg'}),
-            'price': forms.NumberInput(attrs={'class': 'form-control'}),
-            'auction': forms.CheckboxInput(attrs={'class': 'form-check-input'}),
-            'contact': forms.TextInput(attrs={'class': 'form-control'})
+            'title': forms.TextInput(attrs={'class': 'form-control bg-dark text-light btn-outline-primary'}),
+            'description': forms.Textarea(attrs={'class': 'form-control bg-dark text-light btn-outline-primary'}),
+            'image_1': forms.FileInput(attrs={'class': 'form-control bg-dark text-primary btn-outline-primary'}),
+            'image_2': forms.FileInput(attrs={'class': 'form-control bg-dark text-primary btn-outline-primary'}),
+            'image_3': forms.FileInput(attrs={'class': 'form-control bg-dark text-primary btn-outline-primary'}),
+            'price': forms.NumberInput(attrs={'class': 'form-control bg-dark text-light btn-outline-primary'}),
+            'auction': forms.CheckboxInput(attrs={'class': 'form-check-input btn-outline-primary'}),
+            'contact': forms.TextInput(attrs={'class': 'form-control bg-dark text-light btn-outline-primary'})
         }
 
     def clean_title(self):

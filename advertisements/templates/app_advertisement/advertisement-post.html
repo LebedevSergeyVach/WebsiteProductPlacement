@@ -2,12 +2,13 @@
 {% load static %}
 
 {% block title %}
-Разместить  объявление
+Разместить объявление
 {% endblock %}
 
 {% block active_3 %}active{% endblock %}
 
 {% block content %}
+<div class="bg-black">
 
 <div class="row mb-2 offset-sm-2">
   <div class="col" style="margin: 50px;">
@@ -20,7 +21,7 @@
 
 <form method="post" enctype="multipart/form-data">
 {% csrf_token %}
-    <div class="row mb-auto offset-sm-4">
+    <div class="row mb-auto offset-sm-4 text-light">
         <div class="col-6">
             {{ form.as_p }}
         </div>
@@ -35,3 +36,4 @@
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 
 {% endblock %}
+</div>

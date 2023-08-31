@@ -33,17 +33,17 @@ class WebView(object):
 
         username = request.POST["username"]
         password = request.POST["password"]
-        email = request.POST["email"]
+        # email = request.POST["email"]
 
         user = authenticate(
-            request, username=username, password=password, email=email
+            request, username=username, password=password,
         )
 
         # DEBUG
         now = datetime.now()
         print(
             f'# Пользователь вошел в аккаунт: [{now.strftime("%Y-%m-%d %H:%M:%S")}]\n'
-            f'Username: {username} Password: {password} Email: {email}'
+            f'Username: {username} Password: {password}'
         )
 
         if user is not None:

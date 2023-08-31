@@ -8,15 +8,20 @@
 {% block active_1 %}active{% endblock %}
 
 {% block content %}
+<div class="bg-black">
 
+<div class="row">
   <div class="container" style="margin: 50px;">
-    <div class="display-2">
+    <div class="display-2 bg-black">
       <span class="badge bg-primary">Объявление пользователя</span>
+        <p></p>
       <span class="badge bg-primary">{{ user }}</span>
     </div>
   </div>
+</div>
+
   <div class="col offset-2">
-    <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
+    <div class="card mb-2 bg-dark" style="max-width: 1200px; margin-top: 20px;">
       <div class="row g-0">
         <div class="col-md-5">
         <div id="carouselExampleControls" class="carousel slide bg-primary" data-bs-ride="carousel">
@@ -46,20 +51,22 @@
             <h3 class="card-title">
               <strong class="badge bg-primary">{{ advertisement.title }} </strong>
             </h3>
-            <p class="card-text">
+            <p class="card-text text-light nav-link">
               {{ advertisement.description }}
             </p>
-
-              <span>Цена: {{ advertisement.price }} ₽</span>
-
-              <span>Аукцион: {% if adv.auction %} ✅ {% else %} ❌ {% endif %}</span>
+              <span class="card-text text-light">
+                  Цена: <p>{{ advertisement.price }} ₽</p>
+              </span>
+              <span class="card-text text-light">
+                  Аукцион: {% if adv.auction %} ✅ {% else %} ❌ {% endif %}
+              </span>
 
                 <h6 class="card-title">
                   <ul class="navbar-nav me-auto mt-auto mt-lg-auto">
                     <li class="nav-item dropdown">
                       <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">Контакты</a>
-                      <div class="dropdown-menu" aria-labelledby="dropdownId">
+                      <div class="dropdown-menu dropdown-menu-dark btn-outline-primary" aria-labelledby="dropdownId">
                         <strong class="dropdown-item">
                           {% if advertisement.user.is_superuser %} admin website {% elif advertisement.user.email %} {{ advertisement.user.email }} {% else %} None email {% endif %}
                         </strong>
@@ -81,40 +88,8 @@
   </div>
 
 <p style="height: 45px"></p>
-<footer style="padding: 100px; " class="bg-primary">
-  <nav class="navbar navbar-expand-sm navbar-dark">
-    <a class="navbar-brand" href="#">Добавьте</a>
-    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-      data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-      aria-label="Toggle navigation"></button>
-    <div class="collapse navbar-collapse" id="collapsibleNavId">
-      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" href="#" aria-current="page">сюда<span
-              class="visually-hidden">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">что</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">Ссылки</a>
-          <div class="dropdown-menu" aria-labelledby="dropdownId">
-            <a class="dropdown-item" href="https://t.me/PIIZDEEC">Telegram</a>
-            <a class="dropdown-item" href="https://github.com/LebedevSergeyV">GitHub</a>
-            <a class="dropdown-item" href="https://github.com/LebedevSergeyV/Django">Repositories</a>
-            <a class="dropdown-item" href="{% url 'fake' %}">Fake</a>
-          </div>
-        </li>
-      </ul>
-      <form class="d-flex my-2 my-lg-0">
-        <input class="form-control me-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-</footer>
 
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 
 {% endblock %}
+</div>

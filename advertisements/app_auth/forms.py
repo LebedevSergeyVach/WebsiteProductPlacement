@@ -10,12 +10,18 @@ class MyUserCreationForm(UserCreationForm):
     def __init__(self, *args, **kwargs):
         """Create a new"""
         super().__init__(*args, **kwargs)
-        self.fields["username"].widget.attrs["class"] = "form-control form-control-lg"
-        self.fields["first_name"].widget.attrs["class"] = "form-control form-control-lg"
-        self.fields["last_name"].widget.attrs["class"] = "form-control form-control-lg"
-        self.fields["password1"].widget.attrs["class"] = "form-control form-control-lg"
-        self.fields["password2"].widget.attrs["class"] = "form-control form-control-lg"
-        self.fields["email"].widget.attrs["class"] = "form-control form-control-lg"
+        self.fields["username"].widget.attrs["class"] = \
+            "form-control form-control-lg bg-dark text-light btn-outline-primary"
+        self.fields["first_name"].widget.attrs["class"] = \
+            "form-control form-control-lg bg-dark text-light btn-outline-primary"
+        self.fields["last_name"].widget.attrs["class"] = \
+            "form-control form-control-lg bg-dark text-light btn-outline-primary"
+        self.fields["password1"].widget.attrs["class"] = \
+            "form-control form-control-lg bg-dark text-light btn-outline-primary"
+        self.fields["password2"].widget.attrs["class"] = \
+            "form-control form-control-lg bg-dark text-light btn-outline-primary"
+        self.fields["email"].widget.attrs["class"] = \
+            "form-control form-control-lg bg-dark text-light btn-outline-primary"
 
     class Meta:
         """Meta class for user creation form."""

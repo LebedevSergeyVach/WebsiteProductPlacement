@@ -8,6 +8,7 @@
 {% block active_2 %}active{% endblock %}
 
 {% block content %}
+<div class="bg-black">
 
   <div class="row">
     <div class="col" style="margin: 50px;">
@@ -19,9 +20,9 @@
   <div class="container" style="min-height: 452px">
     <ul class="list-group list-group-numbered">
     {% for user in users %}
-      <li class="list-group-item d-flex justify-content-between align-items-start">
-        <div class="ms-2 me-auto">
-          <div class="fw-bold">{{ user }} {{ user.first_name }} {{ user.last_name }}
+      <li class="list-group-item d-flex justify-content-between align-items-start bg-primary text-light">
+        <div class="ms-2 me-auto text-light">
+          <div class="fw-bold text-light">Username: {{ user }} First: {{ user.first_name }} Last: {{ user.last_name }}
           </div>
         </div>
         <span class="badge bg-primary rounded-pill">{{ user.adv_count }}</span>
@@ -30,41 +31,7 @@
     </ul>
   </div>
 
-<footer style="padding: 100px;" class="bg-primary">
-  <nav class="navbar navbar-expand-sm navbar-dark">
-    <a class="navbar-brand" href="#">Добавьте</a>
-    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
-      data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
-      aria-label="Toggle navigation"></button>
-    <div class="collapse navbar-collapse" id="collapsibleNavId">
-      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-        <li class="nav-item">
-          <a class="nav-link active" href="#" aria-current="page">сюда<span
-              class="visually-hidden">(current)</span></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">что</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
-            aria-expanded="false">Ссылки</a>
-          <div class="dropdown-menu" aria-labelledby="dropdownId">
-            <a class="dropdown-item" href="https://t.me/PIIZDEEC">Telegram</a>
-            <a class="dropdown-item" href="https://github.com/LebedevSergeyV">GitHub</a>
-            <a class="dropdown-item" href="https://github.com/LebedevSergeyV/Django">Repositories</a>
-            <a class="dropdown-item" href="{% url 'fake' %}">Fake</a>
-          </div>
-        </li>
-      </ul>
-      <form class="d-flex my-2 my-lg-0">
-        <input class="form-control me-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
-      </form>
-    </div>
-  </nav>
-</footer>
-
-
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
 
 {% endblock %}
+</div>
