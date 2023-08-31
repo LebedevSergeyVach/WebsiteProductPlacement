@@ -33,7 +33,6 @@ class WebView(object):
 
         username = request.POST["username"]
         password = request.POST["password"]
-        # email = request.POST["email"]
 
         user = authenticate(
             request, username=username, password=password,
@@ -57,6 +56,10 @@ class WebView(object):
         )
 
     def logout_view(request):
+        logout(request)
+        return redirect(reverse("login"))
+
+    def logout_view(request):
         """View function for logout page"""
         logout(request)
 
@@ -69,7 +72,7 @@ class WebView(object):
     def register_view(request):
         """View function for register page"""
         if request.method == "POST":
-            form = MyUserCreationForm(request.POST, request.FILES)
+            form = MyUserCreationForm(request.POST)
 
             if form.is_valid():
                 user = form.save()

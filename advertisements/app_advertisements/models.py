@@ -23,13 +23,6 @@ class Advertisement(models.Model):
         verbose_name="Пользователь",
     )
 
-    # picture = models.ImageField(
-    #     verbose_name="Аватарка",
-    #     upload_to="advertisements/",
-    #     null=True,
-    #     blank=True,
-    # )
-
     image_1 = models.ImageField(
         verbose_name="Изображение",
         upload_to="advertisements/",
@@ -70,13 +63,6 @@ class Advertisement(models.Model):
     auction = models.BooleanField(
         verbose_name="Аукцион",
         default=False,
-    )
-
-    favourites = models.BooleanField(
-        verbose_name="Избранное",
-        default=False,
-        null=True,
-        blank=True,
     )
 
     email = models.EmailField(
