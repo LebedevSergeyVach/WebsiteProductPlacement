@@ -144,6 +144,8 @@ STATICFILES_DIRS = [
     Path.joinpath(BASE_DIR, "static")
 ]
 
+STATIC_ROOT = 'staticfiles/'
+
 STATICFILES_URL = 'staticfiles/'
 
 STATICFILES_DIRS_ROOT = [
