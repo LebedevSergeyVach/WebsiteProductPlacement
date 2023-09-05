@@ -12,10 +12,10 @@ venv/
 *.advertisements/advertisements/__pycache__/
 *.advertisements/app_advertisements/__pycache__/
 *.advertisements/app_advertisements/migrations/__pycache__/
-advertisements/app_auth/migrations
-.advertisements/app_auth/migrations
-advertisements/app_advertisements/migrations
-.advertisements/app_advertisements/migrations
+#advertisements/app_auth/migrations
+#.advertisements/app_auth/migrations
+#advertisements/app_advertisements/migrations
+#.advertisements/app_advertisements/migrations
 
 # Django Project Keys
 advertisements/advertisements/secrets.py
@@ -27,7 +27,7 @@ advertisements/parser.py
 advertisements/templates/app_dop/time.html
 
 # Database
-advertisements/db.sqlite3
+#advertisements/db.sqlite3
 advertisements/media/advertisements
 
 # Instructions
