@@ -49,7 +49,7 @@ class WebView(object):
             login(request, user)
             return redirect(redirect_url)
 
-        context = {"error": "Пользователь не найден!"}
+        context = {"error": "Вы не зарегистрировались или неверно вели данные 🥲🥲🥲"}
 
         return render(
             request, "app_auth/login.html", context=context

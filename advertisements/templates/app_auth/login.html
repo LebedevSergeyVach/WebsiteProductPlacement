@@ -17,13 +17,7 @@
     <span class="badge bg-primary">Страница авторизации пользователя</span>
   </div>
 </div>
-{% if error %}
-  <div class="col-sm-4  offset-4 w-25">
-    <div class='form-label bg-warning' style="margin: 10px 0px">
-      {{ error }}
-    </div>
-  </div>
-{% endif %}
+
 </div>
 
 <form method="post">{% csrf_token %}
@@ -58,6 +52,13 @@
   </div>
 </form>
 </div>
+{% if error %}
+  <div class="col-sm-6 offset-4">
+    <div class='badge bg-danger' style="margin: 10px 65px">
+      {{ error }}
+    </div>
+  </div>
+{% endif %}
 
     <div class="container">
     <div class="row">

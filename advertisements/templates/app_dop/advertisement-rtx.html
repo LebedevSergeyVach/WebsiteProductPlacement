@@ -1,0 +1,118 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Объявление продажи RTX-4090
+{% endblock %}
+
+{% block active_1 %}active{% endblock %}
+
+{% block content %}
+
+<div class="container" style="margin: 50px;">
+  <header class="display-4">
+    <nav class="badge bg-primary">Объявление пользователя</nav>
+      <p></p>
+    <nav class="badge bg-primary">Сын Миллионера</nav>
+  </header>
+</div>
+
+<div class="col offset-2">
+  <div class="card mb-2" style="max-width: 1200px; margin-top: 20px;">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <a href="#" class="nav-link">
+          <div id="carouselExampleControls" class="carousel slide bg-primary" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <img src="{% static 'img/RTX-4090.jpg' %}" class="img-fluid rounded-start" alt="Card title">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'img/RTX-4090-1.jpg' %}" class="img-fluid rounded-start" alt="Card title">
+              </div>
+              <div class="carousel-item">
+                <img src="{% static 'img/RTX-4090-2.jpg' %}" class="img-fluid rounded-start" alt="Card title">
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Предыдущий</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Следующий</span>
+            </button>
+          </div>
+        </a>
+      </div>
+
+      <div class="col">
+        <div class="card-body">
+          <h5 class="card-title">
+            <a href="#" class="nav-link"><strong>Видеокарта RTX 4090 ASUS ROG STRIX</strong></a>
+          </h5>
+          <p class="card-text">
+            <h6>
+              Видеокарта RTX-4090 Asus rog strix
+            </h6>
+            <h6>
+              ПЕЧКА КИЛОВАТНАЯ
+            </h6>
+            Графические процессоры ASUS GeForce RTX 4090 ROG Strix OC Edition обеспечивают невероятную
+            скорость для игр и творчества. Они созданы на основе сверхэффективной архитектуры NVIDIA Ada
+            Lovelace, которая обеспечивает качественный скачок как в производительности, так и в графических
+            возможностях на базе ИИ. Погрузитесь в виртуальные миры с трассировкой лучей и сверхвысоким FPS с
+            минимальной задержкой. Используйте возможности для творчества с беспрецедентным ускорением рабочего
+            процесса.
+          </p>
+          <h6 class="card-title">
+            <a href="https://rog.asus.com/ru/graphics-cards/graphics-cards/rog-strix/rog-strix-rtx4090-o24g-gaming-model/" class="nav-link"><strong>Дополнительная информация</strong></a>
+          </h6>
+          <h6 class="card-title">
+            <a href="https://sun1-19.userapi.com/c543108/v543108091/57267/ZnbYJNkJi1Y.jpg" class="nav-link"><strong>Контактные данные</strong></a>
+          </h6>
+          <span>Автор: "Сын Миллионера"</span>
+          <p class="card-text"><small class="text-muted">Размещено: "05.08.2023"</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer style="padding: 100px;" class="bg-primary">
+  <nav class="navbar navbar-expand-sm navbar-dark">
+    <a class="navbar-brand" href="#">Добавьте</a>
+    <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
+      data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
+      aria-label="Toggle navigation"></button>
+    <div class="collapse navbar-collapse" id="collapsibleNavId">
+      <ul class="navbar-nav me-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" href="#" aria-current="page">сюда<span
+              class="visually-hidden">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">что</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Ссылки</a>
+          <div class="dropdown-menu" aria-labelledby="dropdownId">
+            <a class="dropdown-item" href="https://t.me/PIIZDEEC">Telegram</a>
+            <a class="dropdown-item" href="https://github.com/LebedevSergeyV">GitHub</a>
+            <a class="dropdown-item" href="https://github.com/LebedevSergeyV/Django">Repositories</a>
+            <a class="dropdown-item" href="{% url 'fake' %}">Fake</a>
+          </div>
+        </li>
+      </ul>
+      <form class="d-flex my-2 my-lg-0">
+        <input class="form-control me-sm-2" type="text" placeholder="Search">
+        <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </nav>
+</footer>
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+{% endblock %}
