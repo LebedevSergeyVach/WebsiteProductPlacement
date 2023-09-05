@@ -12,10 +12,10 @@ venv/
 *.advertisements/advertisements/__pycache__/
 *.advertisements/app_advertisements/__pycache__/
 *.advertisements/app_advertisements/migrations/__pycache__/
+
 advertisements/advertisements/__pycache__/
 advertisements/app_advertisements/__pycache__/
-#*.advertisements/advertisements/__pycache__/
-#*.advertisements/app_advertisements/__pycache__/
+
 advertisements/app_auth/migrations
 .advertisements/app_auth/migrations
 advertisements/app_advertisements/migrations

@@ -1,3 +1,4 @@
+
 from django.shortcuts import render, redirect, reverse
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
@@ -16,6 +17,10 @@ class WebViews(object):
 
     def index(request):
         """Renders the index page."""
+        contact_list = Advertisement.objects.all()
+        paginator = Paginator(contact_list, 3)
+
+
         title = request.GET.get("query")
 
         if title:
