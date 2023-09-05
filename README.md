@@ -1,6 +1,6 @@
 # Django
 
-The project is written on the Django framework.
+The project is written on the [Django](https://www.djangoproject.com) framework.
 The backend is written in [python](https://www.python.org).
 Frontend is written using [bootstrap](https://getbootstrap.com).
 This is a website where anyone who wants to register can place an ad.
