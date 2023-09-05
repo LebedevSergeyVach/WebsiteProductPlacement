@@ -24,7 +24,7 @@ advertisements/secrets.py
 
 # Additional files
 advertisements/parser.py
-advertisements/templates/time.html
+advertisements/templates/app_dop/time.html
 
 # Database
 advertisements/db.sqlite3

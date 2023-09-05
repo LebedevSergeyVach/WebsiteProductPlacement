@@ -63,15 +63,16 @@
                 <h6 class="card-title">
                   <ul class="navbar-nav me-auto mt-auto mt-lg-auto">
                     <li class="nav-item dropdown">
-                      <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
+                      <a class="nav-link dropdown-toggle btn-outline-dark" href="#" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
                         aria-expanded="false">Контакты</a>
-                      <div class="dropdown-menu dropdown-menu-dark btn-outline-primary" aria-labelledby="dropdownId">
+                        <div class="dropdown-menu dropdown-menu-dark text-light" aria-labelledby="dropdownId">
                         <strong class="dropdown-item">
                           {% if advertisement.user.is_superuser %} admin website {% elif advertisement.user.email %} {{ advertisement.user.email }} {% else %} None email {% endif %}
                         </strong>
                         <strong class="dropdown-item">
                           {% if advertisement.user.is_superuser %} admin website {% elif advertisement.user.contact %} {{ advertisement.user.contact }} {% else %} None contact {% endif %}
                         </strong>
+                      <a class="dropdown-item text-light btn-outline-primary" href="{% url 'fake' %}">Fake</a>
                       </div>
                     </li>
                   </ul>

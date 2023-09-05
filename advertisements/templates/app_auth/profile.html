@@ -14,19 +14,39 @@
   <div class="row">
     <div class="col" style="margin: 50px;">
       <div class="display-5">
-        <span class="badge bg-primary">Ваш аккаунт: </span>
-          <span class="badge bg-white text-primary">{{ user.username }}</span>
+        <span class="badge bg-primary">Аккаунт: </span>
+          <span class="badge bg-dark text-primary">{{ user.username }}</span>
+{#          <p></p>#}
+        <span class="badge bg-primary">Id: </span>
+          <span class="badge bg-dark text-primary">{{ user.id }}</span>
           <p></p>
-        <span class="badge bg-primary ">Ваша почта: </span>
-          <span class="badge bg-white text-primary">{{ user.email }}</span>
+          <h1>
+              <span class="text-primary">⋆⁺｡˚⋆˙‧₊☽ ◯ ☾₊‧˙⋆˚｡⁺⋆</span>
+          </h1>
+        <span class="badge bg-primary ">Почта: </span>
+          <span class="badge bg-dark text-primary">{{ user.email }}</span>
           <p></p>
-        <span class="badge bg-primary">Ваше имя: </span>
-          <span class="badge bg-white text-primary">{{ user.first_name }}</span>
+          <h1>
+              <span class="text-primary">⨯ . ⁺ ✦ ⊹ ꙳ ⁺ ‧ ⨯. ⁺ ✦ ⊹ . * ꙳ ✦ ⊹</span>
+          </h1>
+        <span class="badge bg-primary">Имя: </span>
+          <span class="badge bg-dark text-primary">{{ user.first_name }}</span>
+{#          <p></p>#}
+        <span class="badge bg-primary">Фамилия: </span>
+         <span class="badge bg-dark text-primary">{{ user.last_name }}</span>
           <p></p>
-        <span class="badge bg-primary">Ваша фамилия: </span>
-         <span class="badge bg-white text-primary">{{ user.last_name }}</span>
+          <h1>
+              <span class="text-primary">⋆⁺｡˚⋆˙‧₊☾ ◯ ☽₊‧˙⋆˚｡⁺⋆</span>
+          </h1>
+         <span class="badge bg-primary">Последний вход: </span>
+          <span class="badge bg-dark text-primary">{{ user.last_login }}</span>
           <p></p>
-         <span class="badge bg-white text-primary">{{ user.last_login }} {{ user.date_joined }} {{ user.id }}</span>
+          <h1>
+              <span class="text-primary"> ˚₊‧ • 𓆩⚝𓆪 ♡ 𓆩⚝𓆪 ♡ 𓆩⚝𓆪 ♡ 𓆩⚝𓆪 ♡ • ‎‧₊˚</span>
+          </h1>
+         <span class="badge bg-primary">Регистрация: </span>
+          <span class="badge bg-dark text-primary">{{ user.date_joined }}</span>
+          <p></p>
       </div>
     </div>
   </div>
