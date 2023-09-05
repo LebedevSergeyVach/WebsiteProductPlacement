@@ -1,4 +1,3 @@
-
 from django.shortcuts import render, redirect, reverse
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
@@ -7,6 +6,7 @@ from django.db.models import Count
 
 from .models import Advertisement
 from .forms import AdvertisementForm
+
 
 User = get_user_model()
 # Create your views here.
@@ -17,10 +17,6 @@ class WebViews(object):
 
     def index(request):
         """Renders the index page."""
-        contact_list = Advertisement.objects.all()
-        paginator = Paginator(contact_list, 3)
-
-
         title = request.GET.get("query")
 
         if title:
