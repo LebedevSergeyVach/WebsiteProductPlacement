@@ -27,7 +27,7 @@ advertisements/parser.py
 advertisements/templates/app_dop/time.html
 
 # Database
-#advertisements/db.sqlite3
+advertisements/db.sqlite3
 advertisements/media/advertisements
 
 # Instructions

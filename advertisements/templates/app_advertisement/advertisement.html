@@ -72,7 +72,6 @@
                         <strong class="dropdown-item">
                           {% if advertisement.user.is_superuser %} admin website {% elif advertisement.user.contact %} {{ advertisement.user.contact }} {% else %} None contact {% endif %}
                         </strong>
-                      <a class="dropdown-item text-light btn-outline-primary" href="{% url 'fake' %}">Fake</a>
                       </div>
                     </li>
                   </ul>
