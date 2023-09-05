@@ -16,6 +16,8 @@ ___
 * [Website](https://garage.xiver.ru) - link to the website on the server [GigantPro](https://github.com/GigantPro). Fucking great man. Previous version of the site. 
 * [Website](https://astonishing-pixie-c2446d.netlify.app/advertisements/templates/index.html) - Link to the website. Version without downloading the docker file on a free hosting [Netify](https://app.netlify.com).
 
+___
+
 # Project deployment
 
 The command to run the site docker build on the server [Debian](https://www.debian.org).
@@ -27,6 +29,8 @@ The command to start the rebuild of the docker site on the server [Debian](https
 ```commandline
 su -c 'sudo docker compose -f "./docker-compose.yml" build --force-rm --no-cache'
 ```
+
+___
 
 # Django Commands
 
