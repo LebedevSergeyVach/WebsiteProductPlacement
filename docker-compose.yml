@@ -13,4 +13,7 @@ services:
     #volumes:
     #  - ./advertisements:/app
 
+    volumes:
+      - ./data:/app/data
+
     restart: always
