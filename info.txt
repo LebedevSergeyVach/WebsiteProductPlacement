@@ -30,8 +30,13 @@
 
 * Docker clean cache
   docker builder prune
-  docker builder prune --all
   docker image prune -f
   docker image prune -a -f
 
   https://dev.to/ajeetraina/how-to-clear-docker-cache-2nnp
+
+* Dop .gitignore
+  advertisements/advertisements/migrations
+  advertisements/app_advertisements/migrations
+  advertisements/app_auth/migrations
+  data/db.sqlite3

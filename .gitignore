@@ -13,8 +13,6 @@ advertisements/advertisements/__pycache__/
 advertisements/app_advertisements/__pycache__/
 advertisements/app_advertisements/migrations/__pycache__/
 
-
-
 # Django Project Keys
 advertisements/advertisements/secrets.py
 advertisements/secrets.py
@@ -25,7 +23,6 @@ advertisements/parser.py
 advertisements/templates/app_dop/time.html
 
 # Database
-data/db.sqlite3
 advertisements/media/advertisements
 
 # Instructions
