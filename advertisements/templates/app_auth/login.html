@@ -21,55 +21,46 @@
 </div>
 
 <form method="post">{% csrf_token %}
-  <div class="row mb-3 text-primary">
-    <div class="col">
-      <label class="col-sm-4 col-form-label offset-4">Username</label>
-      <div class="col-sm-4 offset-4 w-25">
-        <input id="username" name="username" type="text" class="form-control form-control-lg bg-dark text-light btn-outline-primary">
+      <div class="row mb-3 text-primary">
+        <div class="col">
+          <label class="col-sm-4 col-form-label offset-4">Username</label>
+          <div class="col-sm-4 offset-4 w-25">
+            <input id="username" name="username" type="text" class="form-control form-control-lg bg-dark text-light btn-outline-primary">
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
-{#  <div class="row mb-3 text-light">#}
-{#    <div class="col">#}
-{#      <label class="col-sm-4 col-form-label offset-4">Email</label>#}
-{#      <div class="col-sm-4 offset-4 w-25">#}
-{#        <input id="email" name="email" type="email" class="form-control form-control-lg bg-dark text-light btn-outline-primary">#}
-{#      </div>#}
-{#    </div>#}
-{#  </div>#}
-  <div class="row mb-3 text-primary">
-    <div class="col">
-      <label class="col-sm-4 col-form-label offset-4">Password</label>
-      <div class="col-sm-4 offset-4 w-25">
-        <input id="password" name="password" type="password" class="form-control form-control-lg bg-dark text-light btn-outline-primary">
+      <div class="row mb-3 text-primary">
+        <div class="col">
+          <label class="col-sm-4 col-form-label offset-4">Password</label>
+          <div class="col-sm-4 offset-4 w-25">
+            <input id="password" name="password" type="password" class="form-control form-control-lg bg-dark text-light btn-outline-primary">
+          </div>
+        </div>
       </div>
+      <div class="row mb-3 offset-sm-5">
+        <div class="col">
+          <button type="submit" class="btn btn-primary btn-outline-dark text-light">Принять</button>
+        </div>
+      </div>
+    </form>
     </div>
-  </div>
-  <div class="row mb-3 offset-sm-5">
-    <div class="col">
-      <button type="submit" class="btn btn-primary btn-outline-dark text-light">Принять</button>
-    </div>
-  </div>
-</form>
-</div>
-{% if error %}
-  <div class="col-sm-6 offset-4">
-    <div class='badge bg-danger' style="margin: 10px 65px">
-      {{ error }}
-    </div>
-  </div>
+    {% if error %}
+      <div class="col-sm-6 offset-4">
+        <div class='badge bg-danger' style="margin: 10px 65px">
+          {{ error }}
+        </div>
+      </div>
 {% endif %}
 
-    <div class="container">
+<div class="container">
     <div class="row">
-<div class="col-auto" style="margin: 70px;">
-  <div class="display-4">
-    <span class="badge bg-primary">Спасибо что пользуетесь моим сайтом! ❤️❤️❤️</span>
-  </div>
+        <div class="col-auto" style="margin: 70px;">
+          <div class="display-4">
+            <span class="badge bg-primary">Спасибо что пользуетесь моим сайтом! ❤️❤️❤️</span>
+          </div>
+        </div>
+    </div>
 </div>
-
-    </div>
-    </div>
 
 
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
