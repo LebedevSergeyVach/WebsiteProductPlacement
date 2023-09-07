@@ -13,10 +13,6 @@ advertisements/advertisements/__pycache__/
 advertisements/app_advertisements/__pycache__/
 advertisements/app_advertisements/migrations/__pycache__/
 
-advertisements/advertisements/migrations
-advertisements/app_advertisements/migrations
-advertisements/app_auth/migrations
-
 # Django Project Keys
 advertisements/advertisements/secrets.py
 advertisements/secrets.py
