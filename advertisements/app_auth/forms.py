@@ -1,6 +1,5 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth import get_user_model
-from django import forms
 
 
 User = get_user_model()
@@ -12,6 +11,7 @@ class MyUserCreationForm(UserCreationForm):
     def __init__(self, *args, **kwargs):
         """Create a new"""
         super().__init__(*args, **kwargs)
+
         self.fields["username"].widget.attrs["class"] = \
             "form-control form-control-lg bg-dark text-light btn-outline-primary"
         self.fields["first_name"].widget.attrs["class"] = \
@@ -24,11 +24,13 @@ class MyUserCreationForm(UserCreationForm):
             "form-control form-control-lg bg-dark text-light btn-outline-primary"
         self.fields["email"].widget.attrs["class"] = \
             "form-control form-control-lg bg-dark text-light btn-outline-primary"
+        self.fields["email"].widget.attrs["class"] = \
+            "form-control form-control-lg bg-dark text-light btn-outline-primary"
 
     class Meta:
-        """Meta class for user creation form."""
+        """ Meta class for the UserCreationForm. """
         model = User
 
         fields = [
-            "username", "email", "first_name", "last_name", "password1", "password2"
+            "username", "email", "first_name", "last_name", "password1", "password2",
         ]

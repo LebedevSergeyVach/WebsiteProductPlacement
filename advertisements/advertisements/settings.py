@@ -53,7 +53,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app_advertisements.apps.AppAdvertisementsConfig',
-    'app_auth'
+    'app_auth',
 ]
 
 MIDDLEWARE = [

@@ -56,10 +56,6 @@ class WebView(object):
         )
 
     def logout_view(request):
-        logout(request)
-        return redirect(reverse("login"))
-
-    def logout_view(request):
         """View function for logout page"""
         logout(request)
 

@@ -22,7 +22,7 @@
 
 <body class="bg-black">
 
-<ul class="nav nav-pills sticky-top bg-white nav-fill">
+<ul class="nav nav-pills sticky-top bg-primary nav-fill">
   <li class="nav-item bg-black">
     <a class="nav-link {% block active_1 %}{% endblock %}" aria-current="page" href="{% url 'main-page' %}">
       <span style="font-weight: bold;">Главная</span>
@@ -76,19 +76,20 @@
     </button>
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog">
-        <div class="modal-content bg-dark text-light">
+        <div class="modal-content bg-black bg-gradient text-light">
           <div class="modal-header">
             <h5 class="modal-title" id="exampleModalLabel">Краткая информация о данном сайте ;)</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
           </div>
           <div class="modal-body">
               <p>Сайт написан на фреймворке Django и стилизацией от Bootstrap.</p>
-              <p>Версия сайта 1.4.7</p>
+              <p>Версия сайта 1.4.8</p>
               <p>Разработчика и все ссылки вы можете найти, нажав на 'ссылки'.</p>
               <strong>Спасибо, что пользуетесь моим сайтом! ❤️❤️❤️</strong>
               <p></p>
               <strong>ПРОСИМ ПРОЩЕНИЯ ЗА СНОС БАЗЫ ДАННЫХ!!! 🥲🥲🥲</strong>
-              <span>Я устал фиксить эту калымагу ... Когда эта дрибедень будет нормально работать ...</span>
+              <p></p>
+              <span>Если вам понравился данный сайт, то можете написать об этом мне в telegram</span>
 
           </div>
           <div class="modal-footer">
@@ -115,8 +116,8 @@
         </li>
       </ul>
       <form class="d-flex my-2 my-lg-0">
-        <input class="form-control me-sm-2 bg-dark text-light btn-outline-primary" type="text" placeholder="Search">
-        <button class="btn btn-outline-primary my-2 my-sm-0 text-light" type="submit">Search</button>
+        <input class="form-control me-sm-2 bg-dark bg-gradient text-light btn-outline-primary" type="text" placeholder="Search">
+        <button class="btn btn-outline-dark my-2 my-sm-0 text-light" type="submit">Search</button>
       </form>
     </div>
   </nav>

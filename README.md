@@ -22,29 +22,28 @@ ___
 
 The command to run the site docker build on the server [Debian](https://www.debian.org).
 ```commandline
-su -c 'sudo docker compose -f "./docker-compose.yml" up'
+sudo docker compose -f "./docker-compose.yml" up
 ```
 
 The command to start the rebuild of the docker site on the server [Debian](https://www.debian.org).
 ```commandline
-su -c 'sudo docker compose -f "./docker-compose.yml" build --force-rm --no-cache'
+sudo docker compose -f "./docker-compose.yml" build --force-rm --no-cache
 ```
 
 ___
 
 # Django Commands
 
-Running the project locally.
+Running local the project locally.
 ```commandline
 poetry run python manage.py runserver
 ```
 
 Migrations in the Django project
 ```commandline
-python manage.py migrate && python manage.py makemigrations
+python manage.py makemigrations
+```
+```commandline
+python manage.py migrate
 ```
 
-If poetry is present in the project
-```commandline
-poetry run python manage.py migrate && poetry run python manage.py makemigrations
-```
