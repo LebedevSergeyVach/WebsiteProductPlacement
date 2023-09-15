@@ -9,7 +9,7 @@ ___
 
 # Links and versions to the website    
 
-* [Lebedev_Sergey](https://github.com/LebedevSergeyV) – Product Lead & Developer
+* [Lebedev Sergey](https://github.com/LebedevSergeyV) – Product Lead & Developer
 
 * [Website](http://109.111.185.225) - a link to a website located on its server with a white (external) ip address connected. [LebedevSergeyV](https://github.com/LebedevSergeyV). A fresh and constantly updated version of the site.
   
@@ -30,6 +30,10 @@ sudo docker compose -f "./docker-compose.yml" up
 sudo docker compose -f "./docker-compose.yml" build --force-rm --no-cache
 ```
 
+#### Clearing dockers data and file cache.
+```commandline
+docker image prune -a -f
+```
 ___
 
 # Django Commands
@@ -51,6 +55,14 @@ ___
 
 # Documentation for directories
 
-* templates - [doc.md](advertisements%2Ftemplates%2Fdoc.md)
-* static - [doc.md](advertisements%2Fstatic%2Fdoc.md)
-* media - [doc.md](advertisements%2Fmedia%2Fdoc.md)
+* [main](advertisements%2Fdoc.md)
+* [advertisements](advertisements%2Fadvertisements%2Fdoc.md)
+* [app advertisements](advertisements%2Fapp_advertisements%2Fdoc.md)
+* [app auth](advertisements%2Fapp_auth%2Fdoc.md)
+* [templates](advertisements%2Ftemplates%2Fdoc.md)
+* [static](advertisements%2Fstatic%2Fdoc.md)
+* [media](advertisements%2Fmedia%2Fdoc.md)
+
+___
+
+[README.md](README.md)

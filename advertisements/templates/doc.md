@@ -10,7 +10,7 @@ ___
 
 # Directories
 
-## 1. [app_advertisement](app_advertisement)
+## 1. [app advertisement](app_advertisement)
 
 ### Управление бэкендом шаблонов
 
@@ -27,7 +27,7 @@ ___
 * шаблон страницы разместить объявление - [advertisement-post.html](app_advertisement%2Fadvertisement-post.html)
 * шаблон от которого идут все наследования - [base.html](base.html)
 
-## 2. [app_auth](app_auth)
+## 2. [app auth](app_auth)
 
 ### Управление бэкендом шаблонов
 * управление базой данных для аккаунтов - [models.py](..%2Fapp_advertisements%2Fmodels.py)
@@ -41,7 +41,7 @@ ___
 * шаблон страницы входа в аккаунт - [login.html](app_auth%2Flogin.html)
 * шаблон страницы просмотра профиля - [profile.html](app_auth%2Fprofile.html)
 
-## 3. [app_dop](app_dop)
+## 3. [app dop](app_dop)
 
 * дополнительные временные шаблоны для debugging
 
