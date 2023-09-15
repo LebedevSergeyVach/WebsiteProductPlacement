@@ -20,12 +20,12 @@ ___
 
 # Project deployment
 
-The command to run the site docker build on the server [Debian](https://www.debian.org).
+#### The command to run the site docker build on the server [Debian](https://www.debian.org).
 ```commandline
 sudo docker compose -f "./docker-compose.yml" up
 ```
 
-The command to start the rebuild of the docker site on the server [Debian](https://www.debian.org).
+#### The command to start the rebuild of the docker site on the server [Debian](https://www.debian.org).
 ```commandline
 sudo docker compose -f "./docker-compose.yml" build --force-rm --no-cache
 ```
@@ -34,12 +34,12 @@ ___
 
 # Django Commands
 
-Running local the project locally.
+#### Running local the project locally.
 ```commandline
 poetry run python manage.py runserver
 ```
 
-Migrations in the Django project
+##### Migrations in the Django project
 ```commandline
 python manage.py makemigrations
 ```
@@ -47,3 +47,10 @@ python manage.py makemigrations
 python manage.py migrate
 ```
 
+___
+
+# Documentation for directories
+
+* templates - [doc.md](advertisements%2Ftemplates%2Fdoc.md)
+* static - [doc.md](advertisements%2Fstatic%2Fdoc.md)
+* media - [doc.md](advertisements%2Fmedia%2Fdoc.md)

@@ -19,14 +19,12 @@
   python manage.py makemigrations
   python manage.py migrate
 
-  poetry run python manage.py makemigrations
-  poetry run python manage.py migrate
-
 * Create superuser for the project
-  poetry run python manage.py createsuperuser
+  python manage.py createsuperuser
 
-* Create app for the project
-  python manage.py startapp app_auth
+* Create app for the project & start the project
+  django-admin startproject advertisements
+  python manage.py startapp app_advertisements
 
 * Docker clean cache
   docker builder prune
