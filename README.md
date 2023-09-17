@@ -55,12 +55,12 @@ ___
 
 # Documentation for each directory
 
-* [advertisements](advertisements%2Fadvertisements%2Fdoc.md)
-* [app advertisements](advertisements%2Fapp_advertisements%2Fdoc.md)
-* [app auth](advertisements%2Fapp_auth%2Fdoc.md)
-* [templates](advertisements%2Ftemplates%2Fdoc.md)
-* [static](advertisements%2Fstatic%2Fdoc.md)
-* [media](advertisements%2Fmedia%2Fdoc.md)
+* [advertisements](advertisements%2Fadvertisements%2FREADME.md)
+* [app advertisements](advertisements%2Fapp_advertisements%2FREADME.md)
+* [app auth](advertisements%2Fapp_auth%2FREADME.md)
+* [templates](advertisements%2Ftemplates%2FREADME.md)
+* [static](advertisements%2Fstatic%2FREADME.md)
+* [media](advertisements%2Fmedia%2FREADME.md)
 * [commands](advertisements%2FREADME.md)
 
 ___
