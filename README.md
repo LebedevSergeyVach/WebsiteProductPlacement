@@ -9,7 +9,7 @@ ___
 
 # Links and versions to the website    
 
-* [Lebedev Sergey](https://github.com/LebedevSergeyV) – Product Lead & Developer
+* [Lebedev Sergey](https://github.com/LebedevSergeyV) – Product Lead & Fullstack Developer
 
 * [Website](http://109.111.185.225) - a link to a website located on its server with a white (external) ip address connected. [LebedevSergeyV](https://github.com/LebedevSergeyV). A fresh and constantly updated version of the site.
   
