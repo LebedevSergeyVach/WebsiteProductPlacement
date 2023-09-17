@@ -61,7 +61,7 @@ ___
 * __[templates](advertisements%2Ftemplates%2Fdoc.md)__
 * __[static](advertisements%2Fstatic%2Fdoc.md)__
 * __[media](advertisements%2Fmedia%2Fdoc.md)__
-* __[commands](systemd%2Finfo.txt)__
+* __[commands](advertisements%2Ftemplates%2FREADME.md)__
 
 ___
 
