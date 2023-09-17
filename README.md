@@ -53,7 +53,7 @@ python manage.py migrate
 
 ___
 
-# Documentation for directories
+# Documentation for each directory
 
 * [main](advertisements%2Fdoc.md)
 * [advertisements](advertisements%2Fadvertisements%2Fdoc.md)

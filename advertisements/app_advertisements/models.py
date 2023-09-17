@@ -201,7 +201,7 @@ class Advertisement(models.Model):
     def get_absolute_url(self):
         """Get absolute URL for this user from the database"""
         return reverse(
-            "adv", kwargs={"pk": self.pk}
+            "advertisement", kwargs={"pk": self.pk}
         )
 
     class Meta:

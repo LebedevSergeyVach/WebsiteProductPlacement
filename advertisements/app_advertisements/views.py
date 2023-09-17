@@ -86,30 +86,3 @@ class WebViews(object):
         return render(
             request, "app_advertisement/advertisement-post.html", context=context
         )
-
-    def advertisement_ak_74(request):
-        """Renders the advertisement AK-74 page."""
-        return render(
-            request, "app_dop/advertisement-AK-74.html"
-        )
-
-    def advertisement_laptop(request):
-        """Renders the advertisement laptop page."""
-        return render(
-            request, "app_dop/advertisement-laptop.html"
-        )
-
-    def advertisement_rtx(request):
-        """Renders the advertisement rtx page."""
-        return render(
-            request, "app_dop/advertisement-rtx.html"
-        )
-
-    def fake(request):
-        """Renders the fake page."""
-        # DEBuG
-        print('# Пользователь зашел на страницу FAKE, он лох!!!')
-
-        return render(
-            request, "app_dop/fake.html"
-        )
