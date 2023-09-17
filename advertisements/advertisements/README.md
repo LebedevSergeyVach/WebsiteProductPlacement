@@ -29,7 +29,7 @@ ___
 
 * подключение ссылок приложений проекта и администрирования
 * `app_advertisements.urls` - приложение [app advertisements](..%2Fapp_advertisements) `25`
-* `app_auth.urls` - приложение [app auth](..%2Fapp_auth) `26
+* `app_auth.urls` - приложение [app auth](..%2Fapp_auth) `26`
 * `settings.DEBUG` - подключение debugging для панели администрирования (показ изображение в товарах) - настройка [models.py](..%2Fapp_advertisements%2Fmodels.py) `121 - 159`
 
 ## 3.[secrets.py](secrets.py)
