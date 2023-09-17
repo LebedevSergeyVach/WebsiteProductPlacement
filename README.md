@@ -55,13 +55,13 @@ ___
 
 # Documentation for each directory
 
-* [main](advertisements%2Fdoc.md)
-* [advertisements](advertisements%2Fadvertisements%2Fdoc.md)
-* [app advertisements](advertisements%2Fapp_advertisements%2Fdoc.md)
-* [app auth](advertisements%2Fapp_auth%2Fdoc.md)
-* [templates](advertisements%2Ftemplates%2Fdoc.md)
-* [static](advertisements%2Fstatic%2Fdoc.md)
-* [media](advertisements%2Fmedia%2Fdoc.md)
+* __[advertisements](advertisements%2Fadvertisements%2Fdoc.md)__
+* __[app advertisements](advertisements%2Fapp_advertisements%2Fdoc.md)__
+* __[app auth](advertisements%2Fapp_auth%2Fdoc.md)__
+* __[templates](advertisements%2Ftemplates%2Fdoc.md)__
+* __[static](advertisements%2Fstatic%2Fdoc.md)__
+* __[media](advertisements%2Fmedia%2Fdoc.md)__
+* __[commands](systemd%2Finfo.txt)__
 
 ___
 
