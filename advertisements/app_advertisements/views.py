@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.shortcuts import render, redirect, reverse
 from django.contrib.auth.decorators import login_required
 from django.urls import reverse_lazy
@@ -69,8 +71,9 @@ class WebViews(object):
                 url = reverse("main-page")
 
                 # DEBUG
+                now = datetime.now()
                 print(
-                    f"# Пользователь выложил объявление:\n"
+                    f'# Пользователь выложил объявление: [{now.strftime("%Y-%m-%d %H:%M:%S")}]\n'
                     f"{advertisement.user} Title: {advertisement.title} "
                     f"Description: {advertisement.description} Price: {advertisement.price} "
                     f"Image: {advertisement.image_1} Auction: {advertisement.auction}"

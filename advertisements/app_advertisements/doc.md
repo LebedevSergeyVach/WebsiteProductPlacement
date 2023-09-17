@@ -2,7 +2,13 @@
 
 ___
 
-Документация к директории app_advertisements.
+Документация к директории [app_advertisements]().
+
+Это приложение отвечает работу сайта, связанную с базой данных (миграции), администрированием сайта, 
+показом главной страницы и объявлений, размещением новых объявлений и размещением страниц на сайте: 
+Главная, Топ продавцов, Объявление и Разместить объявление.
+
+Настройки подключения и другого находятся в файле [settings.py](..%2Fadvertisements%2Fsettings.py).
 
 ___
 
@@ -34,13 +40,13 @@ ___
 
 ## 3. [forms.py](forms.py)
 
-* `class AdvertisementForm()` - класс для POST запроса с размещением объявления - [forms.py](forms.py) `5`
+* `class AdvertisementForm()` - класс со всеми формами для POST запроса с размещением объявления - [forms.py](forms.py) `5`
 * `class Meta` - класс для шаблона [advertisement-post.html](..%2Ftemplates%2Fapp_advertisement%2Fadvertisement-post.html) с размещением объявления (POST запросом) - [forms.py](forms.py) `7`
 * `clean title()` - функция выводящая ошибку если title (заголовок) объявления начинается с "?" - [forms.py](forms.py) `24`
 
 ## 4. [urls.py](urls.py)
 
-* `urlpatterns` - настройка синхронизации между ссылками на сайте, шаблонами в директории [templates](..%2Ftemplates) и классом `class WebViews()` в файле [views.py](views.py) - [urls.py](urls.py) `6`
+* `urlpatterns` - настройка синхронизации между ссылками на сайте, шаблонами в директории [app advertisement](..%2Ftemplates%2Fapp_advertisement)[templates](..%2Ftemplates) и классом `class WebViews()` в файле [views.py](views.py) - [urls.py](urls.py) `6`
 
 ## 5. [views.py](views.py)
 
@@ -53,13 +59,17 @@ ___
    имеет настройку абсолютной ссылки для шаблона - [views.py](views.py) `47` 
 * `advertisement post()` - функция, возвращающая шаблон страницы с размещением объявлений [advertisement-post.html](..%2Ftemplates%2Fapp_advertisement%2Fadvertisement-post.html);
    имеет несколько функций - [views.py](views.py) `60`
-   1. POST запрос, заносящий всю информацию о новом объявлении в базу данных
-   2. не допускает и переносит не зарегистрированных пользователей на страницу с шаблоном [login.html](..%2Ftemplates%2Fapp_auth%2Flogin.html)
-   3. сохраняет новое объявление в базе данных [db.sqlite3](..%2F..%2Fdata%2Fdb.sqlite3) через файл со всеми формами [forms.py](forms.py) 
+   - POST запрос, заносящий всю информацию о новом объявлении в базу данных
+   - не допускает и переносит не зарегистрированных пользователей на страницу с шаблоном [login.html](..%2Ftemplates%2Fapp_auth%2Flogin.html)
+   - сохраняет новое объявление в базе данных [db.sqlite3](..%2F..%2Fdata%2Fdb.sqlite3) через файл со всеми формами [forms.py](forms.py)
+   - выводит ошибку и не дает разместить объявлении без внесенных данных в заголовке "title", описании "description", цене "price" - настройка находится в файле [models.py](models.py)
+   - выводит ошибку, если заголовок "title" начинается с "?" - настройка находится в файле со всеми формами [forms.py](forms.py)
+   - debugging: выводит в консоль закрытого сервера дату, время, пользователя и данные нового размещенного объявления
 
 ## 6. [apps.py](apps.py)
 
 * `class AppAdvertisementsConfig()` - класс для изменения названия приложения с базой данных в панели администратора сайта - [apps.py](apps.py) `4`
+* `INSTALLED_APP` - обязательно добавить все изменения в файл [settings.py](..%2Fadvertisements%2Fsettings.py) `48` - данное приложение `55` 
 
 ## 7. [migrations](migrations)
 
