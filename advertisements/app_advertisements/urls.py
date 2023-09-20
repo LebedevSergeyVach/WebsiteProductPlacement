@@ -5,7 +5,6 @@ from .views import WebViews
 
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
     path("search", WebViews.index, name="search"),
 
     path('', WebViews.index, name="main-page"),
