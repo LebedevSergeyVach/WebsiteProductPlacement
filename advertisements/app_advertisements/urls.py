@@ -14,5 +14,5 @@ urlpatterns = [
     path("advertisement/<int:pk>", WebViews.advertisement_view, name="advertisement"),
     path("advertisement-post", WebViews.advertisement_post, name="advertisement-post"),
 
-    path('handler404', WebViews.page_not_found_view, name='page-not-found'),
+    path('handler404', WebViews.handler404, name='handler404'),
 ]

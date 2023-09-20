@@ -90,7 +90,7 @@ class WebViews(object):
             request, "app_advertisement/advertisement-post.html", context=context
         )
 
-    def page_not_found_view(request, exception):
+    def handler404(request, exception):
         """Returns 404 error page."""
         return render(
             request, 'app_advertisement/404.html', status=404
