@@ -46,6 +46,9 @@ python manage.py startapp app_advertisements
 
 ## Docker clean cache
 ```commandline
+docker builder prune
+```
+```commandline
 docker image prune -a -f
 ``` 
 

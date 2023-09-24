@@ -12,9 +12,6 @@ ___
 * [Lebedev Sergey](https://github.com/LebedevSergeyV) – Product Lead & Fullstack Developer
 
 * [Website](http://109.111.185.225) - a link to a website located on its server with a white (external) ip address connected. [LebedevSergeyV](https://github.com/LebedevSergeyV). A fresh and constantly updated version of the site.
-  
-* [Website](https://garage.xiver.ru) - link to the website on the server [GigantPro](https://github.com/GigantPro). Fucking great man. Previous version of the site. 
-
 
 ___
 
@@ -32,28 +29,11 @@ sudo docker compose -f "./docker-compose.yml" build --force-rm --no-cache
 
 #### Clearing dockers data and file cache.
 ```commandline
-docker image prune -a -f
+docker builder prune
 ```
 ___
 
-# Django Commands
-
-#### Running local the project locally.
-```commandline
-poetry run python manage.py runserver
-```
-
-##### Migrations in the Django project
-```commandline
-python manage.py makemigrations
-```
-```commandline
-python manage.py migrate
-```
-
-___
-
-# Documentation for each directory
+## Documentation for each directory
 
 * [advertisements](advertisements%2Fadvertisements%2FREADME.md)
 * [app advertisements](advertisements%2Fapp_advertisements%2FREADME.md)
@@ -61,6 +41,9 @@ ___
 * [templates](advertisements%2Ftemplates%2FREADME.md)
 * [static](advertisements%2Fstatic%2FREADME.md)
 * [media](advertisements%2Fmedia%2FREADME.md)
+
+## List of the main commands used in the project
+
 * [commands](advertisements%2FREADME.md)
 
 ___
