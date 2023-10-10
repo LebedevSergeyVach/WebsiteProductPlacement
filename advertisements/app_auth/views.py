@@ -29,7 +29,9 @@ class WebView(object):
             if request.user.is_authenticated:
                 return redirect(redirect_url)
             else:
-                return render(request, "app_auth/login.html")
+                return render(
+                    request, "app_auth/login.html"
+                )
 
         username = request.POST["username"]
         password = request.POST["password"]

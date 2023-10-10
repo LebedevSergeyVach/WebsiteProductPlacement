@@ -95,3 +95,51 @@ class WebViews(object):
         return render(
             request, 'app_advertisement/404.html', status=404
         )
+
+    def maps(request):
+        """Returns map"""
+        redirect_url = reverse("main-page")
+
+        if request.method == "GET":
+            if request.user.is_superuser:
+                return render(
+                    request, 'maps/maps.html'
+                )
+            else:
+                return redirect(redirect_url)
+
+        return render(
+            request, 'maps/maps.html'
+        )
+
+    def map_sib_sety(request):
+        """Returns map"""
+        redirect_url = reverse("main-page")
+
+        if request.method == "GET":
+            if request.user.is_superuser:
+                return render(
+                    request, 'maps/map_sib_sety.html'
+                )
+            else:
+                return redirect(redirect_url)
+
+        return render(
+            request, 'maps/map_sib_sety.html'
+        )
+
+    def map_rostelecom(request):
+        """Returns map"""
+        redirect_url = reverse("main-page")
+
+        if request.method == "GET":
+            if request.user.is_superuser:
+                return render(
+                    request, 'maps/maps_rostelecom.html'
+                )
+            else:
+                return redirect(redirect_url)
+
+        return render(
+            request, 'maps/maps_rostelecom.html'
+        )

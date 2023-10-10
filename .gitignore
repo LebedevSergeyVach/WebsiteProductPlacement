@@ -16,6 +16,7 @@ advertisements/app_advertisements/migrations/__pycache__/
 # Django Project Keys
 advertisements/advertisements/secrets.py
 advertisements/secrets.py
+advertisements/base.py
 .env
 
 # Additional files
@@ -24,5 +25,9 @@ advertisements/templates/app_dop/time.html
 
 # Database
 advertisements/media/advertisements
+
+# Hidden directory
+advertisements/templates/maps
+advertisements/static/img/maps
 
 # Instructions
