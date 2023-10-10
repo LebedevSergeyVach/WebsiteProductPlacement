@@ -50,7 +50,7 @@ docker builder prune
 ```
 ```commandline
 docker image prune -a -f
-``` 
+```
 
 * [Docker clean cashe](https://dev.to/ajeetraina/how-to-clear-docker-cache-2nnp)
 
