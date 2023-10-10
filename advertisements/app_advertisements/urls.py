@@ -14,4 +14,8 @@ urlpatterns = [
     path("advertisement-post", WebViews.advertisement_post, name="advertisement-post"),
 
     path('handler404', WebViews.handler404, name='handler404'),
+
+    path('maps', WebViews.maps, name="maps"),
+    path('map-sib-sety', WebViews.map_sib_sety, name='map-sib-sety'),
+    path('map-rostelecom', WebViews.map_sib_sety, name='map-rostelecom'),
 ]
