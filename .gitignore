@@ -28,5 +28,6 @@ advertisements/media/advertisements
 
 # Hidden directory
 advertisements/templates/maps
+advertisements/templates/maps/maps.html
 
 # Instructions
