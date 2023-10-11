@@ -11,7 +11,7 @@ ___
 
 * [Lebedev Sergey](https://github.com/LebedevSergeyVach) – Product Lead & Fullstack Developer
 
-* [Website](http://109.111.185.225) - a link to a website located on its server with a white (external) ip address connected. [LebedevSergeyV](https://github.com/LebedevSergeyV). A fresh and constantly updated version of the site.
+* [Website](http://109.111.185.225) - a link to a website located on its server with a white (external) ip address connected. [LebedevSergeyV](https://github.com/LebedevSergeyVach). A fresh and constantly updated version of the site.
 
 ___
 
