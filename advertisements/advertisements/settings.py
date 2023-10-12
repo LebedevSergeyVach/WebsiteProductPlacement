@@ -31,7 +31,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get(SECRET_KEY, SECRET_KEY)
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = config.DEBUG
+# DEBUG = config.DEBUG
 # DEBUG = False
 
 
@@ -162,3 +162,7 @@ MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media/')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+
+# DEBUG = True
+DEBUG = False

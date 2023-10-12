@@ -113,12 +113,12 @@
                     <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
                       <div class="accordion-body">
                         <strong>
-                            Разработчик LebedevSergeyV. Проект Web-Site in the Django.
+                            Разработчик LebedevSergeyV. Проект Website Product Placement in the Django.
                         </strong>
                           <p>Проект написан на фреймворке Django. Серверная (backend) часть написана на python. Интерфейс (frontend) написан с использованием bootstrap. Сайт размещен на собственном сервере, работающем на Debian.</p>
                           <p>Все ссылки на проект (GitHub), а также на разработчика (Telegram и Github) вы сможете увидеть внизу сайта, нажав на 'Ссылки'.</p>
                           <p>Сайт полностью имеет открытый исходный код для любого желающего на Github. Буду рад если посмотри и нажмете на 'Star'! Opensource ;)</p>
-                          <p>Версия сайта стабильная 1.7.0</p>
+                          <p>Версия сайта стабильная 1.7.1</p>
                       </div>
                     </div>
                   </div>
@@ -168,8 +168,8 @@
           </div>
         </li>
       </ul>
-      <form class="d-flex my-2 my-lg-0">
-        <input class="form-control me-sm-2 bg-dark bg-gradient text-light btn-outline-primary" type="text" placeholder="Search">
+      <form class="d-flex my-2 my-lg-0" method="get">
+        <input class="form-control me-sm-2 bg-dark bg-gradient text-light btn-outline-primary" type="text" placeholder="Search" name="query"  value="{% if title %} {{ title }} {% endif %}">
         <button class="btn btn-outline-dark my-2 my-sm-0 text-light" type="submit">Search</button>
       </form>
     </div>
