@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Provider's point map
+{% endblock %}
+
+{% block active_1 %}active{% endblock %}
+
+{% block content %}
+
+<p></p>
+
+<div class="container overflow-hidden text-center">
+    <div class="d-grid gap-5 col-4 mx-auto">
+        <a href="{% url 'map-sib-sety' %}">
+            <div class="display-auto">
+                <img src="{% static 'img/Rostelecom.jpg' %}" class="img-fluid rounded-start" alt="Card title">
+            </div>
+            <p></p>
+
+            <button class="btn btn-primary" type="button">SIBERIAN NETWORKS</button>
+        </a>
+
+        <a href="{% url 'map-rostelecom' %}">
+            <div class="display-auto">
+                <img src="{% static 'img/RostelecomRostelecom.png' %}" class="img-fluid rounded-start" alt="Card title">
+            </div>
+            <p></p>
+
+            <button class="btn btn-primary" type="button">ROSTELECOM</button>
+        </a>
+
+        <a href="{% url 'main-page' %}">
+                        <div class="display-auto">
+                <img src="{% static 'img/gors.jpg' %}" class="img-fluid rounded-start" alt="Card title">
+            </div>
+            <p></p>
+
+            <button class="btn btn-primary" type="button">MAIN PAGE</button>
+        </a>
+    </div>
+</div>
+
+<p></p>
+
+
+
+{##}
+{#                <div class="display-auto">#}
+{#                <img src="{% static 'img/Rostelecom.jpg' %}" class="img-fluid rounded-start" alt="Card title">#}
+{#            </div>#}
+{#                <div class="display-auto">#}
+{#                <img src="{% static 'img/RostelecomRostelecom.png' %}" class="img-fluid rounded-start" alt="Card title">#}
+{#            </div>#}
+
+
+
+
+
+
+<script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+
+{% endblock %}

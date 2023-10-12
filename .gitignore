@@ -27,7 +27,8 @@ advertisements/templates/app_dop/time.html
 advertisements/media/advertisements
 
 # Hidden directory
-advertisements/templates/maps
-advertisements/templates/maps/maps.html
+advertisements/templates/maps/maps_rostelecom.html
+advertisements/templates/maps/map_sib_sety.html
+
 
 # Instructions
