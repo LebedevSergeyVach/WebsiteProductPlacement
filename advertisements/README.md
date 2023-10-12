@@ -44,12 +44,15 @@ django-admin startproject advertisements
 python manage.py startapp app_advertisements
 ```
 
-## Docker clean cache
+## Docker clean cache and stop the containers all
 ```commandline
 docker builder prune
 ```
 ```commandline
 docker image prune -a -f
+```
+```commandline
+docker rm $(docker ps -a -q)
 ```
 
 * [Docker clean cashe](https://dev.to/ajeetraina/how-to-clear-docker-cache-2nnp)
