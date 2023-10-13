@@ -163,5 +163,8 @@ MEDIA_ROOT = Path.joinpath(BASE_DIR, 'media/')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+<<<<<<< HEAD
 # DEBUG = False
+=======
+>>>>>>> refs/remotes/origin/main
 DEBUG = True
