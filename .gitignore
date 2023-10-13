@@ -9,6 +9,7 @@ venv/
 *.DS_Store
 
 # Migrate
+advertisements/__pycache__/
 advertisements/advertisements/__pycache__/
 advertisements/app_advertisements/__pycache__/
 advertisements/app_advertisements/migrations/__pycache__/
