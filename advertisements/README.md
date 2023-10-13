@@ -46,13 +46,13 @@ python manage.py startapp app_advertisements
 
 ## Docker clean cache and stop the containers all
 ```commandline
-docker builder prune
+sudo docker builder prune
 ```
 ```commandline
-docker image prune -a -f
+sudo docker image prune -a -f
 ```
 ```commandline
-docker rm $(docker ps -a -q)
+sudo docker rm $(docker ps -a -q)
 ```
 
 * [Docker clean cashe](https://dev.to/ajeetraina/how-to-clear-docker-cache-2nnp)
