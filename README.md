@@ -29,7 +29,7 @@ sudo docker compose -f "./docker-compose.yml" build --force-rm --no-cache
 
 #### Clearing dockers data and file cache.
 ```commandline
-docker builder prune
+sudo docker builder prune
 ```
 ___
 
