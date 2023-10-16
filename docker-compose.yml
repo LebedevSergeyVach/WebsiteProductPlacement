@@ -10,11 +10,10 @@ services:
       dockerfile: Dockerfile
     ports:
       - '80:80'
-    #volumes:
-    #  - ./advertisements:/app
 
     volumes:
       - ./data:/app/data
       - ./data:/data
+      - ./advertisements:/app
 
     restart: always
