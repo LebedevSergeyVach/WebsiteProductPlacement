@@ -1,4 +1,4 @@
-# Django
+# Website Product Placement
 
 The project is written on the [Django](https://www.djangoproject.com) framework.
 The backend is written in [python](https://www.python.org).
