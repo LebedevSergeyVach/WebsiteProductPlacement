@@ -38,7 +38,7 @@
       <span style="font-weight: bold;">Разместить объявление</span>
     </a>
   </li>
-  {% if not  user.is_authenticated %}
+  {% if not user.is_authenticated %}
   <li class="nav-item bg-black">
     <a class="nav-link {% block active_4 %}{% endblock %}" href="{% url 'register' %}">
       <span style="font-weight: bold;">Регистрация</span>
@@ -147,12 +147,11 @@
                 </div>
           </div>
           <div class="modal-footer">
-            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Закрыть</button>
+            <button type="button" class="btn btn-primary btn-outline-dark text-light" data-bs-dismiss="modal">Закрыть</button>
           </div>
         </div>
       </div>
     </div>
-
     <button class="navbar-toggler d-lg-none" type="button" data-bs-toggle="collapse"
       data-bs-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false"
       aria-label="Toggle navigation"></button>
