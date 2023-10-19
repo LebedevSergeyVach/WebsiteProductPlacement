@@ -25,7 +25,7 @@ advertisements/parser.py
 advertisements/templates/app_dop/time.html
 
 # Database
-advertisements/media/advertisements
+#advertisements/media/advertisements
 
 # Hidden directory
 advertisements/templates/maps/maps_rostelecom.html
