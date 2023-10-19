@@ -22,52 +22,52 @@
 
 <body class="bg-black">
 
-<ul class="nav nav-pills sticky-top bg-black nav-fill bg-black">
+<ul class="nav nav-pills sticky-top bg-black nav-fill">
 
-
-<a class="btn btn-primary text-light" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+<a class="btn btn-primary" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
     ☰
 </a>
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+<div class="offcanvas offcanvas-start bg-primary text-light" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+    <h2 class="offcanvas-title" id="offcanvasExampleLabel">
+        Website Product Placement
+    </h2>
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Закрыть"></button>
   </div>
-  <div class="offcanvas-body">
+  <div class="offcanvas-body bg-black bg-gradient">
     <div>
-      Какой-то текст в качестве заполнителя. В реальной жизни у вас могут быть элементы, которые Вы выбрали. Нравится, текст, изображения, списки и т. д.
+      Всю информацию о проекте Вы можете найти, нажав на 'Информация о сайте' снизу ⮷⮷⮷.
+      Основная страница с размещенными объявлениями. Страница с продуктами и программным обеспечением для Microsoft Windows.
     </div>
-
     <div class="row mb-auto text-light">
-    <div class="row mb-1">
-        <div class="row-cols-1">
-            <a class="nav-link" aria-current="page" href="{% url 'main-page' %}">
-                <button type="submit" class="btn btn-primary btn-outline-dark text-light">Main page Web site</button>
-            </a>
-
-            <a class="nav-link" aria-current="page" href="{% url 'products' %}">
-                <button type="submit" class="btn btn-primary btn-outline-dark text-light">Products for Windows</button>
-            </a>
+        <div class="row mb-1">
+            <div class="row-cols-1">
+                <a class="nav-link" aria-current="page" href="{% url 'main-page' %}">
+                    <button type="submit" class="btn btn-primary btn-outline-dark text-light">Main page Website</button>
+                </a>
+                <a class="nav-link" aria-current="page" href="{% url 'WindowsProducts' %}">
+                    <button type="submit" class="btn btn-primary btn-outline-dark text-light">Products for Windows</button>
+                </a>
+                <span>
+                    Страница проекта 'Products for Windows' находится в разработке и бета-тестировании.
+                </span>
+            </div>
         </div>
     </div>
-    </div>
-
-    <div class="dropdown mt-5">
-
-      <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
-        Кнопка раскрывающегося списка
+      <p></p>
+    <div class="dropdown mt-1">
+      <button class="btn btn-primary btn-outline-dark text-light dropdown-toggle" aria-current="page" type="button" data-bs-toggle="dropdown">
+        References to the project
       </button>
-
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="https://t.me/LebedevSergeyVach">Telegram</a></li>
-        <li><a class="dropdown-item" href="{% url 'products' %}">Страница с продуктами для виндовс</a></li>
-        <li><a class="dropdown-item" href="#">Что-то еще здесь</a></li>
+      <ul class="dropdown-menu bg-dark text-light btn-outline-dark dropdown-menu-dark" aria-current="dropdownId">
+        <a class="dropdown-item text-light btn-outline-primary" href="https://t.me/LebedevSergeyVach">Telegram</a>
+        <a class="dropdown-item text-light btn-outline-primary" href="https://github.com/LebedevSergeyVach">GitHub</a>
+        <a class="dropdown-item text-light btn-outline-primary" href="https://github.com/LebedevSergeyVach/Django">Repositories</a>
       </ul>
-
     </div>
+      <p></p><span>Ссылки на проект (GitHub), а также на разработчика (Telegram и Github).</span>
   </div>
 </div>
-
 
   <li class="nav-item bg-black">
     <a class="nav-link {% block active_1 %}{% endblock %}" aria-current="page" href="{% url 'main-page' %}">
@@ -108,7 +108,6 @@
   </li>
   {% endif %}
 </ul>
-
 
 
 {% block content %}
@@ -162,9 +161,10 @@
                             Разработчик LebedevSergeyVach. Проект Website Product Placement in the Django.
                         </strong>
                           <p>Проект написан на фреймворке Django. Серверная (backend) часть написана на python. Интерфейс (frontend) написан с использованием bootstrap. Сайт размещен на собственном сервере, работающем на Debian.</p>
-                          <p>Все ссылки на проект (GitHub), а также на разработчика (Telegram и Github) вы сможете увидеть внизу сайта, нажав на 'Ссылки'.</p>
+                          <p>Все ссылки на проект (GitHub), а также на разработчика (Telegram и Github) вы сможете увидеть внизу сайта, нажав на 'Ссылки' или '≡'.</p>
+                          <p>Страницу с продуктами и программным обеспечением для Microsoft Windows вы можете найти, нажав на '≡'.</p>
                           <p>Сайт полностью имеет открытый исходный код для любого желающего на Github. Буду рад если посмотри и нажмете на 'Star'! Opensource ;)</p>
-                          <p>Версия сайта стабильная 1.7.1</p>
+                          <p>Версия сайта стабильная 1.8.0</p>
                       </div>
                     </div>
                   </div>
@@ -181,7 +181,7 @@
                         </strong>
                           <p>1. Не размещайте порнографию, нецензурные выражения, незаконную и нарушающую права иформацию, оскорбляющую других пользователей.</p>
                           <p>2. Относитесь к сайту и его пользователям с уважением.</p>
-                          <p>3. На сайте каждый пользователь обладает свободой слова и в праве рамешать любую информацию, не нарушающую вышенаписанные требования.</p>
+                          <p>3. На сайте каждый пользователь обладает свободой слова и в праве рамешать любую информацию, не нарушающую вышеперечисленные требования.</p>
                           <p>4. Реклама и новостные материалы могут быть размещены без официального подтверждения.</p>
                           <p>5. За каждое размещённое объявление вы несёте ответсвенность самостоятельно. Необходимо размещать актуальную и действительную информацию. Размещение пользовательского контента допускается исключительно в информационных целях.</p>
                           <p>6. Регистрируясь на сайте и при каждом случае входа на сайт, вы гарантируете, что обладаете всеми правомочиями, необходимыми для заключения и исполнения требований и правил.</p>
@@ -203,15 +203,15 @@
       aria-label="Toggle navigation"></button>
     <div class="collapse navbar-collapse" id="collapsibleNavId">
       <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-{#        <li class="nav-item dropdown">#}
-{#          <a class="nav-link dropdown-toggle text-light" href="" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"#}
-{#            aria-expanded="false">Ссылки</a>#}
-{#          <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownId">#}
-{#            <a class="dropdown-item text-light btn-outline-primary" href="https://t.me/LebedevSergeyVach">Telegram</a>#}
-{#            <a class="dropdown-item text-light btn-outline-primary" href="https://github.com/LebedevSergeyVach">GitHub</a>#}
-{#            <a class="dropdown-item text-light btn-outline-primary" href="https://github.com/LebedevSergeyVach/Django">Repositories</a>#}
-{#          </div>#}
-{#        </li>#}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-light" href="" id="dropdownId" data-bs-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">Ссылки</a>
+          <div class="dropdown-menu dropdown-menu-dark" aria-labelledby="dropdownId">
+            <a class="dropdown-item text-light btn-outline-primary" href="https://t.me/LebedevSergeyVach">Telegram</a>
+            <a class="dropdown-item text-light btn-outline-primary" href="https://github.com/LebedevSergeyVach">GitHub</a>
+            <a class="dropdown-item text-light btn-outline-primary" href="https://github.com/LebedevSergeyVach/Django">Repositories</a>
+          </div>
+        </li>
       </ul>
       <form class="d-flex my-2 my-lg-0" method="get">
         <input class="form-control me-sm-2 bg-dark bg-gradient text-light btn-outline-primary" type="text" placeholder="Search" name="query"  value="{% if title %} {{ title }} {% endif %}">
