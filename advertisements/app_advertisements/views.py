@@ -102,7 +102,7 @@ class WebViews(object):
         if request.method == 'GET':
             if request.user.is_superuser:
                 return render(
-                    request, 'app_advertisement/products.html',
+                    request, 'app_advertisement/WindowsProducts.html',
                 )
             else:
                 return render(
