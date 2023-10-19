@@ -18,4 +18,6 @@ urlpatterns = [
     path('maps', WebViews.maps, name="maps"),
     path('map-sib-sety', WebViews.map_sib_sety, name='map-sib-sety'),
     path('map-rostelecom', WebViews.map_sib_sety, name='map-rostelecom'),
+
+    path('products', WebViews.products, name="products"),
 ]
