@@ -28,15 +28,16 @@
           <h1>
               <span class="text-primary">⨯ . ⁺ ✦ ⊹ ꙳ ⁺ ‧ ⨯. ⁺ ✦ ⊹ . * ꙳ ✦ ⊹</span>
           </h1>
+      {% if user.is_superuser %} {% else %}
         <span class="badge bg-primary">Имя: </span>
           <span class="badge bg-black bg-gradient text-primary">{{ user.first_name }}</span>
-{#          <p></p>#}
         <span class="badge bg-primary">Фамилия: </span>
          <span class="badge bg-black bg-gradient text-primary">{{ user.last_name }}</span>
           <p></p>
           <h1>
               <span class="text-primary">⋆⁺｡˚⋆˙‧₊☾ ◯ ☽₊‧˙⋆˚｡⁺⋆</span>
           </h1>
+      {% endif %}
          <span class="badge bg-primary">Последний вход: </span>
           <span class="badge bg-black bg-gradient text-primary">{{ user.last_login }}</span>
           <p></p>
