@@ -1,4 +1,5 @@
-# Website Product Placement
+# Website Product Placement 
+# Production and software for Windows
 
 The project is written on the [Django](https://www.djangoproject.com) framework.
 The backend is written in [python](https://www.python.org).
