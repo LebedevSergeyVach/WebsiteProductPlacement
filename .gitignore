@@ -21,6 +21,7 @@ advertisements/base.py
 .env
 
 # Additional files
+advertisements/static/files
 advertisements/parser.py
 advertisements/templates/app_dop/time.html
 

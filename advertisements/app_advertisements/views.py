@@ -96,18 +96,8 @@ class WebViews(object):
             request, 'app_advertisement/404.html', status=404
         )
 
-    @login_required(login_url=reverse_lazy("login"))
     def products(request):
         """Returns products list."""
-        # if request.method == 'GET':
-        #     if request.user.is_superuser:
-        #         return render(
-        #             request, 'app_advertisement/WindowsProducts.html',
-        #         )
-        #     else:
-        #         return render(
-        #             request, 'app_advertisement/main.html'
-        #         )
         return render(
             request, 'app_advertisement/WindowsProducts.html',
         )

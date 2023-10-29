@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% extends 'basetwo.html' %}
 {% load static %}
 
 {% block title %}
@@ -11,24 +11,25 @@ Provider's point map
 
 <p></p>
 
+
 <div class="container overflow-hidden text-center">
     <div class="d-grid gap-5 col-4 mx-auto">
         <a href="{% url 'map-sib-sety' %}">
             <div class="display-auto">
-                <img src="{% static 'img/Rostelecom.jpg' %}" class="img-fluid rounded-start" alt="Card title">
+                <img src="{% static 'img/maps/Rostelecom.jpg' %}" class="img-fluid rounded-start" alt="Card title">
             </div>
             <p></p>
 
-            <button class="btn btn-primary" type="button">SIBERIAN NETWORKS</button>
+            <button class="btn btn-primary btn-outline-dark text-light" type="button">SIBERIAN NETWORKS</button>
         </a>
 
         <a href="{% url 'map-rostelecom' %}">
             <div class="display-auto">
-                <img src="{% static 'img/RostelecomRostelecom.png' %}" class="img-fluid rounded-start" alt="Card title">
+                <img src="{% static 'img/maps/RostelecomRostelecom.png' %}" class="img-fluid rounded-start" alt="Card title">
             </div>
             <p></p>
 
-            <button class="btn btn-primary" type="button">ROSTELECOM</button>
+            <button class="btn btn-primary btn-outline-dark text-light" type="button">ROSTELECOM</button>
         </a>
 
         <a href="{% url 'main-page' %}">
@@ -37,7 +38,7 @@ Provider's point map
             </div>
             <p></p>
 
-            <button class="btn btn-primary" type="button">MAIN PAGE</button>
+            <button class="btn btn-primary btn-outline-dark text-light" type="button">MAIN PAGE</button>
         </a>
     </div>
 </div>

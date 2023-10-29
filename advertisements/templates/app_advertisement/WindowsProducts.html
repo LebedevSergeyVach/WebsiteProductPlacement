@@ -1,16 +1,280 @@
-{% extends 'base.html' %}
+{% extends 'basetwo.html' %}
 {% load static %}
 
 {% block title %}
-Главная
+Windows Products
 {% endblock %}
 
 {% block active_1 %}active{% endblock %}
 
 {% block content %}
 
+<div style="margin: 10px;"></div>
 
+<div class="row mb-3 offset-sm-2">
+  <div class="col" style="margin: 0px;">
+    <div class="display-2">
+      <span class="badge bg-primary">Production and software for Windows</span>
+    </div>
+  </div>
+</div>
+
+<div class="row mb-3 offset-sm-3">
+  <div class="col" style="margin: 20px;">
+    <div class="display-4">
+        <span class="badge bg-primary">ISO образы Windows 10 и Windows 11</span>
+      </div>
+    </div>
+</div>
+
+<div class="row offset-sm-2">
+    <div class="card bg-black bg-gradient text-light" style="width: 26rem; margin: 5px">
+    <div style="margin: 10px"></div>
+    <a href="{% static 'files/Windows11/Windows.iso' %}">
+        <img src="{% if 'img/WindowsProduct/Windows11.jpg' %} {% static 'img/WindowsProduct/Windows11.jpg' %} {% else %} {% static '404-sorry-1.gif' %} {% endif %}" class="card-img-top" alt="...">
+    </a>
+      <div class="card-body">
+        <h4 class="card-title">Windows 11 23h2 ISO</h4>
+        <p class="card-text">
+            Официальный ISO образ Windows 11 версии сборки 23h2 64 бит для установки через образ диска: Rufus, Ventoy.
+            Тестирование бета-версии Windows.</p>
+        <p class="card-text">
+            Этот параметр предназначен для пользователей, которые хотят создать загрузочный носитель (USB-устройство флэш-памяти или DVD-диск)
+            или создать виртуальную машину (ISO-файл) для установки Windows 11. При этом скачивается ISO-файл с несколькими выпусками,
+            который использует ключ продукта для разблокировки нужного выпуска.
+        </p>
+        <a href="{% static 'files/Windows11/Windows.iso' %}" class="btn btn-primary btn-outline-dark text-light">Download Windows 11 ISO</a>
+        <a href="https://www.microsoft.com/ru-ru/software-download/windows11" class="btn btn-primary btn-outline-dark text-light">link website</a>
+      </div>
+    </div>
+
+    <div class="card bg-black bg-gradient text-light" style="width: 26rem; margin: 5px">
+    <div style="margin: 10px"></div>
+    <a href="{% static 'files/Windows11/Windows22.iso' %}">
+        <img src="{% if 'img/WindowsProduct/Windows11.jpg' %} {% static 'img/WindowsProduct/Windows11.jpg' %} {% else %} {% static '404-sorry-1.gif' %} {% endif %}" class="card-img-top" alt="...">
+    </a>
+      <div class="card-body">
+        <h4 class="card-title">Windows 11 22h2 ISO</h4>
+        <p class="card-text">
+            Официальный ISO образ Windows 11 версии сборки 22h2 64 бит для установки через образ диска: Rufus, Ventoy.
+            Стабильная версия Windows.
+        </p>
+        <p class="card-text">
+            Этот параметр предназначен для пользователей, которые хотят создать загрузочный носитель (USB-устройство флэш-памяти или DVD-диск)
+            или создать виртуальную машину (ISO-файл) для установки Windows 10. При этом скачивается ISO-файл с несколькими выпусками,
+            который использует ключ продукта для разблокировки нужного выпуска.
+        </p>
+        <a href="{% static 'files/Windows11/Windows22.iso' %}" class="btn btn-primary btn-outline-dark text-light">Download Windows 11 ISO</a>
+        <a href="https://www.microsoft.com/ru-ru/software-download/windows11" class="btn btn-primary btn-outline-dark text-light">link website</a>
+      </div>
+    </div>
+
+    <div class="card bg-black bg-gradient text-light" style="width: 26rem; margin: 5px">
+    <div style="margin: 10px"></div>
+    <a href="{% static 'files/Windows10/Windows.iso' %}">
+        <img src="{% if 'img/WindowsProduct/Windows10.webp' %} {% static 'img/WindowsProduct/Windows10.webp' %} {% else %} {% static '404-sorry-1.gif' %} {% endif %}" class="card-img-top" alt="...">
+    </a>
+      <div class="card-body">
+        <h4 class="card-title">Windows 10 22h2 ISO</h4>
+        <p class="card-text">
+            Официальный ISO образ Windows 10 версии сборки 22h2 64 бит для установки через образ диска: Rufus, Ventoy.
+            Стабильная версия Windows.
+        </p>
+        <p class="card-text">
+            Этот параметр предназначен для пользователей, которые хотят создать загрузочный носитель (USB-устройство флэш-памяти или DVD-диск)
+            или создать виртуальную машину (ISO-файл) для установки Windows 11. При этом скачивается ISO-файл с несколькими выпусками,
+            который использует ключ продукта для разблокировки нужного выпуска.
+        </p>
+        <a href="{% static 'files/Windows10/Windows.iso' %}" class="btn btn-primary btn-outline-dark text-light">Download Windows 10 ISO</a>
+        <a href="https://www.microsoft.com/ru-ru/software-download/windows10" class="btn btn-primary btn-outline-dark text-light">link website</a>
+      </div>
+    </div>
+</div>
+
+<div style="margin: 10px;"></div>
+
+<div class="row mb-3 offset-sm-3">
+  <div class="col" style="margin: 20px;">
+    <div class="display-4">
+        <span class="badge bg-primary">Программы для установки Windows 11</span>
+      </div>
+    </div>
+</div>
+
+<div class="row offset-2">
+    <div class="card bg-black bg-gradient text-light" style="width: 26rem; margin: 5px">
+    <div style="margin: 10px"></div>
+    <a href="{% static 'files/Windows11/Windows11InstallationAssistant.exe' %}">
+        <img src="{% if 'img/WindowsProduct/Windows11.jpg' %} {% static 'img/WindowsProduct/Windows11.jpg' %} {% else %} {% static '404-sorry-1.gif' %} {% endif %}" class="card-img-top" alt="...">
+    </a>
+      <div class="card-body">
+        <h4 class="card-title">Windows 11 Installation Assistant</h4>
+        <p class="card-text">Официальный помощник по установке Windows 11.</p>
+        <p class="card-text">
+            Информацию по системным требованиям и установке Вы можете найти по ссылке ниже.
+            Это лучший вариант установки Windows 11 на устройстве, которое вы используете. Нажмите кнопку Скачать, чтобы приступить.
+        </p>
+        <p class="card-text">
+            Этот помощник предназначен для тех, кто хочет обновить компьютер с Windows 10 до Windows 11.
+            Прежде чем начать, убедитесь, что: вас есть лицензия на Windows 10.
+            На вашем компьютере установлена Windows 10 версии 2004 или более поздней для запуска помощника по установке.
+            Ваш компьютер соответствует требованиям к обновлению и поддерживаемым функциям, указанным в требованиях
+            Windows 11 к оборудованию.
+        </p>
+        <a href="{% static 'files/Windows11/Windows11InstallationAssistant.exe' %}" class="btn btn-primary btn-outline-dark text-light">Download Assistant</a>
+        <a href="https://www.microsoft.com/ru-ru/software-download/windows11" class="btn btn-primary btn-outline-dark text-light">link website</a>
+      </div>
+    </div>
+
+    <div class="card bg-black bg-gradient text-light" style="width: 26rem; margin: 5px">
+    <div style="margin: 10px"></div>
+    <a href="{% static 'files/Windows11/mediacreationtool.exe' %}">
+        <img src="{% if 'img/WindowsProduct/Windows11.jpg' %} {% static 'img/WindowsProduct/Windows11.jpg' %} {% else %} {% static '404-sorry-1.gif' %} {% endif %}" class="card-img-top" alt="...">
+    </a>
+      <div class="card-body">
+        <h4 class="card-title">Microsoft Media Creation Tool Windows 11</h4>
+        <p class="card-text">
+            Создание установочного носителя Windows 11.
+        </p>
+        <p class="card-text">
+            Если вы хотите переустановить или выполнить чистую установку Windows 11 на новом или старом компьютере,
+            используйте этот параметр, чтобы скачать инструмент для создания загрузочного носителя на USB- или DVD-диске.
+        </p>
+        <p class="card-text">
+            Для начала работы необходима лицензия на установку Windows 11 или устройство с Windows 10, которое подходит для обновления до Windows 11.
+        </p>
+        <p class="card-text">
+            Перед установкой Windows 11 рекомендуется сохранить все рабочие файлы и создать резервную копию компьютера.
+            Подробнее о том, как установить и работать с программой, смотрите по ссылке, приведенной ниже.
+        </p>
+        <div style="margin: 23px;"></div>
+        <a href="{% static 'files/Windows11/mediacreationtool.exe' %}" class="btn btn-primary btn-outline-dark text-light">Download Media Creation</a>
+        <a href="https://www.microsoft.com/ru-ru/software-download/windows11" class="btn btn-primary btn-outline-dark text-light">link website</a>
+      </div>
+    </div>
+
+    <div class="card bg-black bg-gradient text-light" style="width: 26rem; margin: 5px">
+    <div style="margin: 10px"></div>
+    <a href="{% static 'files/Windows10/MediaCreationTool22H2.exe' %}">
+        <img src="{% if 'img/WindowsProduct/Windows10.webp' %} {% static 'img/WindowsProduct/Windows10.webp' %} {% else %} {% static '404-sorry-1.gif' %} {% endif %}" class="card-img-top" alt="...">
+    </a>
+      <div class="card-body">
+        <h4 class="card-title">Microsoft Media Creation Tool Windows 10</h4>
+        <p class="card-text">
+            Создание установочного носителя Windows 10.
+        </p>
+        <p class="card-text">
+            Если вы хотите переустановить или выполнить чистую установку Windows 10 на новом или старом компьютере,
+            используйте этот параметр, чтобы скачать инструмент для создания загрузочного носителя на USB- или DVD-диске.
+        </p>
+        <p class="card-text">
+            Чтобы приступить к работе, вам потребуется лицензия на установку Windows 10.
+            Затем можно будет установить и запустить средство создания носителя.
+        </p>
+        <p class="card-text">
+            Перед установкой Windows 10 рекомендуется сохранить все рабочие файлы и создать резервную копию компьютера.
+            Подробнее о том, как установить и работать с программой, смотрите по ссылке, приведенной ниже.
+        </p>
+        <div style="margin: 23px;"></div>
+        <a href="{% static 'files/Windows10/MediaCreationTool22H2.exe' %}" class="btn btn-primary btn-outline-dark text-light">Download Media Creation</a>
+        <a href="https://www.microsoft.com/ru-ru/software-download/windows10" class="btn btn-primary btn-outline-dark text-light">link website</a>
+      </div>
+    </div>
+</div>
+
+<div style="margin: 10px;"></div>
+
+<div class="row mb-3 offset-sm-3">
+  <div class="col" style="margin: 20px;">
+    <div class="display-4">
+        <span class="badge bg-primary">Microsoft Office и активатор продукции</span>
+      </div>
+    </div>
+</div>
+
+<div class="row offset-2">
+    <div class="card bg-black bg-gradient text-light" style="width: 26rem; margin: 5px">
+    <div style="margin: 10px"></div>
+      <img src="{% if 'img/WindowsProduct/MicrosoftOffice.png' %} {% static 'img/WindowsProduct/MicrosoftOffice.png' %} {% else %} {% static '404-sorry-1.gif' %} {% endif %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">Microsoft Office professional plus 2019</h4>
+        <p class="card-text">
+            Microsoft Office professional plus 2019 имеет полный набор всех необходимых программ с последними обновлениями.
+        </p>
+        <p class="card-text">
+            Microsoft Office 2019 — сборка популярного офисного пакета, способного помочь при составлении различных документов.
+            Данный офисный набор предлагает пользователю полный спектр функций, присущих домашней или деловой сфере деятельности.
+            Продукт является лидером рынка в области офисных программ и наиболее известной программой разработчика.
+            В состав пакета входят Word, Excel, PowerPoint и другие популярные программы пакета Microsoft Office 2019.
+        </p>
+        <p class="card-text">
+            Для установки Microsoft Office запустите .exe файл и дождитесь окончания установки.
+            Отключите установку яндекс браузера. Данный офис не имеет активации.
+        </p>
+        <a href="{% static 'files/MicrosoftOffice/Office-2019-Word-Excel-Powerpoint.exe' %}" class="btn btn-primary stretched-link btn-outline-dark text-light">Download Microsoft Office</a>
+      </div>
+    </div>
+
+    <div class="card bg-black bg-gradient text-light" style="width: 26rem; margin: 5px">
+    <div style="margin: 10px"></div>
+      <img src="{% if 'img/WindowsProduct/kmsauto.jpg' %} {% static 'img/WindowsProduct/kmsauto.jpg' %} {% else %} {% static '404-sorry-1.gif' %} {% endif %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">Activator KMS Auto</h4>
+        <p class="card-text">
+            Активирование Windows и Microsoft Office, а также установка Microsoft Office любой версии.
+        </p>
+        <p class="card-text">
+            KMS Auto Net наилучший вариант для активации продуктов Microsoft.
+            Благодаря своим конструктивным способностям данное приложение позволяет полностью отключить и удалить службу активации.
+            Программа не затрагивает файлы операционной системы. Отныне приложение будет полностью блокировать доступ к сервису.
+            Однако активаторы не ограничиваются только одной функцией.
+        </p>
+        <p class="card-text">
+            Установка. Отключите антивирус и безопасность Windows Защита от вирусов и угроз.
+            Разархивировать архив в любое место с латиницей. Запустите .exe файл и выберите нужную функцию.
+            Пароль архива 2022. Архив проверен на вирусы.
+        </p>
+        <div style="margin: 20px;"></div>
+        <a href="{% static 'files/MicrosoftOffice/KMS Tools Portable 01.07.2022 password 2022.7z' %}" class="btn btn-primary stretched-link btn-outline-dark text-light">Download KMS Auto</a>
+      </div>
+    </div>
+
+    <div class="card bg-black bg-gradient text-light" style="width: 26rem; margin: 5px">
+    <div style="margin: 10px"></div>
+      <img src="{% if 'img/WindowsProduct/PowerToys.png' %} {% static 'img/WindowsProduct/PowerToys.png' %} {% else %} {% static '404-sorry-1.gif' %} {% endif %}" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h4 class="card-title">Power Toys</h4>
+        <p class="card-text">
+            Microsoft PowerToys - это набор утилит для опытных пользователей, которые настраивают и оптимизируют работу
+            с Windows 10 и 11 для повышения производительности, служебных программ, позволяющих опытным пользователям
+            настроить и оптимизировать работу в Windows для повышения производительности.
+        </p>
+        <p class="card-text">
+            Мы рекомендуем устанавливать PowerToys через GitHub Microsoft Store, диспетчер пакетов, но также
+            приводим дополнительные методы установки, если вы предпочитаете использовать диспетчер пакетов.
+            Поддерживаемые операционные системы: Windows 11 (все версии) Windows 10 версии 2004 или выше.
+            Системная архитектура x64 и Arm64.
+        </p>
+        <p class="card-text">
+            Информация о возможностях программы и установке Вы можете найти по ссылке ниже.
+        </p>
+        <div style="margin: 20px;"></div>
+        <a href="https://learn.microsoft.com/ru-ru/windows/powertoys/" class="btn btn-primary stretched-link btn-outline-dark text-light">Download Power Toys</a>
+      </div>
+    </div>
+</div>
+
+<div style="margin: 40px;"></div>
+
+<div class="row mb-3 offset-sm-3">
+  <div class="col" style="margin: 10px;">
+    <div class="display-3">
+      <span class="badge bg-primary">Thank you for using the website</span>
+    </div>
+  </div>
+</div>
+
+<div style="margin: 20px;"></div>
 
 <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
-
 {% endblock %}
