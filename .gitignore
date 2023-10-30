@@ -13,6 +13,7 @@ advertisements/__pycache__/
 advertisements/advertisements/__pycache__/
 advertisements/app_advertisements/__pycache__/
 advertisements/app_advertisements/migrations/__pycache__/
+advertisements/__pycache__/settings.cpython-311.pyc
 
 # Django Project Keys
 advertisements/advertisements/secrets.py
