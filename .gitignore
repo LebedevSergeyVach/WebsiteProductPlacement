@@ -9,22 +9,25 @@ venv/
 *.DS_Store
 
 # Migrate
+*/__pycache__/*
 advertisements/__pycache__/
 advertisements/advertisements/__pycache__/
 advertisements/app_advertisements/__pycache__/
 advertisements/app_advertisements/migrations/__pycache__/
-advertisements/__pycache__/settings.cpython-311.pyc
 
 # Django Project Keys
 advertisements/advertisements/secrets.py
 advertisements/secrets.py
-advertisements/base.py
+certificates/
+certificate.crt
+certificate.key
 .env
 
 # Additional files
 advertisements/static/files
 advertisements/parser.py
 advertisements/templates/app_dop/time.html
+advertisements/base.py
 
 # Database
 advertisements/media/advertisements
