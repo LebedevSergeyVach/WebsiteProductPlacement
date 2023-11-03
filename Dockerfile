@@ -21,6 +21,6 @@ COPY . .
 RUN curl -sSL https://install.python-poetry.org/ | python3 - && \
     poetry install --no-interaction --no-cache
 
-EXPOSE 80
+EXPOSE 443
 
-ENTRYPOINT ["poetry", "run", "python3", "./advertisements/manage.py", "runserver", "0.0.0.0:80"]
+ENTRYPOINT ["poetry", "run", "python3", "./advertisements/manage.py", "runserver_plus", "0.0.0.0:443", "--cert-file", "./certificates/fullchain.crt"]
