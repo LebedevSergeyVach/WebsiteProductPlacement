@@ -24,8 +24,6 @@ class MyUserCreationForm(UserCreationForm):
             "form-control form-control-lg bg-dark text-light btn-outline-primary"
         self.fields["email"].widget.attrs["class"] = \
             "form-control form-control-lg bg-dark text-light btn-outline-primary"
-        self.fields["email"].widget.attrs["class"] = \
-            "form-control form-control-lg bg-dark text-light btn-outline-primary"
 
     class Meta:
         """ Meta class for the UserCreationForm. """

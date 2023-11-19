@@ -32,13 +32,19 @@
           </div>
           <div class="carousel-inner">
             <div class="carousel-item active">
-              <img src="{% if advertisement.image_1 %} {{ advertisement.image_1.url }} {% else %} {% static 'img/404-sorry-1.gif' %} {% endif %} " class="img-fluid rounded-start" alt="Card title">
+                <a href="{% if advertisement.image_1 %} {{ advertisement.image_1.url }} {% else %} {% static 'img/404-not-found.jpg' %} {% endif %}">
+                    <img src="{% if advertisement.image_1 %} {{ advertisement.image_1.url }} {% else %} {% static 'img/404-not-found.jpg' %} {% endif %} " class="img-fluid rounded-start" alt="Card title">
+                </a>
             </div>
             <div class="carousel-item">
-              <img src="{% if advertisement.image_2 %} {{ advertisement.image_2.url }} {% else %} {% static 'img/404-sorry-1.gif' %} {% endif %} " class="img-fluid rounded-start" alt="Card title">
+                <a href="{% if advertisement.image_1 %} {{ advertisement.image_1.url }} {% else %} {% static 'img/404-not-found.jpg' %} {% endif %}">
+                    <img src="{% if advertisement.image_1 %} {{ advertisement.image_1.url }} {% else %} {% static 'img/404-not-found.jpg' %} {% endif %}" class="img-fluid rounded-start" alt="Card title">
+                </a>
             </div>
             <div class="carousel-item">
-              <img src="{% if advertisement.image_3 %} {{ advertisement.image_3.url }} {% else %} {% static 'img/404-sorry-1.gif' %} {% endif %} " class="img-fluid rounded-start" alt="Card title">
+                <a href="{% if advertisement.image_3 %} {{ advertisement.image_3.url }} {% else %} {% static 'img/404-not-found.jpg' %} {% endif %}">
+                    <img src="{% if advertisement.image_3 %} {{ advertisement.image_3.url }} {% else %} {% static 'img/404-not-found.jpg' %} {% endif %} " class="img-fluid rounded-start" alt="Card title">
+                </a>
             </div>
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">

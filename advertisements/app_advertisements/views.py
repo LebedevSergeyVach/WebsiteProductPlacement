@@ -6,9 +6,12 @@ from django.urls import reverse_lazy
 from django.contrib.auth import get_user_model
 from django.db.models import Count
 
+from django.contrib.auth.models import User
+
 from .models import Advertisement
 from .forms import AdvertisementForm
 
+import advertisements
 
 User = get_user_model()
 # Create your views here.
@@ -107,7 +110,11 @@ class WebViews(object):
         redirect_url = reverse("main-page")
 
         if request.method == "GET":
-            if request.user.is_superuser:
+            if request.user.username in advertisements.secrets.users:
+                return render(
+                    request, 'maps/maps.html'
+                )
+            elif request.user.is_superuser:
                 return render(
                     request, 'maps/maps.html'
                 )
@@ -119,7 +126,11 @@ class WebViews(object):
         redirect_url = reverse("main-page")
 
         if request.method == "GET":
-            if request.user.is_superuser:
+            if request.user.username in advertisements.secrets.users:
+                return render(
+                    request, 'maps/map_sib_sety.html'
+                )
+            elif request.user.is_superuser:
                 return render(
                     request, 'maps/map_sib_sety.html'
                 )
@@ -131,7 +142,11 @@ class WebViews(object):
         redirect_url = reverse("main-page")
 
         if request.method == "GET":
-            if request.user.is_superuser:
+            if request.user.username in advertisements.secrets.users:
+                return render(
+                    request, 'maps/maps_rostelecom.html'
+                )
+            elif request.user.is_superuser:
                 return render(
                     request, 'maps/maps_rostelecom.html'
                 )

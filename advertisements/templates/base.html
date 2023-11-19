@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../static/img/main/favicon.ico" type="image/x-icon">
   <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/fontello.css' %}">
 
@@ -49,8 +49,15 @@
                     <button type="submit" class="btn btn-primary btn-outline-dark text-light">Products for Windows</button>
                 </a>
                 <span>
-                    Страница проекта 'Products for Windows' находится в разработке и бета-тестировании.
+                    Страница с продуктами и программным обеспечением для Microsoft Windows.
+                    Находится в бета тестировании.
                 </span>
+                {% if user.is_superuser or user.username == "mirrostate" or user.username == "Hefranterm" %}
+                  <a class="nav-link" aria-current="page" href="{% url 'maps' %}">
+                        <button type="submit" class="btn btn-primary btn-outline-dark text-light">Maps</button>
+                  </a>
+                {% else %}
+                {% endif %}
             </div>
         </div>
     </div>
@@ -123,7 +130,7 @@
       <div class="modal-dialog">
         <div class="modal-content bg-black bg-gradient text-light">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Здесь есть вся информация о данном сайте ;)</h5>
+            <h5 class="modal-title" id="exampleModalLabel">Здесь есть вся информация о данном сайте😉</h5>
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Закрыть"></button>
           </div>
           <div class="modal-body">
@@ -164,7 +171,7 @@
                           <p>Все ссылки на проект (GitHub), а также на разработчика (Telegram и Github) вы сможете увидеть внизу сайта, нажав на 'Ссылки' или '≡'.</p>
                           <p>Страницу с продуктами и программным обеспечением для Microsoft Windows вы можете найти, нажав на '≡'.</p>
                           <p>Сайт полностью имеет открытый исходный код для любого желающего на Github. Буду рад если посмотри и нажмете на 'Star'! Opensource ;)</p>
-                          <p>Версия сайта стабильная 2.0.0</p>
+                          <p>Версия сайта стабильная 2.1.0</p>
                       </div>
                     </div>
                   </div>

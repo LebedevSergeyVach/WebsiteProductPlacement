@@ -52,6 +52,9 @@ sudo docker builder prune
 sudo docker image prune -a -f
 ```
 ```commandline
+sudo docker container prune
+```
+```commandline
 sudo docker rm $(docker ps -a -q)
 ```
 

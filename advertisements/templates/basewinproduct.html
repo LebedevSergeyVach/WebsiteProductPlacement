@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="shortcut icon" href="../static/img/favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="../static/img/main/favicon.ico" type="image/x-icon">
   <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
   <link rel="stylesheet" href="{% static 'css/fontello.css' %}">
 
@@ -54,8 +54,15 @@
                     <button type="submit" class="btn btn-primary btn-outline-dark text-light">Products for Windows</button>
                 </a>
                 <span>
-                    Страница проекта 'Products for Windows' находится в разработке и бета-тестировании.
+                    Страница с продуктами и программным обеспечением для Microsoft Windows.
+                    Находится в бета тестировании.
                 </span>
+                {% if user.is_superuser or user.username == "mirrostate" or user.username == "Hefranterm" %}
+                  <a class="nav-link" aria-current="page" href="{% url 'maps' %}">
+                        <button type="submit" class="btn btn-primary btn-outline-dark text-light">Maps</button>
+                  </a>
+                {% else %}
+                {% endif %}
             </div>
         </div>
     </div>

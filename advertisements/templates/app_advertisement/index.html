@@ -12,13 +12,13 @@
     <div id="carouselExampleControls" class="carousel slide bg-primary" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="{% static 'img/utkablackwhite.gif' %}" width="" height="600" class="mx-auto d-block w-33" alt="...">
+          <img src="{% static 'img/carousel/RTX-4090.jpg' %}" width="" height="600" class="mx-auto d-block w-33" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="{% static 'img/programmneon.gif' %}" width="" height="600" class="mx-auto d-block w-33" alt="...">
+          <img src="{% static 'img/carousel/asus1.png' %}" width="" height="600" class="mx-auto d-block w-33" alt="...">
         </div>
         <div class="carousel-item">
-          <img src="{% static 'img/404-sorry-1.gif' %}" width="" height="600" class="mx-auto d-block w-33" alt="...">
+          <img src="{% static 'img/carousel/AK-74.jpg' %}" width="" height="600" class="mx-auto d-block w-33" alt="...">
         </div>
       </div>
 
@@ -67,7 +67,7 @@
           <div class="row g-0">
             <div class="col-md-4">
               <a href="{{ adv.get_absolute_url }}" class="nav-link">
-                <img src="{% if adv.image_1 %}  {{ adv.image_1.url }} {% else %} {% static 'img/404-sorry-3.gif' %} {% endif %} " class="img-fluid rounded-start" alt="Card title">
+                <img src="{% if adv.image_1 %}  {{ adv.image_1.url }} {% else %} {% static 'img/404-not-found.jpg' %} {% endif %} " class="img-fluid rounded-start" alt="Card title">
               </a>
             </div>
             <div class="col-md-8">
