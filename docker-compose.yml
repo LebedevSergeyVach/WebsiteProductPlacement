@@ -13,7 +13,6 @@ services:
 
     volumes:
       - ./data:/app/data
-      - ./data:/data
-      - ./advertisements/media
+      - ./advertisements/media:/app/advertisements/media
 
     restart: always
