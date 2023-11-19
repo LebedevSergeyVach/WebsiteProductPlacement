@@ -15,6 +15,5 @@ services:
       - ./data:/app/data
       - ./data:/data
       - ./advertisements/media
-      - advertisements/media
 
     restart: always
