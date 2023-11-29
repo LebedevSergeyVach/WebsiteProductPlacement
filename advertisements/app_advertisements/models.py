@@ -127,7 +127,6 @@ class Advertisement(models.Model):
             )
         else:
             return format_html(
-                # '<img src="https://dark-network.net/wp-content/uploads/2021/09/404-not-found-01.jpg"'
                 '<img src="https://pa1.narvii.com/7435/efabf45acf29e0c694a56ec3871779f6f5434fc7r1-640-360_hq.gif"'
                 'style="width: 70px; height: 50px">'
             )
