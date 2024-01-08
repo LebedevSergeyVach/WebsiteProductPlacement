@@ -58,7 +58,7 @@ sudo docker container prune
 sudo docker rm $(docker ps -a -q)
 ```
 
-* [Docker clean cashe](https://dev.to/ajeetraina/how-to-clear-docker-cache-2nnp)
+* [Docker clean casssh -p 5000 debian@192.168.1.204he](https://dev.to/ajeetraina/how-to-clear-docker-cache-2nnp)
 
 ___
 
