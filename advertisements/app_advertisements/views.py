@@ -71,7 +71,6 @@ class WebViews(object):
                 advertisement = form.save(commit=False)
                 advertisement.user = request.user
                 advertisement.save()
-                url = reverse("main-page")
 
                 # DEBUG
                 now = datetime.now()
