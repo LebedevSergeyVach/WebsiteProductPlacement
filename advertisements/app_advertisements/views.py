@@ -92,10 +92,10 @@ class WebViews(object):
             request, "app_advertisement/advertisement-post.html", context=context
         )
 
-    def handler404(request, exception):
+    def handler404(request):
         """Returns 404 error page."""
         return render(
-            request, 'app_advertisement/404.html', status=404
+            request, '404.html', status=404
         )
 
     def products(request):
@@ -106,7 +106,7 @@ class WebViews(object):
 
     def maps(request):
         """Returns map"""
-        redirect_url = reverse("main-page")
+        redirect_url = reverse("handler404")
 
         if request.method == "GET":
             if request.user.username in advertisements.secrets.users:
@@ -122,7 +122,7 @@ class WebViews(object):
 
     def map_sib_sety(request):
         """Returns map sib sety"""
-        redirect_url = reverse("main-page")
+        redirect_url = reverse("handler404")
 
         if request.method == "GET":
             if request.user.username in advertisements.secrets.users:
@@ -138,7 +138,7 @@ class WebViews(object):
 
     def map_rostelecom(request):
         """Returns map rostelecom"""
-        redirect_url = reverse("main-page")
+        redirect_url = reverse("handler404")
 
         if request.method == "GET":
             if request.user.username in advertisements.secrets.users:

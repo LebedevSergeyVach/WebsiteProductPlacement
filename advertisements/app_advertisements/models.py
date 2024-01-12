@@ -13,7 +13,7 @@ User = get_user_model()
 
 
 class Advertisement(models.Model):
-    """Advertisement model"""
+    """ Advertisement model """
 
     user = models.ForeignKey(
         User,

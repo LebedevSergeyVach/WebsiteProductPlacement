@@ -1,6 +1,4 @@
 from django.urls import include, path
-from django.contrib import admin
-
 from .views import WebViews
 
 
@@ -14,6 +12,7 @@ urlpatterns = [
     path("advertisement-post", WebViews.advertisement_post, name="advertisement-post"),
 
     path('handler404', WebViews.handler404, name='handler404'),
+
 
     path('maps', WebViews.maps, name="maps"),
     path('map-sib-sety', WebViews.map_sib_sety, name='map-sib-sety'),

@@ -23,6 +23,9 @@ class WebView(object):
 
     def login_view(request):
         """View function for login page"""
+        if request.user.is_authenticated:
+            return redirect('handler404')
+
         redirect_url = reverse("profile")
 
         if request.method == "GET":
@@ -69,6 +72,9 @@ class WebView(object):
 
     def register_view(request):
         """View function for register page"""
+        if request.user.is_authenticated:
+            return redirect('handler404')
+
         if request.method == "POST":
             form = MyUserCreationForm(request.POST)
 

@@ -37,8 +37,8 @@
                 </a>
             </div>
             <div class="carousel-item">
-                <a href="{% if advertisement.image_1 %} {{ advertisement.image_2.url }} {% else %} {% static 'img/404/404-not-found.jpg' %} {% endif %}">
-                    <img src="{% if advertisement.image_1 %} {{ advertisement.image_2.url }} {% else %} {% static 'img/404/404-not-found.jpg' %} {% endif %}" class="img-fluid rounded-start" alt="Card title">
+                <a href="{% if advertisement.image_2 %} {{ advertisement.image_2.url }} {% else %} {% static 'img/404/404-not-found.jpg' %} {% endif %}">
+                    <img src="{% if advertisement.image_2 %} {{ advertisement.image_2.url }} {% else %} {% static 'img/404/404-not-found.jpg' %} {% endif %}" class="img-fluid rounded-start" alt="Card title">
                 </a>
             </div>
             <div class="carousel-item">

@@ -14,5 +14,6 @@ services:
     volumes:
       - ./data:/app/data
       - ./advertisements/media:/app/advertisements/media
+      - ./advertisements/static/files:/app/static/files
 
     restart: always
