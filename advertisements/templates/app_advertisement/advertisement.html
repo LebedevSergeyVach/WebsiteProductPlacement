@@ -26,26 +26,38 @@
         <div class="col-md-5">
         <div id="carouselExampleControls" class="carousel slide bg-primary" data-bs-ride="carousel">
           <div class="carousel-indicators">
+            {% if advertisement.image_1 %}
             <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            {% endif %}
+            {% if advertisement.image_2 %}
             <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            {% endif %}
+            {% if advertisement.image_3 %}
             <button type="button" data-bs-target="#carouselExampleControls" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            {% endif %}
           </div>
           <div class="carousel-inner">
+            {% if advertisement.image_1 %}
             <div class="carousel-item active">
                 <a href="{% if advertisement.image_1 %} {{ advertisement.image_1.url }} {% else %} {% static 'img/404/404-not-found.jpg' %} {% endif %}">
                     <img src="{% if advertisement.image_1 %} {{ advertisement.image_1.url }} {% else %} {% static 'img/404/404-not-found.jpg' %} {% endif %} " class="img-fluid rounded-start" alt="Card title">
                 </a>
             </div>
+            {% endif %}
+            {% if advertisement.image_2 %}
             <div class="carousel-item">
                 <a href="{% if advertisement.image_2 %} {{ advertisement.image_2.url }} {% else %} {% static 'img/404/404-not-found.jpg' %} {% endif %}">
                     <img src="{% if advertisement.image_2 %} {{ advertisement.image_2.url }} {% else %} {% static 'img/404/404-not-found.jpg' %} {% endif %}" class="img-fluid rounded-start" alt="Card title">
                 </a>
             </div>
+            {% endif %}
+            {% if advertisement.image_3 %}
             <div class="carousel-item">
                 <a href="{% if advertisement.image_3 %} {{ advertisement.image_3.url }} {% else %} {% static 'img/404/404-not-found.jpg' %} {% endif %}">
                     <img src="{% if advertisement.image_3 %} {{ advertisement.image_3.url }} {% else %} {% static 'img/404/404-not-found.jpg' %} {% endif %} " class="img-fluid rounded-start" alt="Card title">
                 </a>
             </div>
+            {% endif %}
           </div>
           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -65,11 +77,13 @@
             <p class="card-text text-light nav-link">
               {{ advertisement.description }}
             </p>
+              <p>
               <span class="card-text text-light">
-                  Цена: <p>{{ advertisement.price }} ₽</p>
+                  Цена: {{ advertisement.price }} ₽
               </span>
+              </p>
               <span class="card-text text-light">
-                  Аукцион: {% if adv.auction %} ✅ {% else %} ❌ {% endif %}
+                  Аукцион: {% if advertisement.auction %} ✅ {% else %} ❌ {% endif %}
               </span>
                 <h6 class="card-title">
                   <ul class="navbar-nav me-auto mt-auto mt-lg-auto">
@@ -79,7 +93,6 @@
                         <div class="dropdown-menu dropdown-menu-dark text-light btn-outline-dark bg-dark" aria-labelledby="dropdownId">
                         <strong class="dropdown-item">
                             {% if advertisement.user.email %} {{ advertisement.user.email }} {% else %} None email 🥲 {% endif %}
-{#                          {% if advertisement.user.is_superuser %} admin website {% elif advertisement.user.email %} {{ advertisement.user.email }} {% else %} None email {% endif %}#}
                         </strong>
                         <strong class="dropdown-item">
                             {% if advertisement.contact %} {{ advertisement.contact }} {% else %} None contact 🥲 {% endif %}

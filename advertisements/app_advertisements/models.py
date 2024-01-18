@@ -24,8 +24,6 @@ class Advertisement(models.Model):
     image_1 = models.ImageField(
         verbose_name="Изображение",
         upload_to="advertisements/",
-        null=True,
-        blank=True,
     )
 
     image_2 = models.ImageField(
@@ -49,7 +47,7 @@ class Advertisement(models.Model):
 
     description = models.TextField(
         verbose_name="Описание",
-        max_length=1000,
+        max_length=1500,
     )
 
     price = models.DecimalField(
