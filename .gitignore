@@ -9,6 +9,10 @@ venv/
 *.DS_Store
 
 # Migrate
+advertisements/app_auth/migrations
+advertisements/app_advertisements/migrations
+
+# PyCache
 */__pycache__/*
 advertisements/__pycache__/
 advertisements/advertisements/__pycache__/
