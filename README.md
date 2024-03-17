@@ -49,16 +49,17 @@ ___
 
 ## Documentation for each directory
 
-* [advertisements](advertisements%2Fadvertisements%2FREADME.md)
-* [app advertisements](advertisements%2Fapp_advertisements%2FREADME.md)
-* [app auth](advertisements%2Fapp_auth%2FREADME.md)
-* [templates](advertisements%2Ftemplates%2FREADME.md)
-* [static](advertisements%2Fstatic%2FREADME.md)
-* [media](advertisements%2Fmedia%2FREADME.md)
+* `The main application of the framework` - [advertisements](advertisements%2Fadvertisements%2FREADME.md)
+* `The main application of the project` - [app advertisements](advertisements%2Fapp_advertisements%2FREADME.md)
+* `Authorization application` - [app auth](advertisements%2Fapp_auth%2FREADME.md)
+* `Project Template Directory` - [templates](advertisements%2Ftemplates%2FREADME.md)
+* `Directory of static project files` - [static](advertisements%2Fstatic%2FREADME.md)
+* `The directory of the project's media files` - [media](advertisements%2Fmedia%2FREADME.md)
+
 
 ## List of the main commands used in the project
 
-* [commands](advertisements%2FREADME.md)
+* `Project Console commands` - [commands](advertisements%2FREADME.md)
 
 ---
 
@@ -111,16 +112,16 @@ sudo docker builder prune
 ---
 
 ## Документация для каждого каталога
-* [advertisements](advertisements%2Fadvertisements%2FREADME.md)
-* [app advertisements](advertisements%2Fapp_advertisements%2FREADME.md)
-* [app auth](advertisements%2Fapp_auth%2FREADME.md)
-* [templates](advertisements%2Ftemplates%2FREADME.md)
-* [static](advertisements%2Fstatic%2FREADME.md)
-* [media](advertisements%2Fmedia%2FREADME.md)
+* `Главное приложение фреймворка` - [advertisements](advertisements%2Fadvertisements%2FREADME.md)
+* `Основное приложение проекта` - [app advertisements](advertisements%2Fapp_advertisements%2FREADME.md)
+* `Приложение авторизации проекта` - [app auth](advertisements%2Fapp_auth%2FREADME.md)
+* `Директория шаблонов проекта` - [templates](advertisements%2Ftemplates%2FREADME.md)
+* `Директория статических файлов проекта` - [static](advertisements%2Fstatic%2FREADME.md)
+* `Директория медиа файлов проекта` - [media](advertisements%2Fmedia%2FREADME.md)
 
 ## Список основных команд, используемых в проекте
-* [commands](advertisements%2FREADME.md)
+* `Консольные команды проекта` - [commands](advertisements%2FREADME.md)
 
 ___
 
-[README.md](README.md)
+`README` - [README.md](README.md)
