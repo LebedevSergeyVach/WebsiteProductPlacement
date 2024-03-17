@@ -10,7 +10,7 @@ ___
 
 # Links and versions to the website    
 
-* [Lebedev Sergey Vyacheslav](https://github.com/LebedevSergeyVach) – Product Lead & Fullstack Developer
+* [Lebedev Sergey Vyacheslav](https://github.com/LebedevSergeyVach) – Product Lead & Fullstack Developer.
 
 * [Website](https://serphantom.space) - a link to a website located on its server with a white (external) ip address connected. [LebedevSergeyVach](https://github.com/LebedevSergeyVach). A fresh and constantly updated version of the site.
 
@@ -18,18 +18,18 @@ ___
 
 # Project deployment on the server [Debian](https://www.debian.org).
 
-#### Uploading a project
+#### Uploading a project.
 ```commandline
 git clone git@github.com:LebedevSergeyVach/WebsiteProductPlacement.git
 ```
-#### The command for configuring and migrating the project database on the Django framework on the server
+#### The command for configuring and migrating the project database on the Django framework on the server.
 ```commandline
 python manage.py makemigrations
 ```
 ```commandline
 python manage.py migrate
 ```
-#### Creating and configuring a website administrator
+#### Creating and configuring a website administrator.
 ```commandline
 python manage.py createsuperuser
 ```
@@ -73,25 +73,25 @@ ___
 ---
 
 ## Ссылки и версии веб-сайта    
-* [Лебедев Сергей Вячеславович](https://github.com/LebedevSergeyVach) – Ведущий разработчик и Fullstack-разработчик
+* [Лебедев Сергей Вячеславович](https://github.com/LebedevSergeyVach) – Ведущий разработчик и Fullstack-разработчик.
 * [Веб-сайт](https://serphantom.space) - ссылка на веб-сайт, размещенный на собственном сервере с белым (внешним) IP-адресом. [LebedevSergeyVach](https://github.com/LebedevSergeyVach). Свежая и постоянно обновляемая версия сайта.
 
 ---
 
 ## Развертывание проекта на сервере [Debian](https://www.debian.org).
 
-#### Загрузка проекта
+#### Загрузка проекта.
 ```commandline
 git clone git@github.com:LebedevSergeyVach/WebsiteProductPlacement.git
 ```
-#### Команда для настройки и миграции базы данных проекта на фреймворке Django на сервере
+#### Команда для настройки и миграции базы данных проекта на фреймворке Django на сервере.
 ```commandline
 python manage.py makemigrations
 ```
 ```commandline
 python manage.py migrate
 ```
-#### Создание и настройка администратора веб-сайта
+#### Создание и настройка администратора веб-сайта.
 ```commandline
 python manage.py createsuperuser
 ```
