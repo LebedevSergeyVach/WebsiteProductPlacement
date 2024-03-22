@@ -18,7 +18,7 @@ ___
 
 # Project deployment on the server [Debian](https://www.debian.org).
 
-#### Uploading a project.
+#### Download a project.
 ```commandline
 git clone git@github.com:LebedevSergeyVach/WebsiteProductPlacement.git
 ```
