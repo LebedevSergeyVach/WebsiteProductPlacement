@@ -151,3 +151,10 @@ class WebViews(object):
                 )
             else:
                 return redirect(redirect_url)
+
+    def kirill_go_fuck_yourself(request):
+        """Returns kirill go fuck yourself"""
+
+        return render(
+            request, "kirill/kirill_go_fuck_yourself.html"
+        )

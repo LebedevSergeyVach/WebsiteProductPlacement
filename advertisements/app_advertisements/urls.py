@@ -19,4 +19,6 @@ urlpatterns = [
     path('map-rostelecom', WebViews.map_sib_sety, name='map-rostelecom'),
 
     path('WindowsProducts', WebViews.products, name="WindowsProducts"),
+
+    path('Kirill-go-fuck-yourself', WebViews.kirill_go_fuck_yourself, name="Kirill-go-fuck-yourself"),
 ]
