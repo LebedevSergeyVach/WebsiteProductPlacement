@@ -10,9 +10,8 @@ ___
 
 # Links and versions to the website    
 
-* [Lebedev Sergey Vyacheslav](https://github.com/LebedevSergeyVach) – Product Lead & Fullstack Developer.
-
-* [Website](https://serphantom.space) - a link to a website located on its server with a white (external) ip address connected. [LebedevSergeyVach](https://github.com/LebedevSergeyVach). A fresh and constantly updated version of the site.
+### [Lebedev Sergey Vyacheslav](https://github.com/LebedevSergeyVach) – Product Lead & Fullstack Developer.
+### [Website](https://serphantom.space) - a link to a website located on its server with a white (external) ip address connected. [LebedevSergeyVach](https://github.com/LebedevSergeyVach). A fresh and constantly updated version of the site.
 
 ___
 
@@ -73,9 +72,9 @@ ___
 
 ---
 
-## Ссылки и версии веб-сайта    
-* [Лебедев Сергей Вячеславович](https://github.com/LebedevSergeyVach) – Ведущий разработчик и Fullstack-разработчик.
-* [Веб-сайт](https://serphantom.space) - ссылка на веб-сайт, размещенный на собственном сервере с белым (внешним) IP-адресом. [LebedevSergeyVach](https://github.com/LebedevSergeyVach). Свежая и постоянно обновляемая версия сайта.
+# Ссылки и версии веб-сайта    
+### [Лебедев Сергей Вячеславович](https://github.com/LebedevSergeyVach) – Ведущий разработчик и Fullstack-разработчик.
+### [Веб-сайт](https://serphantom.space) - ссылка на веб-сайт, размещенный на собственном сервере с белым (внешним) IP-адресом. [LebedevSergeyVach](https://github.com/LebedevSergeyVach). Свежая и постоянно обновляемая версия сайта.
 
 ---
 
