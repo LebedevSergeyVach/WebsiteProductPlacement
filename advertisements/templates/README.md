@@ -26,7 +26,7 @@ ___
 * шаблон страницы топ-продавцов - [top-sellers.html](app_advertisement%2Ftop-sellers.html)
 * шаблон страницы с объявлением - [advertisement.html](app_advertisement%2Fadvertisement.html)
 * шаблон страницы разместить объявление - [advertisement-post.html](app_advertisement%2Fadvertisement-post.html)
-* шаблон от которого идут все наследования - [base.html](base.html)
+* шаблон от которого идут все наследования - [base.html](../../../SerphantomApplication/advertisements/templates/base.html)
 
 ## 2. [app auth](app_auth)
 
