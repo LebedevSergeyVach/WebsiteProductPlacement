@@ -1,4 +1,5 @@
-# Website Product Placement 
+# Website Product Placement
+<a name="up"></a>
 # Production and software for Windows
 
 The project is written on the [Django](https://www.djangoproject.com) framework.
@@ -62,7 +63,12 @@ ___
 
 ---
 
+#### [README](README.md) [UP](#up)
+
+---
+
 # Размещение продукции на веб-сайте
+<a name="вверх"></a>
 # Продукция и программное обеспечение для Windows
 
 Проект написан на фреймворке [Django](https://www.djangoproject.com).
@@ -73,8 +79,8 @@ ___
 ---
 
 # Ссылки и версии веб-сайта    
-### [Лебедев Сергей Вячеславович](https://github.com/LebedevSergeyVach) – Ведущий разработчик и Fullstack-разработчик.
-### [Веб-сайт](https://serphantom.space) - ссылка на веб-сайт, размещенный на собственном сервере с белым (внешним) IP-адресом. [LebedevSergeyVach](https://github.com/LebedevSergeyVach). Свежая и постоянно обновляемая версия сайта.
+### [Лебедев Сергей Вячеславович](https://github.com/LebedevSergeyVach) – Руководитель продукта и Fullstack Python-разработчик.
+### [Serphantom](https://serphantom.space) - ссылка на веб-сайт, размещенный на собственном сервере с белым (внешним) IP-адресом. Свежая и постоянно обновляемая версия сайта.
 
 ---
 
@@ -123,4 +129,4 @@ sudo docker builder prune
 
 ___
 
-`README` - [README.md](README.md)
+#### [README](README.md) [ВВЕРХ](#вверх)
