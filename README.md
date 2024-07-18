@@ -14,6 +14,8 @@ ___
 ### [Lebedev Sergey Vyacheslav](https://github.com/LebedevSergeyVach) – Product Lead & Fullstack Python-Developer.
 ### [Website Serphantom](https://serphantom.space) - a link to a website located on its server with a white (external) ip address connected. A fresh and constantly updated version of the site.
 
+### At the moment, the website is occupied by another service - [Serphantom Application](https://github.com/LebedevSergeyVach/SerphantomApplication)
+
 ___
 
 # Project deployment on the server [Debian](https://www.debian.org).
@@ -81,6 +83,8 @@ ___
 # Ссылки и версии веб-сайта    
 ### [Лебедев Сергей Вячеславович](https://github.com/LebedevSergeyVach) – Руководитель продукта и Fullstack Python-разработчик.
 ### [Веб-сайт Serphantom](https://serphantom.space) - ссылка на веб-сайт, размещенный на собственном сервере с белым (внешним) IP-адресом. Свежая и постоянно обновляемая версия сайта.
+
+### На данным момент веб-сайт занят другим сервисом - [Serphantom Application](https://github.com/LebedevSergeyVach/SerphantomApplication)
 
 ---
 
