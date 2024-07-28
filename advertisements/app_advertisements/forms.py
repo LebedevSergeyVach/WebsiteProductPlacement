@@ -29,3 +29,4 @@ class AdvertisementForm(forms.ModelForm):
             raise forms.ValidationError("Title cannot start with a question mark")
 
         return title
+    
