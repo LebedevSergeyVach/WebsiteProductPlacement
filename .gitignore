@@ -32,7 +32,8 @@ advertisements/static/files
 advertisements/parser.py
 advertisements/templates/app_dop/time.html
 advertisements/base.py
-advertisements/templates/app_advertisement/WindowsProducts.html
+advertisements/templates/kirill
+advertisements/templates/app_dop
 
 # Database
 advertisements/media/advertisements
@@ -42,5 +43,13 @@ data/db.sqlite3
 advertisements/templates/maps/maps_rostelecom.html
 advertisements/templates/maps/map_sib_sety.html
 
+
+# Maps
+advertisements/templates/maps
+advertisements/templates/basemaps.html
+
+# Windows
+advertisements/templates/app_advertisement/WindowsProducts.html
+advertisements/templates/basewinproduct.html
 
 # Instructions

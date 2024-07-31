@@ -20,5 +20,5 @@ urlpatterns = [
 
     path('WindowsProducts', WebViews.handler404, name="WindowsProducts"),
 
-    path('Kirill-go-fuck-yourself', WebViews.kirill_go_fuck_yourself, name="Kirill-go-fuck-yourself"),
+    path('Kirill-go-fuck-yourself', WebViews.handler404, name="Kirill-go-fuck-yourself"),
 ]
