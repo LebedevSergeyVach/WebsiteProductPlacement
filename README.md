@@ -1,6 +1,5 @@
 # Website Product Placement
 <a name="up"></a>
-# Production and software for Windows
 
 The project is written on the [Django](https://www.djangoproject.com) framework.
 The backend is written in [python](https://www.python.org).
@@ -71,7 +70,6 @@ ___
 
 # Размещение продукции на веб-сайте
 <a name="вверх"></a>
-# Продукция и программное обеспечение для Windows
 
 Проект написан на фреймворке [Django](https://www.djangoproject.com).
 Бэкенд написан на [Python](https://www.python.org).  

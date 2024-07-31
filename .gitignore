@@ -32,6 +32,7 @@ advertisements/static/files
 advertisements/parser.py
 advertisements/templates/app_dop/time.html
 advertisements/base.py
+advertisements/templates/app_advertisement/WindowsProducts.html
 
 # Database
 advertisements/media/advertisements
